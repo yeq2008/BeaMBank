@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.bea.mbank"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+    android:orientation="horizontal"
+    android:padding="@dimen/padding" >
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginRight="@dimen/padding"
+        android:layout_weight="6"
+        android:background="@color/whiteColor" >
+
+        <TextView
+            android:id="@+id/dp_tv01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_margin="@dimen/padding"
+            android:text="请选择日期"
+            android:textColor="@color/titleColor"
+            android:textSize="@dimen/choose_date_textSize" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/choose_date_marginTop" >
+
+            <com.android.wheelview.WheelView
+                android:id="@+id/wheelyear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:wv_textFont="@dimen/scollChoose_date_textSize" />
+
+            <com.android.wheelview.WheelView
+                android:id="@+id/wheelmonth"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:wv_textFont="@dimen/scollChoose_date_textSize" />
+
+            <com.android.wheelview.WheelView
+                android:id="@+id/wheelday"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:wv_textFont="@dimen/scollChoose_date_textSize" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/whiteColor"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/OK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/padding"
+            android:background="@drawable/btn_commit"
+            android:gravity="center"
+            android:textColor="@color/blackColor" />
+
+        <Button
+            android:id="@+id/closedate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/padding"
+            android:background="@drawable/btn_close"
+            android:textColor="@color/blackColor" />
+    </LinearLayout>
+
+</LinearLayout>

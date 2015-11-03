@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#F2F2F2"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="horizontal"
+    android:padding="@dimen/padding" >
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginRight="@dimen/padding"
+        android:layout_weight="1"
+        android:background="@color/whiteColor" >
+
+        <View
+            android:id="@+id/pzp_iv_vertical_divider1"
+            android:layout_width="@dimen/zone_parent_vertical_divider_width"
+            android:layout_height="@dimen/zone_parent_vertical_divider_height"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/layout_marginTop"
+            android:layout_marginLeft="@dimen/padding"
+            android:layout_marginRight="@dimen/padding"
+            android:layout_marginTop="@dimen/layout_marginTop"
+            android:background="#E6E6E6" />
+
+        <TextView
+            android:id="@+id/pzp_tv_country"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/zone_parent_country_height"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/pzp_iv_vertical_divider1"
+            android:background="#FFFFFF"
+            android:gravity="center|right"
+            android:hint="请选择国家"
+            android:paddingRight="@dimen/padding"
+            android:tag="country"
+            android:textColor="#333333"
+            android:textColorHint="#999999"
+            android:textSize="@dimen/title_font_size" />
+
+        <TextView
+            android:id="@+id/pzp_tv_province"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/zone_parent_country_height"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/padding"
+            android:layout_toRightOf="@+id/pzp_iv_vertical_divider1"
+            android:background="#FFFFFF"
+            android:gravity="center|right"
+            android:hint="请选择省份"
+            android:paddingRight="@dimen/padding"
+            android:tag="province"
+            android:textColor="#333333"
+            android:textColorHint="#999999"
+            android:textSize="@dimen/title_font_size" />
+
+        <View
+            android:id="@+id/pzp_iv_horizontal_divider1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/pzp_iv_vertical_divider1"
+            android:layout_marginLeft="@dimen/padding"
+            android:layout_marginRight="@dimen/padding"
+            android:background="#B0B0B0" />
+
+        <View
+            android:id="@+id/pzp_iv_vertical_divider2"
+            android:layout_width="@dimen/zone_parent_vertical_divider_width"
+            android:layout_height="@dimen/zone_parent_vertical_divider_height"
+            android:layout_below="@+id/pzp_iv_horizontal_divider1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/layout_marginTop"
+            android:layout_marginLeft="@dimen/padding"
+            android:layout_marginRight="@dimen/padding"
+            android:layout_marginTop="@dimen/layout_marginTop"
+            android:background="#E6E6E6" />
+
+        <TextView
+            android:id="@+id/pzp_tv_city"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/zone_parent_country_height"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/pzp_iv_horizontal_divider1"
+            android:layout_toLeftOf="@+id/pzp_iv_vertical_divider2"
+            android:background="#FFFFFF"
+            android:gravity="center|right"
+            android:hint="请选择城市"
+            android:paddingRight="@dimen/padding"
+            android:tag="city"
+            android:textColor="#333333"
+            android:textColorHint="#999999"
+            android:textSize="@dimen/title_font_size" />
+
+        <TextView
+            android:id="@+id/pzp_tv_zone"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/zone_parent_country_height"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/pzp_iv_horizontal_divider1"
+            android:layout_marginRight="@dimen/padding"
+            android:layout_toRightOf="@+id/pzp_iv_vertical_divider2"
+            android:background="#FFFFFF"
+            android:gravity="center|right"
+            android:hint="请选择区域"
+            android:paddingRight="@dimen/padding"
+            android:tag="zone"
+            android:textColor="#333333"
+            android:textColorHint="#999999"
+            android:textSize="@dimen/title_font_size" />
+
+        <View
+            android:id="@+id/pzp_iv_horizontal_divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/pzp_iv_vertical_divider2"
+            android:layout_marginLeft="@dimen/padding"
+            android:layout_marginRight="@dimen/padding"
+            android:background="#B0B0B0" />
+
+        <EditText
+            android:id="@+id/pzp_et_lp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zone_parent_country_height"
+            android:layout_below="@+id/pzp_iv_horizontal_divider2"
+            android:layout_marginLeft="@dimen/padding"
+            android:layout_marginRight="@dimen/padding"
+            android:background="#FFFFFF"
+            android:hint="请输入楼盘"
+            android:paddingLeft="@dimen/padding"
+            android:textColor="#333333"
+            android:textColorHint="#999999"
+            android:textSize="@dimen/title_font_size" />
+
+        <View
+            android:id="@+id/pzp_iv_horizontal_divider3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/pzp_et_lp"
+            android:layout_marginLeft="@dimen/padding"
+            android:layout_marginRight="@dimen/padding"
+            android:background="#B0B0B0" />
+
+        <EditText
+            android:id="@+id/pzp_et_addr"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zone_parent_country_height"
+            android:layout_below="@+id/pzp_iv_horizontal_divider3"
+            android:layout_marginLeft="@dimen/padding"
+            android:layout_marginRight="@dimen/padding"
+            android:background="#FFFFFF"
+            android:hint="请输入详细地址"
+            android:paddingLeft="@dimen/padding"
+            android:textColor="#333333"
+            android:textColorHint="#999999"
+            android:textSize="@dimen/title_font_size" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="@dimen/personinfo_layout_width"
+        android:layout_height="match_parent"
+        android:background="@color/whiteColor" >
+
+        <ImageView
+            android:id="@+id/pzp_im_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/padding"
+            android:src="@drawable/btn_commit" />
+
+        <ImageView
+            android:id="@+id/pzp_im_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pzp_im_confirm"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/padding"
+            android:src="@drawable/btn_reset" />
+
+        <ImageView
+            android:id="@+id/pzp_im_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pzp_im_refresh"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/padding"
+            android:src="@drawable/btn_close" />
+    </RelativeLayout>
+
+</LinearLayout>

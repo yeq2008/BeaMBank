@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.bea.mbank"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.bea.mbank.widgets.GridTableView
+        android:id="@+id/Credit_gridTableView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/margin"
+        android:layout_marginTop="@dimen/margin_topOrBottom"
+        app:grt_title="借款人资产"
+        app:grt_titleFont="@dimen/bottom_line_title_textSize"
+        app:grt_titles="@array/CreditTitlesArray" >
+    </com.bea.mbank.widgets.GridTableView>
+
+    <com.bea.mbank.widgets.GridTableView
+        android:id="@+id/Credit_gridTableView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Credit_gridTableView"
+        android:layout_margin="@dimen/margin"
+        app:grt_title="借款人负债"
+        app:grt_titleFont="@dimen/bottom_line_title_textSize"
+        app:grt_titles="@array/CreditTitlesArray1" >
+    </com.bea.mbank.widgets.GridTableView>
+
+</RelativeLayout>

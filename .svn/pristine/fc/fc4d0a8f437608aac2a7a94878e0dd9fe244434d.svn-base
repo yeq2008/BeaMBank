@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.bea.mbank"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/pop_right_margin"
+        android:background="@color/whiteColor"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <com.android.widgets.BottomLineTitleView
+                android:id="@+id/bottomLineTitleView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:layout_marginTop="@dimen/margin"
+                app:bl_lineColor="#e7e7e7"
+                app:bl_lineSize="1px"
+                app:bl_selectorColor="@color/redColor"
+                app:bl_title="贷款计算器"
+                app:bl_titleColor="@color/blackColor"
+                app:bl_titleFont="@dimen/bottom_line_title_textSize" >
+            </com.android.widgets.BottomLineTitleView>
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="#e7e7e7" />
+
+            <LinearLayout
+                android:id="@+id/huankuan_fangshi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bottomLineTitleView1"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/fglc_tv_paybacktype"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin"
+                    android:text="还款方式"
+                    android:textColor="@color/titleColor"
+                    android:textSize="@dimen/title_font_size" />
+
+                <com.bea.mbank.widgets.GroupTagViewEx
+                    android:id="@+id/fglc_gtv_paybacktype"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin"
+                    app:gt_titleFont="@dimen/value_font_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/daikuan_jine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/huankuan_fangshi"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <com.android.widgets.TitleValueView
+                    android:id="@+id/fglc_tvv_loanAmount"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin"
+                    app:tv_title="贷款金额"
+                    app:tv_titleColor="@color/blackColor"
+                    app:tv_titleFont="@dimen/title_font_size"
+                    app:tv_titleMaxNum="100"
+                    app:tv_valueColor="@color/contentColor"
+                    app:tv_valueFont="@dimen/value_font_size"
+                    app:tv_valueHint="金额"
+                    app:tv_valueInputType="decimal"
+                    app:tv_valueMaxLength="5" />
+
+                <TextView
+                    android:id="@+id/tv_wanyuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin"
+                    android:text="万元"
+                    android:textColor="@color/contentColor"
+                    android:textSize="@dimen/value_font_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/daikuan_qixian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/daikuan_jine"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <com.android.widgets.TitleValueView
+                    android:id="@+id/fglc_tvv_payyears"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin"
+                    app:tv_title="贷款期限"
+                    app:tv_titleColor="@color/blackColor"
+                    app:tv_titleFont="@dimen/title_font_size"
+                    app:tv_titleMaxNum="100"
+                    app:tv_valueColor="@color/contentColor"
+                    app:tv_valueFont="@dimen/value_font_size"
+                    app:tv_valueHint="期限"
+                    app:tv_valueInputType="number"
+                    app:tv_valueMaxLength="2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin"
+                    android:text="年"
+                    android:textColor="@color/contentColor"
+                    android:textSize="@dimen/value_font_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fudong_bilv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/daikuan_qixian"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <com.android.widgets.TitleValueView
+                    android:id="@+id/fglc_tvv_floatrate"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin"
+                    app:tv_title="浮动比例"
+                    app:tv_titleColor="@color/blackColor"
+                    app:tv_titleFont="@dimen/title_font_size"
+                    app:tv_titleMaxNum="100"
+                    app:tv_valueColor="@color/contentColor"
+                    app:tv_valueFont="@dimen/value_font_size"
+                    app:tv_valueHint="浮动比例"
+                    app:tv_valueInputType="signedDecimal"
+                    app:tv_valueMaxLength="5" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin"
+                    android:text="%"
+                    android:textColor="@color/contentColor"
+                    android:textSize="@dimen/title_font_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lilv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fudong_bilv"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <com.android.widgets.TitleValueView
+                    android:id="@+id/fglc_tvv_rate"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin"
+                    app:tv_title="利率"
+                    app:tv_titleColor="@color/blackColor"
+                    app:tv_titleFont="@dimen/title_font_size"
+                    app:tv_titleMaxNum="100"
+                    app:tv_valueColor="@color/contentColor"
+                    app:tv_valueEnable="false"
+                    app:tv_valueFont="@dimen/value_font_size"
+                    app:tv_valueHint="利率" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin"
+                    android:text="%"
+                    android:textColor="@color/contentColor"
+                    android:textSize="@dimen/title_font_size" />
+            </LinearLayout>
+
+            <com.android.widgets.XCButton
+                android:id="@+id/fglc_btn_calculator"
+                android:layout_width="@dimen/jisuan_btn_width"
+                android:layout_height="@dimen/jisuan_btn_height"
+                android:layout_below="@id/lilv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="@dimen/margin"
+                android:background="@drawable/ac_appset_setting_affirmbutton"
+                android:text="开始计算"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/red_buttom_textSize" />
+
+            <com.android.widgets.BottomLineTitleView
+                android:id="@+id/bottomLineLoadDetail"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fglc_btn_calculator"
+                android:layout_margin="@dimen/margin"
+                app:bl_lineColor="#e7e7e7"
+                app:bl_lineSize="1px"
+                app:bl_selectorColor="@color/redColor"
+                app:bl_title="贷款明细"
+                app:bl_titleColor="@color/blackColor"
+                app:bl_titleFont="@dimen/bottom_line_title_textSize" >
+            </com.android.widgets.BottomLineTitleView>
+
+            <com.bea.mbank.helper.counter.PieChartSurfaceView
+                android:id="@+id/fglc_fl_pic"
+                android:layout_width="@dimen/pieChart_width"
+                android:layout_height="@dimen/pieChart_height"
+                android:layout_below="@id/bottomLineLoadDetail"
+                android:layout_marginBottom="@dimen/margin"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:layout_marginTop="10dp"
+                android:background="@color/whiteColor" >
+            </com.bea.mbank.helper.counter.PieChartSurfaceView>
+
+            <RelativeLayout
+                android:id="@+id/fglc_rl_loanDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bottomLineLoadDetail"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/fglc_fl_pic" >
+
+                <LinearLayout
+                    android:id="@+id/loanDetail_totalamount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <com.bea.mbank.helper.counter.LoanAmountDot
+                        android:id="@+id/loanDetail_dot_totalamount"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp" >
+                    </com.bea.mbank.helper.counter.LoanAmountDot>
+
+                    <TextView
+                        android:id="@+id/loanDetail_tv_totalamount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="贷款总额:"
+                        android:textColor="@color/titleColor"
+                        android:textSize="@dimen/title_font_size" />
+
+                    <TextView
+                        android:id="@+id/loanDetail_tv_totalamountContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text=""
+                        android:textColor="@color/titleColor"
+                        android:textSize="@dimen/value_font_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/loanDetail_interest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/loanDetail_totalamount"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal" >
+
+                    <com.bea.mbank.helper.counter.InterestsPayDot
+                        android:id="@+id/loanDetail_dot_InterestsPay"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp" >
+                    </com.bea.mbank.helper.counter.InterestsPayDot>
+
+                    <TextView
+                        android:id="@+id/loanDetail_tv_interest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="支付利息:"
+                        android:textColor="@color/titleColor"
+                        android:textSize="@dimen/title_font_size" />
+
+                    <TextView
+                        android:id="@+id/loanDetail_tv_interestContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text=""
+                        android:textColor="@color/titleColor"
+                        android:textSize="@dimen/value_font_size" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/loanSummary_monthPay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/loanDetail_interest"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:text="月均还款:"
+                    android:textColor="@color/titleColor"
+                    android:textSize="@dimen/title_font_size" />
+
+                <TextView
+                    android:id="@+id/loanSummary_monthPayContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/loanSummary_monthPay"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/loanSummary_monthPay"
+                    android:text=""
+                    android:textColor="@color/titleColor"
+                    android:textSize="@dimen/value_font_size" />
+
+                <TextView
+                    android:id="@+id/loanSummary_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/loanSummary_monthPay"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:text="贷款月数:"
+                    android:textColor="@color/titleColor"
+                    android:textSize="@dimen/title_font_size" />
+
+                <TextView
+                    android:id="@+id/loanSummary_monthContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/loanSummary_month"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/loanSummary_month"
+                    android:text=""
+                    android:textColor="@color/titleColor"
+                    android:textSize="@dimen/value_font_size" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fglc_rl_loanDetail"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginTop="20dp"
+                android:text="以上计算结果仅供参考"
+                android:textSize="@dimen/red_buttom_textSize" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:id="@+id/listview_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:layout_marginTop="10dp"
+                android:background="#E6E6E6"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="@dimen/margin"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:text="月份"
+                    android:textColor="@color/titleColor"
+                    android:textSize="@dimen/loan_list_title_size" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:text="月供"
+                    android:textColor="@color/titleColor"
+                    android:textSize="@dimen/loan_list_title_size" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1.5"
+                    android:text="月供本金"
+                    android:textColor="@color/titleColor"
+                    android:textSize="@dimen/loan_list_title_size" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1.5"
+                    android:text="月供利息"
+                    android:textColor="@color/titleColor"
+                    android:textSize="@dimen/loan_list_title_size" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:text="剩余"
+                    android:textColor="@color/titleColor"
+                    android:textSize="@dimen/loan_list_title_size" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/loan_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/listview_title"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:divider="#e6e6e6"
+                android:dividerHeight="1px" >
+            </ListView>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#333333"
+    android:orientation="vertical" >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/redTitle_height"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ac_appmenu_title" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"  >
+        <ImageView
+            android:id="@+id/userHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_left"
+            android:src="@drawable/ac_appmenu_user" />
+        <LinearLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/userHeader"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_left" >
+            <TextView
+	            android:id="@+id/userName"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="0dp"
+	            android:textColor="@color/whiteColor"
+	            android:textSize="@dimen/username_font_size" />
+	        <TextView
+	            android:id="@+id/loginDate"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="0dp"
+	            android:layout_marginTop="5dp"
+	            android:textColor="@color/whiteColor"
+	            android:textSize="@dimen/username_font_size" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/newVersionTip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="@color/redColor"
+        android:visibility="gone" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="center"
+        android:src="@drawable/ac_appmenu_divider" />
+
+    <com.android.uitableview.UITableView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:paddingTop="15dp"
+        android:listSelector="#333333"
+        android:divider="@null"/>
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView 
+            android:id="@+id/Textversion"
+            android:layout_width="95dip"
+            android:layout_height="50dip"
+            android:gravity="center_vertical"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="20dip"
+            android:textSize="20sp"
+            android:text="1231"
+            android:textColor="@color/colorC3C3C3"
+            />
+    <ImageButton
+        android:id="@+id/setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"  
+        android:layout_toRightOf="@id/Textversion"
+        android:background="#333333"
+        android:src="@drawable/ac_appmenu_setting" />
+    </RelativeLayout>
+</LinearLayout>

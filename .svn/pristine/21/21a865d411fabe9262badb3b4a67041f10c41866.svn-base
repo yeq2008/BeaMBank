@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 页面背景颜色 -->
+    <color name="FragmentBackColor">#EFEFEF</color>
+    <!-- 导航栏背景颜色 -->
+    <color name="NaviBarColor">#33365E</color>
+    <!-- 透明色 -->
+    <color name="transparentColor">#00000000</color>
+
+    <drawable name="transparentColor">#00000000</drawable>
+    <!-- 白色 -->
+    <color name="whiteColor">#FFFFFF</color>
+    <!-- 黑色 -->
+
+<drawable name="listbg">#E6E6E6</drawable>
+    <!-- 白色 -->
+    <drawable name="white">#FFFFFF</drawable>
+
+    <color name="listitemColor">#6E6E6E</color>
+    <color name="blackColor">#000000</color>
+    <!-- 页面遮罩颜色 -->
+    <color name="mask_color">#b5555555</color>
+
+    <!-- 535353色 -->
+    <color name="color535353">#535353</color>
+    <!-- 858585色 -->
+    <color name="color858585">#858585</color>
+    <!-- 33365e色 -->
+    <color name="color33365e">#33365E</color>
+    <!-- E4E4E4色 -->
+    <color name="colore4e4e4">#E4E4E4</color>
+    <!-- 272727色 -->
+    <color name="color272727">#272727</color>
+    <!-- FD8913色 -->
+    <color name="colorFD8913">#FD8913</color>
+    <!-- A0C1F8色 -->
+    <color name="colorA0C1F8">#A0C1F8</color>
+    <!-- C3C3C3色 -->
+    <color name="colorC3C3C3">#C3C3C3</color>
+
+    <!-- 红色 -->
+    <color name="redColor">#FF0000</color>
+
+    <drawable name="redColor">#FF0000</drawable>
+    <!-- 黄色 -->
+    <color name="yellowColor1">#FD8913</color>
+    <color name="yellowColor2">#FC6A0A</color>
+    <color name="yellowColor3">#FC9A19</color>
+    <color name="yellowColor4">#F87C09</color>
+
+    <!-- 分割线颜色 -->
+    <color name="divider">#807674</color>
+    <color name="divider_list">#dadada</color>
+
+    <!-- 页面通用背景色 -->
+    <color name="simple_bg_color">#E7E7E7</color>
+    <color name="simple_listitem_bg_normal">#FFFFFF</color>
+    <color name="simple_listitem_bg_press">#ACACAC</color>
+
+    <!-- 个人主页菜单项正常状态下颜色 -->
+    <color name="UserMenuItemBackColor_Normal">#675A54</color>
+    <!-- 个人主页菜单项高亮状态下颜色 -->
+    <color name="UserMenuItemBackColor_Highlited">#524843</color>
+    <!-- 登录页面选项卡下面的滑块颜色 -->
+    <color name="LoginViewMenuSliderBackColor_Highlited">#FD8913</color>
+    <!-- 标题颜色 -->
+    <color name="titleColor">#000000</color>
+    <!-- 内容颜色颜色 -->
+    <color name="contentColor">#999999</color>
+
+    <color name = "groupviewTitleColor">#FFFFFF</color>
+</resources>

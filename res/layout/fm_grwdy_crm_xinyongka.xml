@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_leftOrRight"
+        android:layout_marginRight="@dimen/margin_leftOrRight" >
+
+        <com.android.widgets.BottomLineTitleView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_topOrBottom"
+            android:textColor="@color/blackColor"
+            app:bl_lineColor="#e7e7e7"
+            app:bl_lineSize="1px"
+            app:bl_selectorColor="@color/redColor"
+            app:bl_title="信用卡"
+            app:bl_titleColor="@color/blackColor"
+            app:bl_titleFont="@dimen/bottom_line_title_textSize" />
+
+        <ImageView
+            android:id="@+id/iv_return"
+            android:layout_width="@dimen/grwdy_returnBtn_width"
+            android:layout_height="@dimen/grwdy_returnBtn_height"
+            android:layout_gravity="right"
+            android:layout_marginTop="@dimen/image_layout_marginTop"
+            android:src="@drawable/fm_grwdy_return" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/grwdy_crm_height"
+        android:layout_marginLeft="@dimen/margin_leftOrRight"
+        android:layout_marginRight="@dimen/margin_leftOrRight"
+        android:layout_marginTop="@dimen/padding_topOrBottom"
+        android:background="#F0F0F0"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="币种"
+            android:textColor="@color/blackColor"
+            android:textSize="@dimen/crmtitlefont" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="产品分类"
+            android:textColor="@color/blackColor"
+            android:textSize="@dimen/crmtitlefont" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="贷款余额"
+            android:textColor="@color/blackColor"
+            android:textSize="@dimen/crmtitlefont" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="积分余额"
+            android:textColor="@color/blackColor"
+            android:textSize="@dimen/crmtitlefont" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="当期应还金额"
+            android:textColor="@color/blackColor"
+            android:textSize="@dimen/crmtitlefont" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="账单日"
+            android:textColor="@color/blackColor"
+            android:textSize="@dimen/crmtitlefont" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="固定循环额度"
+            android:textColor="@color/blackColor"
+            android:textSize="@dimen/crmtitlefont" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|left"
+            android:text="账户状态"
+            android:textColor="@color/blackColor"
+            android:textSize="@dimen/crmtitlefont" />
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_topOrBottom"
+        android:layout_marginLeft="@dimen/margin_leftOrRight"
+        android:layout_marginRight="@dimen/margin_leftOrRight" />
+
+</LinearLayout>

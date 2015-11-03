@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:padding="10dp"
+	android:orientation="vertical" >
+	<RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content" >
+	    <RadioGroup
+		    android:id="@+id/fgp_rg"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal" >
+		<RadioButton
+			android:id="@+id/fgp_rb01"
+			android:layout_width="wrap_content"
+			android:layout_height="50dp"
+			android:checked="true"
+			android:background="@drawable/pingan_dtaskbtn"
+			android:button="@null"
+			android:gravity="left"
+			android:paddingTop="13dp"
+			android:paddingLeft="45dp"
+			android:text="待选择任务 "
+			android:textColor="@color/blackColor"
+			android:textSize="@dimen/paxb_switch_task_textSize" />
+		<RadioButton
+			android:id="@+id/fgp_rb02"
+			android:layout_width="wrap_content"
+			android:layout_height="50dp"
+			android:layout_marginLeft="10dp"
+			android:background="@drawable/pingan_taskbtn"
+			android:button="@null"
+			android:gravity="left"
+			android:paddingTop="10dp"
+			android:paddingLeft="45dp"
+			android:text="我的任务 "
+			android:textColor="@color/blackColor"
+			android:textSize="@dimen/paxb_switch_task_textSize" />
+		</RadioGroup>
+		<ImageButton 
+		    android:id="@+id/paxb_reset"
+		    android:layout_width="40dp"
+		    android:layout_height="40dp"
+		    android:background="@drawable/btn_reset" 
+		    android:layout_alignParentRight="true" />
+	</RelativeLayout>
+	<FrameLayout
+        android:id="@+id/gfp_fl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+    	android:background="#FFFFFF" >
+    </FrameLayout>
+</LinearLayout>

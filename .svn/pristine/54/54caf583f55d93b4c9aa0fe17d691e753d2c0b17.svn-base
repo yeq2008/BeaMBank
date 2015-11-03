@@ -1,0 +1,51 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="AppTheme.GroupTagDialog" parent="android:Theme.Holo.Light.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@color/whiteColor</item>
+    </style>
+    
+    <style name="AppTheme.Dialog" parent="android:Theme.Holo.Light.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@color/whiteColor</item>
+    </style>
+
+    <style name="AppTheme.popupWindow" parent="@android:style/Theme.Dialog">
+　　     <item name="android:windowFrame">@null</item>
+　　     <item name="android:windowIsFloating">true</item>
+　　     <item name="android:windowIsTranslucent">false</item>
+　　     <item name="android:windowNoTitle">true</item>
+　　     <item name="android:windowBackground">@android:color/transparent</item>
+　　     <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    
+    <!-- popwidnow 显示/消失动画 -->
+ 	<style name="popwindow_anim_style_down">
+ 	    <!-- 指定显示的动画xml  -->
+   		<item name="android:windowEnterAnimation">@anim/down_popshow_anim</item>  
+   		<!-- 指定消失的动画xml  -->      
+   		<item name="android:windowExitAnimation">@anim/down_pophidden_anim</item>       
+ 	</style>  
+	
+</resources>

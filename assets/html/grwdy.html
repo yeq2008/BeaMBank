@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title></title>
+<link rel="stylesheet" href="file:///android_asset/css/grwdy.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="file:///android_asset/css/core.css" type="text/css" media="screen" />
+<script type="text/javascript" src="file:///android_asset/js/prototype-1.6.0.2.js"></script>
+<script type="text/javascript" src="file:///android_asset/js/grwdy.js"></script>
+<script type="text/javascript">
+	function loadHint(flag){
+		var ss = '<label style="font-size: 16px;color: #333333;">'
+			+ ' 本人证实，本人与东亚银行集团任何董事/雇员并无亲属关系，本人承诺，若于此申请表签署后，本人与东亚银行集团任何董事/雇员有任何亲属'
+			+ '关系的，本人将尽快通知 贵行。'
+			+ '</label><br/>';
+		document.getElementById('model1_1').innerHTML = ss;
+			
+		var s = '';
+		if('3' == flag)
+			return;
+			
+		if('2' == flag){
+			s =  '<label style="font-size: 16px;color: #333333;"><b>自主支付:</b></label>'
+			   + '<label style="font-size: 16px;color: #333333;">'
+			   + ' 本人授权 贵行将贷款发放至以下本人在 贵行现有借记卡账户，并授权 贵行按期从本人在 贵行所开立的账户中扣取个人贷款还款金额。'
+			   + '</label><br/><br/>'
+			   + '<label style="font-size: 16px;color: #333333;"><b>特别声明:</b></label>'
+			   + '<label style="font-size: 16px;color: #333333;">'
+			   + ' 本人承诺上述账户为本人名下账户或认可之受托账户，'
+			   + '相关账户信息完全真实准确，如因相关信息不实造成 贵行所发放贷款/划款被退还，或因此而导'
+			   + '致的任何损失（包括但不限于承担资金划转费用、贷款利息等）由本人自行承担。若上述还款账户发生挂失、冻结、结清，超过有效期，或本人需要变更'
+			   + '还款账户等情况，本人承诺于 10 个银行营业日内至 贵行办理变更手续，重新签订还款账户授权书，若因本人未及时办理相关手续造成 贵行无法按时'
+			   + '从上述账户足额扣除相应还款金额，由此造成的贷款逾期罚息、不良信用记录等结果，均由本人自行承担。</label><br/><br/>';
+		}
+		var tmp = '<label style="font-size: 16px;color: #333333;"><b>特别提示:</b></label>'
+			+ '<label style="font-size: 16px;color: #333333;">'
+			+ ' 根据中国银行业监督管理委员会 有关规定，贷款资金可用于各类合法合规的消费支出，不能用于无明确用途的个人支出，不得用于投资任何'
+			+ '房地产项目、证券市场、借贷牟取非法收入、违规用于股本权益性投资、或将贷款用于国家政策禁止信贷资金流入的其他行业。'
+			+ '</label><br/>';
+		document.getElementById('model7_1').innerHTML = s + tmp;
+	}
+</script>
+</head>
+<body onload="javascript:jsHelper.loadData()">
+	<div id="model1" style="display: none;">
+		<div class="divtitle">
+			<input type="text" readonly="readonly" value="借款人个人资料" class="title"/>
+		</div>
+		<div class="divtitle">
+			<hr style="float: left;height: 1px;width: 18%;border: none;border-top: 1px solid red;margin-top: 10px;">
+			<hr style="float: left;height: 1px;width:82%;border: none;border-top: 1px solid #E6E6E6;margin-top: 10px;">
+			<div style="clear: left;"></div>
+		</div>
+		<div class="divtitle" style="padding-bottom: 10px;">
+			<table id="table1" class="table"> </table>
+		</div>
+		<div class="RoundedCorner">
+			<b class="rtop">
+				<b class="r1"></b>
+				<b class="r2"></b>
+				<b class="r3"></b>
+				<b class="r4"></b>
+			</b>
+			<div id="model1_1" style="font-size: 16px;padding: 10px;"></div>
+			<b class="rbottom">
+				<b class="r4"></b>
+				<b class="r3"></b>
+				<b class="r2"></b>
+				<b class="r1"></b>
+			</b>
+		</div>
+	</div>
+	
+	<div id="model2" style="display: none;margin-top: 40px;">
+		<div class="divtitle">
+			<input type="text" readonly="readonly" value="借款人职业资料" class="title"/>
+		</div>
+		<div class="divtitle">
+			<hr style="float: left;height: 1px;width: 18%;border: none;border-top: 1px solid red;margin-top: 10px;">
+			<hr style="float: left;height: 1px;width:82%;border: none;border-top: 1px solid #E6E6E6;margin-top: 10px;">
+			<div style="clear: left;"></div>
+		</div>
+		<div class="divtitle">
+			<table id="table2" class="table"> </table>
+		</div>
+	</div>
+	
+	<div id="model5" style="display: none;margin-top: 40px;">
+		<div class="divtitle">
+			<input type="text" readonly="readonly" value="联系人信息" class="title"/>
+		</div>
+		<div class="divtitle">
+			<hr style="float: left;height: 1px;width: 13%;border: none;border-top: 1px solid red;margin-top: 10px;">
+			<hr style="float: left;height: 1px;width:87%;border: none;border-top: 1px solid #E6E6E6;margin-top: 10px;">
+			<div style="clear: left;"></div>
+		</div>
+		<div class="divtitle">
+			<table id="table5" class="table"> </table>
+		</div>
+	</div>
+	
+	<div id="model3" style="display: none;margin-top: 40px;">
+		<div class="divtitle">
+			<input type="text" readonly="readonly" value="借款人资产" class="title"/>
+		</div>
+		<div class="divtitle">
+			<hr style="float: left;height: 1px;width: 18%;border: none;border-top: 1px solid red;margin-top: 10px;">
+			<hr style="float: left;height: 1px;width:82%;border: none;border-top: 1px solid #E6E6E6;margin-top: 10px;">
+			<div style="clear: left;"></div>
+		</div>
+		<div class="divtitle">
+			<table id="table3_1" class="titletable">
+				<thead>
+					<tr style="background-color: #f0f0f0;">
+						<td> <input type="text" readonly="readonly" class="titletable_inputtitle" value="项目资产分类"/> </td> 
+						<td> <input type="text" readonly="readonly" class="titletable_inputtitle" value="币种"/> </td>
+						<td> <input type="text" readonly="readonly" class="titletable_inputtitle" value="余额"/> </td>
+					</tr>
+				</thead>
+				<tbody id="tbody3_1" ></tbody>
+			</table>
+		</div>
+		
+		<div class="divtitle" style="margin-top: 40px;">
+			<input type="text" readonly="readonly" value="借款人负债" class="title"/>
+		</div>
+		<div class="divtitle">
+			<hr style="float: left;height: 1px;width: 18%;border: none;border-top: 1px solid red;margin-top: 10px;">
+			<hr style="float: left;height: 1px;width:82%;border: none;border-top: 1px solid #E6E6E6;margin-top: 10px;">
+			<div style="clear: left;"></div>
+		</div>
+		<div class="divtitle">
+			<table id="table3_2" class="titletable">
+				<thead>
+					<tr style="background-color: #f0f0f0;">
+						<td style="width: 20%;"> <input type="text" readonly="readonly" class="titletable_inputtitle" value="资产项目分类"/> </td>
+						<td style="width: 20%;"> <input type="text" readonly="readonly" class="titletable_inputtitle" value="币种"/> </td>
+						<td style="width: 20%;"> <input type="text" readonly="readonly" class="titletable_inputtitle" value="余额"/> </td>
+						<td style="width: 20%;"> <input type="text" readonly="readonly" class="titletable_inputtitle" value="授信额度"/> </td>
+						<td style="width: 20%;"> <input type="text" readonly="readonly" class="titletable_inputtitle" value="每月还款余额"/> </td> 
+					</tr>
+				</thead>
+				<tbody id="tbody3_2" ></tbody>
+			</table>
+		</div>
+	</div>
+	
+	<div id="model4" style="display: none;margin-top: 40px;">
+		<div class="divtitle">
+			<input type="text" readonly="readonly" value="共同借款人个人资料" class="title"/>
+		</div>
+		<div class="divtitle">
+			<hr style="float: left;height: 1px;width: 23%;border: none;border-top: 1px solid red;margin-top: 10px;">
+			<hr style="float: left;height: 1px;width:77%;border: none;border-top: 1px solid #E6E6E6;margin-top: 10px;">
+			<div style="clear: left;"></div>
+		</div>
+		<div class="divtitle">
+			<table id="table4" class="table"> </table>
+		</div>
+	</div>
+	
+	<div id="model6" style="display: none;margin-top: 40px;">
+		<div class="divtitle">
+			<input type="text" readonly="readonly" value="借款人配偶信息" class="title"/>
+		</div>
+		<div class="divtitle">
+			<hr style="float: left;height: 1px;width: 18%;border: none;border-top: 1px solid red;margin-top: 10px;">
+			<hr style="float: left;height: 1px;width:82%;border: none;border-top: 1px solid #E6E6E6;margin-top: 10px;">
+			<div style="clear: left;"></div>
+		</div>
+		<div class="divtitle" style="padding-bottom: 10px;">
+			<table id="table6" class="table"> </table>
+		</div>
+		<div class="RoundedCorner">
+			<b class="rtop">
+				<b class="r1"></b>
+				<b class="r2"></b>
+				<b class="r3"></b>
+				<b class="r4"></b>
+			</b>
+			<div style="font-size: 16px;padding: 10px;">
+				<label style="font-size: 16px;color: #333333;"><b>特别声明:</b></label>
+				<label style="font-size: 16px;color: #333333;">
+					本人知悉此项贷款之申请，并用于家庭相关所需支出。
+				</label>
+			</div>
+			<b class="rbottom">
+				<b class="r4"></b>
+				<b class="r3"></b>
+				<b class="r2"></b>
+				<b class="r1"></b>
+			</b>
+		</div>
+	</div>
+	
+	<div id="model7" style="display: none;margin-top: 40px;">
+		<div class="divtitle">
+			<input type="text" readonly="readonly" value="申请贷款及费用信息" class="title"/>
+		</div>
+		<div class="divtitle">
+			<hr style="float: left;height: 1px;width: 23%;border: none;border-top: 1px solid red;margin-top: 10px;">
+			<hr style="float: left;height: 1px;width:77%;border: none;border-top: 1px solid #E6E6E6;margin-top: 10px;">
+			<div style="clear: left;"></div>
+		</div>
+		<div class="divtitle" style="padding-bottom: 10px;">
+			<table id="table7" class="table"> </table>
+		</div>
+		<div class="RoundedCorner">
+			<b class="rtop">
+				<b class="r1"></b>
+				<b class="r2"></b>
+				<b class="r3"></b>
+				<b class="r4"></b>
+			</b>
+			<div id="model7_1" style="font-size: 16px;padding: 10px;"></div>
+			<b class="rbottom">
+				<b class="r4"></b>
+				<b class="r3"></b>
+				<b class="r2"></b>
+				<b class="r1"></b>
+			</b>
+		</div>
+	</div>
+	
+	<div id="model8" style="display: none;margin-top: 40px;">
+		<div class="divtitle">
+			<input type="text" readonly="readonly" value="个人基本资料" class="title"/>
+		</div>
+		<div class="divtitle">
+			<hr style="float: left;height: 1px;width: 20%;border: none;border-top: 1px solid red;margin-top: 10px;">
+			<hr style="float: left;height: 1px;width:80%;border: none;border-top: 1px solid #E6E6E6;margin-top: 10px;">
+			<div style="clear: left;"></div>
+		</div>
+		<div class="divtitle">
+			<table id="table8" class="table"> </table>
+		</div>
+	</div>
+</body>
+</html>

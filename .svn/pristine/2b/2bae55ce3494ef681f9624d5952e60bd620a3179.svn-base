@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.bea.mbank"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margin" >
+
+    <com.android.widgets.BottomLineTitleView
+        android:id="@+id/apply_bltv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bl_lineColor="#e7e7e7"
+        app:bl_lineSize="1px"
+        app:bl_selectorColor="@color/redColor"
+        app:bl_title="申请贷款及费用信息"
+        app:bl_titleColor="@color/blackColor"
+        app:bl_titleFont="@dimen/bottom_line_title_textSize" />
+
+    <LinearLayout
+        android:id="@+id/chanpinleixing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/apply_bltv"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/productTypeTitle"
+            android:layout_width="@dimen/grouptext_width"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:text="产品类型"
+            android:textColor="@color/blackColor"
+            android:textSize="@dimen/title_font_size" />
+
+        <com.bea.mbank.widgets.GroupTagViewEx
+            android:id="@+id/productTypeValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/daikuan_jine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/chanpinleixing"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_ilmoney"
+            android:layout_width="@dimen/grouptext_width"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:text="贷款金额"
+            android:textColor="@color/titleColor"
+            android:textSize="@dimen/title_font_size" />
+
+        <EditText
+            android:id="@+id/et_ilmoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="left|center_vertical"
+            android:hint="贷款金额"
+            android:inputType="numberDecimal"
+            android:maxLength="18"
+            android:paddingLeft="5dp"
+            android:textColor="@color/contentColor"
+            android:textSize="@dimen/value_font_size" />
+
+        <TextView
+            android:id="@+id/joint_yuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:gravity="left|center_vertical"
+            android:text="元"
+            android:textColor="@color/contentColor"
+            android:textSize="@dimen/value_font_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/daikuan_qixian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/daikuan_jine"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_irperiod"
+            android:layout_width="@dimen/grouptext_width"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:text="贷款期限"
+            android:textColor="@color/blackColor"
+            android:textSize="@dimen/title_font_size" />
+
+        <com.bea.mbank.widgets.GroupTagViewEx
+            android:id="@+id/gtv_irperiod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/grouptop" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/daikuan_yongtu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/daikuan_qixian"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/apply_dkuanyt"
+            android:layout_width="@dimen/grouptext_width"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:text="贷款用途"
+            android:textColor="@color/blackColor"
+            android:textSize="@dimen/title_font_size" />
+
+        <com.bea.mbank.widgets.GroupTagViewEx
+            android:id="@+id/apply_dkuanytview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_irperiod"
+            android:layout_marginTop="@dimen/grouptop"
+            app:gt_hintText="贷款用途" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/yongtu_beizhu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/daikuan_yongtu"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/apply_tv_ocomment"
+            android:layout_width="@dimen/grouptext_width"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="用途备注"
+            android:textColor="@color/titleColor"
+            android:textSize="@dimen/title_font_size" />
+
+        <EditText
+            android:id="@+id/apply_et_ocomment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="用途备注"
+            android:textColor="@color/contentColor"
+            android:textSize="@dimen/value_font_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/daikuan_zhifufangshi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/yongtu_beizhu"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/apply_dkkuanzfs"
+            android:layout_width="@dimen/grouptext_width"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:text="贷款支付方式"
+            android:textColor="@color/blackColor"
+            android:textSize="@dimen/title_font_size" />
+
+        <com.bea.mbank.widgets.GroupTagViewEx
+            android:id="@+id/apply_dkkuanzfsview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/grouptop" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/isjieshou_duanxin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/daikuan_zhifufangshi"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/apply_dkduanxin"
+            android:layout_width="@dimen/grouptext_width"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:text="不接收贷款短信"
+            android:textColor="@color/blackColor"
+            android:textSize="@dimen/title_font_size"
+            android:visibility="gone" />
+
+        <com.bea.mbank.widgets.GroupTagViewEx
+            android:id="@+id/apply_dkduanxinview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/apply_dkkuanzfs"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/apply_dkduanxin"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/jingbanren"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/isjieshou_duanxin"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <com.android.widgets.TitleValueView
+            android:id="@+id/apply_jingbanren"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tv_title="经办人"
+            app:tv_titleColor="@color/blackColor"
+            app:tv_titleFont="@dimen/title_font_size"
+            app:tv_titleWidth="@dimen/grouptext_width"
+            app:tv_valueColor="@color/contentColor"
+            app:tv_valueEnable="false"
+            app:tv_valueFont="@dimen/value_font_size"
+            app:tv_valueHint="经办人" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lilv_leixing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/jingbanren"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/apply_lilvlxing"
+            android:layout_width="@dimen/grouptext_width"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:text="利率类型"
+            android:textColor="@color/blackColor"
+            android:textSize="@dimen/title_font_size" />
+
+        <com.bea.mbank.widgets.GroupTagViewEx
+            android:id="@+id/apply_lilvlxingview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/grouptop" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_ifluctuate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lilv_leixing"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tv_ifluctuate"
+            android:layout_width="@dimen/grouptext_width"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:text="浮动幅度"
+            android:textColor="@color/titleColor"
+            android:textSize="@dimen/title_font_size" />
+
+        <EditText
+            android:id="@+id/et_ifluctuate"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_ifluctuate"
+            android:background="@null"
+            android:digits="0123456789.-"
+            android:gravity="left|center_vertical"
+            android:inputType="numberSigned|numberDecimal"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:textColor="@color/contentColor"
+            android:textSize="@dimen/value_font_size" />
+
+        <TextView
+            android:id="@+id/tv_fd_bfh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/et_ifluctuate"
+            android:gravity="left|center_vertical"
+            android:text="%"
+            android:textColor="@color/contentColor"
+            android:textSize="@dimen/value_font_size" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/zhixing_lilv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/rl_ifluctuate"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_iar"
+            android:layout_width="@dimen/grouptext_width"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:text="执行利率"
+            android:textColor="@color/titleColor"
+            android:textSize="@dimen/title_font_size" />
+
+        <EditText
+            android:id="@+id/et_iar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:digits="0123456789."
+            android:gravity="left|center_vertical"
+            android:hint="执行利率"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:textColor="@color/contentColor"
+            android:textSize="@dimen/value_font_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:gravity="left|center_vertical"
+            android:text="%"
+            android:textColor="@color/contentColor"
+            android:textSize="@dimen/value_font_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/huankuan_fangshi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/zhixing_lilv"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/apply_huankuanfs"
+            android:layout_width="@dimen/grouptext_width"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:text="还款方式"
+            android:textColor="@color/blackColor"
+            android:textSize="@dimen/title_font_size" />
+
+        <com.bea.mbank.widgets.GroupTagViewEx
+            android:id="@+id/apply_gtvhuankuanfs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/grouptop"
+            app:gt_hintText="请选择" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/huankuan_zhouqi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/huankuan_fangshi"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/apply_huankuanzq"
+            android:layout_width="@dimen/grouptext_width"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:text="还款周期"
+            android:textColor="@color/blackColor"
+            android:textSize="@dimen/title_font_size" />
+
+        <com.bea.mbank.widgets.GroupTagViewEx
+            android:id="@+id/apply_gtvhuankuanzq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/grouptop" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_loanPayMethod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/huankuan_zhouqi" >
+
+        <TextView
+            android:id="@+id/apply_zaixianzf"
+            android:layout_width="@dimen/grouptext_width"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:text="是否在线支付"
+            android:textColor="@color/blackColor"
+            android:textSize="@dimen/title_font_size" />
+
+        <com.bea.mbank.widgets.GroupTagViewEx
+            android:id="@+id/apply_zaixianzfview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/apply_zaixianzf"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/apply_zaixianzf" />
+
+        <TextView
+            android:id="@+id/apply_fangkuanbz"
+            android:layout_width="@dimen/grouptext_width"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/apply_zaixianzf"
+            android:gravity="left|center_vertical"
+            android:text="放款账户币种"
+            android:textColor="@color/blackColor"
+            android:textSize="@dimen/title_font_size" />
+
+        <com.bea.mbank.widgets.GroupTagViewEx
+            android:id="@+id/apply_fangkuanbzview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/apply_zaixianzf"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/apply_fangkuanbz"
+            app:gt_hintText="点击选择"
+            app:gt_spinnerShow="true" />
+
+        <com.android.widgets.TitleValueView
+            android:id="@+id/apply_fangkuanzhangh"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/apply_fangkuanbz"
+            app:tv_title="放款账户卡号"
+            app:tv_titleColor="@color/blackColor"
+            app:tv_titleFont="@dimen/title_font_size"
+            app:tv_titleWidth="@dimen/grouptext_width"
+            app:tv_valueColor="@color/contentColor"
+            app:tv_valueFont="@dimen/value_font_size"
+            app:tv_valueHint="放款账户卡号"
+            app:tv_valueInputType="number" />
+
+        <com.android.widgets.XCImageButton
+            android:id="@+id/fkzhCheckButton"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/apply_fangkuanbz"
+            android:layout_toRightOf="@id/apply_fangkuanzhangh"
+            android:background="@null"
+            android:scaleType="center"
+            android:src="@drawable/cardvalid_check" />
+
+        <com.android.widgets.TitleValueView
+            android:id="@+id/apply_fangkuanzhanghname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/apply_fangkuanzhangh"
+            app:tv_title="放款账户名称"
+            app:tv_titleColor="@color/blackColor"
+            app:tv_titleFont="@dimen/title_font_size"
+            app:tv_titleWidth="@dimen/grouptext_width"
+            app:tv_valueColor="@color/contentColor"
+            app:tv_valueFont="@dimen/value_font_size"
+            app:tv_valueHint="放款账户名称" />
+
+        <TextView
+            android:id="@+id/apply_hktongfk"
+            android:layout_width="@dimen/grouptext_width"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/apply_fangkuanzhanghname"
+            android:gravity="left|center_vertical"
+            android:paddingRight="20dp"
+            android:text="还款账户是否同放款账户"
+            android:textColor="@color/blackColor"
+            android:textSize="@dimen/title_font_size" />
+
+        <com.bea.mbank.widgets.GroupTagViewEx
+            android:id="@+id/apply_hktongfkview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/apply_fangkuanzhanghname"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/apply_hktongfk" />
+
+        <TextView
+            android:id="@+id/apply_huankuanzhbiz"
+            android:layout_width="@dimen/grouptext_width"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/apply_hktongfk"
+            android:gravity="left|center_vertical"
+            android:text="还款账户币种"
+            android:textColor="@color/blackColor"
+            android:textSize="@dimen/title_font_size" />
+
+        <com.bea.mbank.widgets.GroupTagViewEx
+            android:id="@+id/apply_huankuanzhbizkview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/apply_hktongfk"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/apply_huankuanzhbiz"
+            app:gt_hintText="还款账户币种"
+            app:gt_spinnerShow="true" />
+
+        <com.android.widgets.TitleValueView
+            android:id="@+id/apply_huankuanzhkh"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/apply_huankuanzhbiz"
+            app:tv_title="还款账户卡号"
+            app:tv_titleColor="@color/blackColor"
+            app:tv_titleFont="@dimen/title_font_size"
+            app:tv_titleWidth="@dimen/grouptext_width"
+            app:tv_valueColor="@color/contentColor"
+            app:tv_valueFont="@dimen/value_font_size"
+            app:tv_valueHint="还款账户卡号"
+            app:tv_valueInputType="number" />
+
+        <com.android.widgets.XCImageButton
+            android:id="@+id/hkzhCheckButton"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/apply_huankuanzhbiz"
+            android:layout_toRightOf="@id/apply_huankuanzhkh"
+            android:background="@null"
+            android:scaleType="center"
+            android:src="@drawable/cardvalid_check" />
+
+        <com.android.widgets.TitleValueView
+            android:id="@+id/apply_huankuanzhhm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/apply_huankuanzhkh"
+            app:tv_title="还款账户户名"
+            app:tv_titleColor="@color/blackColor"
+            app:tv_titleFont="@dimen/title_font_size"
+            app:tv_titleWidth="@dimen/grouptext_width"
+            app:tv_valueColor="@color/contentColor"
+            app:tv_valueFont="@dimen/value_font_size"
+            app:tv_valueHint="还款账户户名" />
+
+        <TextView
+            android:id="@+id/apply_tv_ibbank"
+            android:layout_width="@dimen/grouptext_width"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/apply_huankuanzhhm"
+            android:gravity="left|center_vertical"
+            android:text="开户行代码"
+            android:textColor="@color/titleColor"
+            android:textSize="@dimen/title_font_size" />
+
+        <EditText
+            android:id="@+id/apply_et_ibbank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/apply_huankuanzhhm"
+            android:layout_toRightOf="@+id/apply_tv_ibbank"
+            android:background="@null"
+            android:gravity="left|center_vertical"
+            android:hint="还款账户开户行代码(4位数)"
+            android:inputType="number"
+            android:maxLength="4"
+            android:paddingLeft="5dp"
+            android:textColor="@color/contentColor"
+            android:textSize="@dimen/value_font_size" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/zhanghu_guanli"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/rl_loanPayMethod"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_Management"
+            android:layout_width="@dimen/grouptext_width"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:text="账户管理费率"
+            android:textColor="@color/titleColor"
+            android:textSize="@dimen/title_font_size" />
+
+        <EditText
+            android:id="@+id/et_Management"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:digits="0123456789."
+            android:gravity="left|center_vertical"
+            android:inputType="numberSigned|numberDecimal"
+            android:singleLine="true"
+            android:textColor="@color/contentColor"
+            android:textSize="@dimen/value_font_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:gravity="left|center_vertical"
+            android:text="%"
+            android:textColor="@color/contentColor"
+            android:textSize="@dimen/value_font_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/jiaofei_zhouqi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/zhanghu_guanli"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/apply_Period"
+            android:layout_width="@dimen/grouptext_width"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:text="缴费周期"
+            android:textColor="@color/blackColor"
+            android:textSize="@dimen/title_font_size" />
+
+        <com.bea.mbank.widgets.GroupTagViewEx
+            android:id="@+id/apply_gtvPeriod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/grouptop" />
+    </LinearLayout>
+
+</RelativeLayout>

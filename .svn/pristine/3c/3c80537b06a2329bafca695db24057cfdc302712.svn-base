@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.bea.mbank"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center" >
+
+    <RelativeLayout
+        android:id="@+id/appset_Setting_RelativeLayout"
+        android:layout_width="440dp"
+        android:layout_height="560dp"
+        android:background="@drawable/ac_appset_settingshap"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/appset_TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="密码修改"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/appset_ImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/appset_TextView"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="100dp"
+            android:gravity="center"
+            android:text="*"
+            android:textColor="#FF0000"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/appset_EditText_Original"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@+id/appset_ImageView"
+            android:layout_below="@+id/appset_TextView"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="100dp"
+            android:layout_toRightOf="@+id/appset_ImageView"
+            android:background="@drawable/ac_appset_selector_editframe"
+            android:gravity="center|left"
+            android:hint="请输入原密码"
+            android:inputType="textPassword"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textColor="@color/blackColor"
+            android:textSize="16sp" />
+
+        <requestFocus />
+
+        <TextView
+            android:id="@+id/appset_ImageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignLeft="@+id/appset_ImageView"
+            android:layout_below="@+id/appset_ImageView"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="*"
+            android:textColor="#FF0000"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/appset_EditText_Unused"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@+id/appset_ImageView1"
+            android:layout_below="@+id/appset_EditText_Original"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@+id/appset_ImageView1"
+            android:background="@drawable/ac_appset_selector_editframe"
+            android:gravity="center|left"
+            android:hint="请输入新密码"
+            android:inputType="textPassword"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textColor="@color/blackColor"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/appset_ImageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignLeft="@+id/appset_ImageView"
+            android:layout_below="@+id/appset_ImageView1"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="*"
+            android:textColor="#FF0000"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/appset_EditText_Again"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@+id/appset_ImageView2"
+            android:layout_below="@+id/appset_EditText_Unused"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@+id/appset_ImageView2"
+            android:background="@drawable/ac_appset_selector_editframe"
+            android:gravity="center|left"
+            android:hint="请再次输入密码"
+            android:inputType="textPassword"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textColor="@color/blackColor"
+            android:textSize="16sp" /> 
+
+        <com.android.widgets.XCButton
+            android:id="@+id/appset_AffirmButton"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/appset_EditText_Again"
+             android:layout_marginTop="50dp"
+            android:layout_marginLeft="70dp"
+            android:background="@drawable/ac_appset_setting_affirmbutton"
+            android:gravity="center"
+            android:text="确      定"
+            android:textColor="@color/whiteColor" />
+    </RelativeLayout>
+
+</RelativeLayout>

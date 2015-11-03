@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.bea.mbank"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <com.android.widgets.BottomLineTitleView
+        android:id="@+id/groupTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:bl_lineColor="#e7e7e7"
+        app:bl_lineSize="1px"
+        app:bl_selectorColor="@color/redColor"
+        app:bl_title="申请贷款及费用信息"
+        app:bl_titleColor="@color/blackColor"
+        app:bl_titleFont="@dimen/bottom_line_title_textSize" >
+    </com.android.widgets.BottomLineTitleView>
+
+    <com.android.uitableview.UITableView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_topOrBottom"
+        android:background="@drawable/v_gridtable_back"
+        android:divider="@color/divider_list"
+        android:dividerHeight="1dp" >
+
+    </com.android.uitableview.UITableView>
+
+</LinearLayout>

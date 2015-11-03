@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+    android:orientation="horizontal"
+    android:padding="@dimen/padding" >
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginRight="@dimen/padding_leftOrRight"
+        android:layout_weight="1"
+        android:background="@drawable/white" >
+
+        <TextView
+            android:id="@+id/title_name"
+            android:layout_width="@dimen/personinfo_title_width"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/margin_leftOrRight"
+            android:layout_marginTop="@dimen/padding_topOrBottom"
+            android:text="姓名"
+            android:textColor="@color/titleColor"
+            android:textSize="@dimen/value_font_size" />
+
+        <TextView
+            android:id="@+id/value_name"
+            android:layout_width="@dimen/personinfo_value_width"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/title_name"
+            android:layout_marginLeft="@dimen/padding_leftOrRight"
+            android:layout_toRightOf="@+id/title_name"
+            android:textColor="@color/contentColor"
+            android:textSize="@dimen/value_font_size" />
+
+        <TextView
+            android:id="@+id/title_fzgj"
+            android:layout_width="@dimen/personinfo_title_width"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/value_name"
+            android:layout_marginLeft="@dimen/margin_leftOrRight"
+            android:layout_marginTop="@dimen/padding_topOrBottom"
+            android:text="发证国家"
+            android:textColor="@color/titleColor"
+            android:textSize="@dimen/value_font_size" />
+
+        <TextView
+            android:id="@+id/value_fzgj"
+            android:layout_width="@dimen/personinfo_value_width"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/title_fzgj"
+            android:layout_below="@+id/value_name"
+            android:layout_marginLeft="@dimen/padding_leftOrRight"
+            android:layout_toRightOf="@+id/title_fzgj"
+            android:textColor="@color/contentColor"
+            android:textSize="@dimen/value_font_size" />
+
+        <TextView
+            android:id="@+id/title_zjlx"
+            android:layout_width="@dimen/personinfo_title_width"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/value_fzgj"
+            android:layout_marginLeft="@dimen/margin_leftOrRight"
+            android:layout_marginTop="@dimen/padding_topOrBottom"
+            android:text="证件类型"
+            android:textColor="@color/titleColor"
+            android:textSize="@dimen/value_font_size" />
+
+        <TextView
+            android:id="@+id/value_zjlx"
+            android:layout_width="@dimen/personinfo_value_width"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/title_zjlx"
+            android:layout_below="@+id/value_fzgj"
+            android:layout_marginLeft="@dimen/padding_leftOrRight"
+            android:layout_toRightOf="@+id/title_zjlx"
+            android:textColor="@color/contentColor"
+            android:textSize="@dimen/value_font_size" />
+
+        <TextView
+            android:id="@+id/title_fzjg"
+            android:layout_width="@dimen/personinfo_title_width"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/value_zjlx"
+            android:layout_marginLeft="@dimen/margin_leftOrRight"
+            android:layout_marginTop="@dimen/padding_topOrBottom"
+            android:text="发证机关"
+            android:textColor="@color/titleColor"
+            android:textSize="@dimen/value_font_size" />
+
+        <TextView
+            android:id="@+id/value_fzjg"
+            android:layout_width="@dimen/personinfo_value_width"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/title_fzjg"
+            android:layout_below="@+id/value_zjlx"
+            android:layout_marginLeft="@dimen/padding_leftOrRight"
+            android:layout_toRightOf="@+id/title_fzjg"
+            android:singleLine="false"
+            android:textColor="@color/contentColor"
+            android:textSize="@dimen/value_font_size" />
+
+        <ImageView
+            android:id="@+id/iv_photo"
+            android:layout_width="@dimen/personinfo_photo_width"
+            android:layout_height="@dimen/personinfo_photo_height"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="@dimen/padding_leftOrRight"
+            android:layout_marginTop="@dimen/padding_topOrBottom"
+            android:background="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/title_creditcard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="@dimen/margin_topOrBottom"
+            android:layout_marginLeft="@dimen/margin_leftOrRight"
+            android:text="公民身份证号码"
+            android:textColor="@color/titleColor"
+            android:textSize="@dimen/personinfo_creditcard_textSize" />
+
+        <TextView
+            android:id="@+id/value_creditcard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/title_creditcard"
+            android:layout_marginLeft="@dimen/padding_leftOrRight"
+            android:layout_toRightOf="@+id/title_creditcard"
+            android:textColor="@color/titleColor"
+            android:textSize="@dimen/personinfo_creditcard_textSize" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="@dimen/personinfo_layout_width"
+        android:layout_height="match_parent"
+        android:background="@drawable/white" >
+
+        <Button
+            android:id="@+id/copypop"
+            android:layout_width="@dimen/pop_imageButton_width"
+            android:layout_height="@dimen/pop_imageButton_height"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/padding_topOrBottom"
+            android:background="@drawable/pop_copy"
+            android:textColor="@color/blackColor"
+            android:textSize="@dimen/red_buttom_textSize" />
+
+        <Button
+            android:id="@+id/closepop"
+            android:layout_width="@dimen/pop_imageButton_width"
+            android:layout_height="@dimen/pop_imageButton_height"
+            android:layout_below="@+id/copypop"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/padding_topOrBottom"
+            android:background="@drawable/btn_close"
+            android:textColor="@color/blackColor"
+            android:textSize="@dimen/red_buttom_textSize" />
+    </RelativeLayout>
+
+</LinearLayout>

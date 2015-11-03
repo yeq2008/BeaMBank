@@ -1,0 +1,28 @@
+<resources>
+
+    <dimen name="padding">10dp</dimen>
+    <dimen name="margin_Min">10dp</dimen>
+    <dimen name="margin">20dp</dimen>
+    <dimen name="layoutmargin">0dp</dimen>
+    <dimen name="title_font_size">16sp</dimen>
+    <dimen name="value_font_size">16sp</dimen>
+    <dimen name="crmtitlefont">18sp</dimen>
+     
+    <dimen name ="grouptop" >10dp</dimen>
+    <dimen name="grouptext_width">150dp</dimen>
+    <dimen name="rowheight">30dp</dimen>
+	<dimen name="value_margin">17dp</dimen>
+	
+	<dimen name="valuepadding">5dp</dimen>
+	
+	<dimen name="margintop">20dp</dimen>
+	
+	<dimen name="borrowermargin_top">0dp</dimen>
+	<dimen name="borrowerTextView_width">55dp</dimen>
+	
+	<dimen name="titlemargin">5dp</dimen>
+	<dimen name="fiftyfivedp">55dp</dimen>
+	<dimen name="loan_summary_size">16sp</dimen>
+	<dimen name="loan_list_size">16sp</dimen>
+	<dimen name="loan_list_title_size">18sp</dimen>
+</resources>

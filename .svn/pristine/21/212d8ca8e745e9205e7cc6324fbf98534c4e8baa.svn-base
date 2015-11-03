@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:background="@color/whiteColor" >
+
+            <TextView
+                android:id="@+id/taskTitle"
+                android:layout_width="40dp"
+                android:layout_height="46dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginTop="7.2dp"
+                android:gravity="center"
+                android:text="@string/draft_title"
+                android:textColor="@color/titleColor"
+                android:textSize="20sp" />
+
+            <RelativeLayout
+                android:id="@+id/search_lay"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp">
+                <!-- android:background="@drawable/draft_btnshape" 
+
+                <EditText
+                    android:id="@+id/searcheditext"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/draft_btnshape"
+                    android:gravity="center_vertical"
+                    android:hint="输入您要查询的内容"
+                    android:maxLength="12"
+                    android:paddingLeft="20dp"
+                    android:textSize="16sp" /> -->
+
+                <Button
+                    android:id="@+id/searchview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/task_draft_searchbg"
+                    android:focusable="false" >
+                </Button>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/whiteColor" >
+
+            <com.android.uitableview.UITableView
+                android:id="@+id/uITableView1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@drawable/transparentColor"
+                android:dividerHeight="1dp"
+                android:listSelector="@drawable/listview_bg" >
+            </com.android.uitableview.UITableView>
+        </LinearLayout>
+    </LinearLayout>
+
+</merge>

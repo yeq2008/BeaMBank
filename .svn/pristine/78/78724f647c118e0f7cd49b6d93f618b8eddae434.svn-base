@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.bea.mbank"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margin" >
+
+    <com.android.widgets.BottomLineTitleView
+        android:id="@+id/Contact_LineTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:textColor="@color/blackColor"
+        app:bl_lineColor="#e7e7e7"
+        app:bl_lineSize="1dp"
+        app:bl_selectorColor="@color/redColor"
+        app:bl_title="@string/linkman"
+        app:bl_titleFont="20sp"
+        app:bl_titleColor="@color/blackColor" />
+    
+      <TextView
+        android:id="@+id/Contact_NexusType"
+        android:layout_width="@dimen/grouptext_width"
+        android:layout_height="@dimen/borrowerTextView_width"
+        android:gravity="center_vertical"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/Contact_LineTitle"
+        android:layout_marginTop="@dimen/borrowermargin_top" 
+        android:text="关系类型"
+        android:textColor="@color/blackColor"
+        android:textSize="@dimen/title_font_size" />
+
+    <com.bea.mbank.widgets.GroupTagViewEx
+        android:id="@+id/Contact_gtvNexusType"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/Contact_LineTitle"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:layout_toRightOf="@+id/Contact_NexusType" 
+        app:gt_spinnerShow="true"
+        app:gt_hintText="关系类型"
+        />
+
+     <LinearLayout
+        android:id="@+id/Contact_linlayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/Contact_gtvNexusType" 
+        android:orientation="horizontal" >
+
+        <com.android.widgets.TitleValueView
+            android:id="@+id/Contact_fName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:tv_title="姓（中文）"
+            app:tv_titleColor="@color/blackColor"
+            app:tv_titleFont="@dimen/title_font_size"
+            app:tv_titleWidth="@dimen/grouptext_width"
+            app:tv_valueFont="@dimen/value_font_size"
+            app:tv_valueHint="姓" 
+           	app:tv_valueColor="@color/contentColor" 
+        app:tv_valueMaxLength="100"
+            />
+
+        <com.android.widgets.TitleValueView
+            android:id="@+id/Contact_lName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="15dp"
+            app:tv_title="名（中文）"
+            app:tv_titleColor="@color/blackColor"
+            app:tv_titleFont="@dimen/title_font_size"
+            app:tv_titleWidth="@dimen/grouptext_width"
+            app:tv_valueFont="@dimen/value_font_size"
+            	app:tv_valueColor="@color/contentColor"
+            app:tv_valueHint="名" 
+        app:tv_valueMaxLength="100"/>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/Contact_linlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/Contact_linlayout1"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:orientation="horizontal" >
+
+        <com.android.widgets.TitleValueView
+            android:id="@+id/Contact_efName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:tv_title="姓（英文/拼音）"
+            app:tv_titleColor="@color/blackColor"
+            app:tv_titleFont="@dimen/title_font_size"
+            app:tv_titleWidth="@dimen/grouptext_width"
+            app:tv_valueFont="@dimen/value_font_size"
+            app:tv_valueHint="姓"
+        app:tv_valueMaxLength="100" />
+
+        <com.android.widgets.TitleValueView
+            android:id="@+id/Contact_elName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="15dp"
+            app:tv_title="名（英文/拼音）"
+            app:tv_titleColor="@color/blackColor"
+            app:tv_titleFont="@dimen/title_font_size"
+            app:tv_titleWidth="@dimen/grouptext_width"
+            app:tv_valueFont="@dimen/value_font_size"
+            	app:tv_valueColor="@color/contentColor"
+            app:tv_valueHint="名"
+        app:tv_valueMaxLength="100" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/Contact_DocumentType"
+        android:layout_width="@dimen/grouptext_width"
+         android:layout_height="@dimen/borrowerTextView_width"
+        android:gravity="center_vertical"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/Contact_linlayout"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:text="证件类型" 
+        android:textColor="@color/blackColor"
+        android:textSize="@dimen/title_font_size" 
+        android:visibility="gone"
+        />
+
+    <com.bea.mbank.widgets.GroupTagViewEx
+        android:id="@+id/Contact_gtvDocumentType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Contact_linlayout"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:layout_alignLeft="@id/Contact_gtvNexusType"
+        android:layout_toRightOf="@+id/Contact_DocumentType"
+        app:gt_spinnerShow="true" 
+        app:gt_hintText="证件类型"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/Contact_Issuing"
+        android:layout_width="@dimen/grouptext_width"
+         android:layout_height="@dimen/borrowerTextView_width"
+        android:gravity="center_vertical"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/Contact_gtvDocumentType"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:text="发证国家" 
+        android:textColor="@color/blackColor"
+        android:textSize="@dimen/title_font_size" 
+        android:visibility="gone"/>
+
+    <com.bea.mbank.widgets.GroupTagViewEx
+        android:id="@+id/Contact_gtvIssuing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Contact_gtvDocumentType"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:layout_alignLeft="@id/Contact_gtvNexusType"
+        app:gt_spinnerShow="true"
+        app:gt_hintText="发证国家"
+        android:visibility="gone"
+        />
+
+    <com.android.widgets.TitleValueView
+        android:id="@+id/Contact_DocumentNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/Contact_gtvIssuing"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        app:tv_title="证件号码"
+        app:tv_titleColor="@color/blackColor"
+        app:tv_titleFont="@dimen/title_font_size"
+        app:tv_titleWidth="@dimen/grouptext_width"
+        app:tv_valueFont="@dimen/value_font_size"
+        app:tv_valueHint="证件号码" 
+        app:tv_valueColor="@color/contentColor"
+        app:tv_valueMaxLength="32"
+        android:visibility="gone"
+        />
+    
+   <!--     <TextView
+        android:id="@+id/Contact_BillReceiveType"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/Contact_DocumentNumber"
+        android:layout_marginTop="@dimen/margin"
+        android:text="接收银行通知方式"
+        android:textColor="@color/blackColor"
+        android:textSize="@dimen/title_font_size" />
+
+    <com.bea.mbank.widgets.GroupTagViewEx
+        android:id="@+id/Contact_gtvBillReceiveType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Contact_DocumentNumber"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_toRightOf="@+id/Contact_BillReceiveType"  
+        android:layout_alignLeft="@+id/Contact_gtvNexusType"
+        app:gt_hintText="接收银行通知方式"
+        />
+    
+      <TextView
+        android:id="@+id/Contact_MessageReceiveType"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/Contact_BillReceiveType"
+        android:layout_marginTop="@dimen/margin"
+        android:text="接收银行账单方式"
+        android:textColor="@color/blackColor"
+        android:textSize="@dimen/title_font_size" />
+
+    <com.bea.mbank.widgets.GroupTagViewEx
+        android:id="@+id/Contact_gtvMessageReceiveType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Contact_BillReceiveType"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_toRightOf="@+id/Contact_MessageReceiveType"  
+        android:layout_alignLeft="@+id/Contact_gtvNexusType"
+        app:gt_hintText="接收银行账单方式"
+        /> 
+       <com.android.widgets.TitleValueView
+        android:id="@+id/Contact_Email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/Contact_DocumentNumber"
+        android:layout_marginTop="@dimen/margin"
+        app:tv_title="电子邮箱"
+        app:tv_titleColor="@color/blackColor"
+        app:tv_titleFont="@dimen/title_font_size"
+        app:tv_titleMaxNum="7"
+        app:tv_valueFont="@dimen/value_font_size"
+        app:tv_valueHint="Email" 
+        app:tv_valueInputType="email"
+        app:tv_valueColor="@color/contentColor"/>
+        -->
+
+    <!-- <TextView
+        android:id="@+id/Contact_PhoneType"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/Contact_DocumentNumber"
+        android:layout_marginTop="@dimen/margin"
+        android:text="电话类型"
+        android:textColor="@color/blackColor"
+        android:textSize="@dimen/title_font_size" />
+
+    <com.bea.mbank.widgets.GroupTagViewEx
+        android:id="@+id/Contact_gtvPhoneType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Contact_DocumentNumber"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_alignLeft="@id/Contact_gtvNexusType"
+        app:gt_hintText="电话类型"
+        /> -->
+
+    <com.android.widgets.TitleValueView
+        android:id="@+id/Contact_InterCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/Contact_DocumentNumber"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        app:tv_title="国际区号"
+        app:tv_titleColor="@color/blackColor"
+        app:tv_titleFont="@dimen/title_font_size"
+        app:tv_titleWidth="@dimen/grouptext_width"
+        app:tv_valueFont="@dimen/value_font_size"
+        app:tv_valueHint="国际区号" 
+        app:tv_valueColor="@color/contentColor"
+        app:tv_valueInputType="number"
+        app:tv_valueMaxLength="18"/>
+
+    <!-- <com.android.widgets.TitleValueView
+        android:id="@+id/Contact_Code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/Contact_InterCode"
+        android:layout_marginTop="@dimen/margin"
+        app:tv_title="区号"
+        app:tv_titleColor="@color/blackColor"
+        app:tv_titleFont="@dimen/title_font_size"
+        app:tv_titleMaxNum="7"
+        app:tv_valueFont="@dimen/value_font_size"
+        app:tv_valueHint="区号" 
+        app:tv_valueColor="@color/contentColor"
+        app:tv_valueInputType="number"/> -->
+
+    <com.android.widgets.TitleValueView
+        android:id="@+id/Contact_PhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/Contact_InterCode"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        app:tv_title="手机号码"
+        app:tv_titleColor="@color/blackColor"
+        app:tv_titleFont="@dimen/title_font_size"
+        app:tv_titleWidth="@dimen/grouptext_width"
+        app:tv_valueFont="@dimen/value_font_size"
+        app:tv_valueHint="手机号码" 
+        app:tv_valueColor="@color/contentColor"
+        app:tv_valueInputType="phone"
+        app:tv_valueMaxLength="32"/>
+
+    <!-- <com.android.widgets.TitleValueView
+        android:id="@+id/Contact_ExNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/Contact_PhoneNumber"
+        android:layout_marginTop="@dimen/margin"
+        app:tv_title="分机号"
+        app:tv_titleColor="@color/blackColor"
+        app:tv_titleFont="@dimen/title_font_size"
+        app:tv_titleMaxNum="7"
+        app:tv_valueFont="@dimen/value_font_size"
+        app:tv_valueHint="分机号" 
+        app:tv_valueColor="@color/contentColor"
+        app:tv_valueInputType="phone"/> -->
+
+    
+
+</RelativeLayout>

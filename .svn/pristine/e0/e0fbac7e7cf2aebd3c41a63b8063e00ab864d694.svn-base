@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+	<WebView 
+	    android:id="@+id/webview"
+	    android:layout_width="0dp"
+	    android:layout_weight="3"
+	    android:layout_height="match_parent"
+	    android:layout_marginTop="@dimen/pop_right_margin"
+	    android:layout_marginLeft="@dimen/pop_right_margin"
+	    android:layout_marginBottom="@dimen/pop_right_margin" />
+    <fragment
+        android:id="@+id/fmcd_fm"
+        android:name="com.bea.mbank.edit.step1.BlackListPanelFragment"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/pop_right_margin" />
+</LinearLayout>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp" >
+
+        <TextView
+            android:id="@+id/pnum"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center|left"
+            android:text="123456789"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="90dp"
+            android:gravity="center|right"
+            android:text="@string/date"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/cusName"
+            android:layout_width="170dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/pnum"
+            android:layout_marginLeft="30dp"
+            android:gravity="center_vertical"
+            android:text="@string/cusname"
+            android:textColor="#000000"
+            android:textSize="16sp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/cardlei"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/pnum"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/cusName"
+            android:gravity="center_vertical"
+            android:text="证件类型:"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/cardleitext"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/pnum"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_toRightOf="@id/cardlei"
+            android:gravity="center_vertical"
+            android:text="证件类型"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/cusview"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/pnum"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/cardleitext"
+            android:gravity="center_vertical"
+            android:text="证件号码:"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/cardNum"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@id/pnum"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_toRightOf="@id/cusview"
+            android:gravity="center_vertical"
+            android:text="@string/carNum"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/moneyview"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@id/pnum"
+            android:layout_marginLeft="60dp"
+            android:layout_toRightOf="@id/cardNum"
+            android:gravity="center_vertical"
+            android:text="@string/moneycount"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/moneyConut"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/pnum"
+            android:layout_toRightOf="@id/moneyview"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:textColor="@color/redColor"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/yuan_view"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@id/pnum"
+            android:layout_marginRight="50dp"
+            android:layout_toRightOf="@id/moneyConut"
+            android:gravity="center_vertical"
+            android:text="元"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/task_flag"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/mytask_jiantou" />
+
+      
+    </RelativeLayout>
+  <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"   
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/mytask_xuxian" />
+</LinearLayout>

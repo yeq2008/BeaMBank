@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.bea.mbank"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#F2F2F2"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="583dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical" 
+        android:layout_margin="10dp"
+        android:background="@color/whiteColor"
+        android:orientation="vertical" >
+
+	<com.android.widgets.BottomLineTitleView
+	    android:id="@+id/search_bottomline"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_margin="@dimen/padding"
+	    android:textColor="@color/blackColor"
+	    app:bl_lineColor="@color/UserMenuItemBackColor_Normal"
+	    app:bl_lineSize="1dp"
+	    app:bl_selectorColor="@color/redColor"
+	    app:bl_title="筛选类型"
+	    app:bl_titleColor="@color/blackColor"
+	    app:bl_titleFont="20sp" />
+ 
+	      <TextView
+        android:id="@+id/Search_CBType"
+        android:layout_width="@dimen/grouptext_width"
+        android:layout_height="@dimen/borrowerTextView_width"  
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginLeft="50dp"
+        android:layout_below="@+id/search_bottomline"
+        android:text="业务品种"
+        android:textColor="@color/blackColor"
+        android:textSize="@dimen/title_font_size" />
+
+    <com.bea.mbank.widgets.GroupTagViewEx
+        android:id="@+id/Seach_gtvCBType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="30dp"  
+        android:layout_alignTop="@id/Search_CBType" 
+        android:layout_below="@+id/search_bottomline"
+        android:layout_toRightOf="@+id/Search_CBType"
+        app:gt_spinnerShow="true"
+        app:gt_hintText="业务品种"
+        />
+ 
+    <TextView 
+        android:id="@+id/Search_name"
+          android:layout_width="@dimen/grouptext_width"
+        android:layout_height="@dimen/borrowerTextView_width"  
+        android:gravity="center_vertical"
+        android:text="姓名"
+        android:textSize="@dimen/title_font_size"
+        android:layout_below="@+id/Seach_gtvCBType"  
+         android:layout_marginLeft="50dp" 
+         android:textColor="@color/blackColor"
+        />
+    <EditText 
+        android:id="@+id/Search_editeName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="100dp" 
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/Search_name"
+        android:layout_alignTop="@id/Search_name"
+        android:background="@null"  
+        android:textColor="@color/contentColor"
+        android:textSize="@dimen/title_font_size"
+        android:hint="姓名"
+        android:singleLine="true"
+        />
+	
+    
+    <TextView 
+        android:id="@+id/Search_cardNum"
+          android:layout_width="@dimen/grouptext_width"
+       android:layout_height="@dimen/borrowerTextView_width"  
+        android:gravity="center_vertical"
+        android:text="证件号码"
+        android:textSize="@dimen/title_font_size"
+        android:layout_below="@+id/Search_name"  
+         android:layout_marginLeft="50dp" 
+         android:textColor="@color/blackColor"
+        />
+    <EditText 
+        android:id="@+id/Search_cardNumName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/Search_name"
+        android:layout_toRightOf="@+id/Search_cardNum"
+        android:layout_alignTop="@id/Search_cardNum"
+        android:background="@null"   
+         android:textColor="@color/contentColor"
+         android:textSize="@dimen/title_font_size"
+        android:hint="证件号码" 
+        android:digits="0123456789X"
+        android:singleLine="true"
+        />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="110dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical" 
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/whiteColor"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/padding"
+        android:paddingRight="@dimen/padding" >
+
+        <Button
+            android:id="@+id/mytask_search_confirmBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/pop_searchbg"
+            android:gravity="center"
+            android:textColor="@color/blackColor" />
+
+        <Button
+            android:id="@+id/mytask_search_closeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/btn_close"
+            android:gravity="center"
+            android:textColor="@color/blackColor"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</LinearLayout>

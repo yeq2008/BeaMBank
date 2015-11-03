@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/redTitle_height"
+            android:background="@color/whiteColor" 
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/taskTitle"
+                android:layout_width="@dimen/mytask_tasklay_taskTitle_width"
+                android:layout_height="@dimen/mytask_tasklay_taskTitle_height"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginTop="@dimen/layout_marginTop"
+                android:gravity="center_vertical"
+                android:text="@string/draft_title"
+                android:textColor="@color/titleColor"
+                android:textSize="@dimen/myTask_listitem_below_textSize" />
+
+            <RelativeLayout
+                android:id="@+id/search_lay"
+                android:layout_width="@dimen/mytask_tasklay_search_lay_width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/mytask_tasklay_search_lay_marginRight" >
+
+                <Button
+                    android:id="@+id/searchview"
+                    android:layout_width="@dimen/mytask_tasklay_searchview_width"
+                    android:layout_height="@dimen/mytask_tasklay_searchview_height"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/task_draft_searchbg"
+                    android:focusable="false" >
+                </Button>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/padding"
+            android:background="@color/whiteColor" >
+            <com.android.uitableview.UITableView
+                android:id="@+id/uITableView1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@drawable/transparentColor"
+                android:dividerHeight="1dp"
+                android:listSelector="@drawable/listview_bg" >
+            </com.android.uitableview.UITableView>
+        </LinearLayout>
+    </LinearLayout>
+
+</merge>

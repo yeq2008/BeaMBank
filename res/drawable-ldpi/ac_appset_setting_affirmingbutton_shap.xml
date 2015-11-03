@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+    <corners android:radius="@dimen/context_dp40_size"/> 
+  <gradient 
+      android:startColor="#BE1C34"
+      android:centerColor="#BE1C34"
+      android:endColor="#BE1C34"
+      />
+    
+    <!-- <solid android:color="#FF00FF"/> --><!-- 填充色 --> 
+</shape>

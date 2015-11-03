@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/relativeLayout1_marginBottom" >
+
+        <ImageView
+            android:id="@+id/aa_iv_im01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ac_applogin_im01" />
+
+        <ImageView
+            android:id="@+id/aa_iv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/aa_iv_im01"
+            android:layout_marginTop="@dimen/username_marginTop"
+            android:paddingTop="@dimen/iamgeview_paddingTop"
+            android:src="@drawable/ac_applogin_username" />
+
+        <EditText
+            android:id="@+id/aa_et_username"
+            android:layout_width="@dimen/editview_username_width"
+            android:layout_height="@dimen/editview_username_height"
+            android:layout_below="@+id/aa_iv_im01"
+            android:layout_marginLeft="@dimen/editview_marginLeft"
+            android:layout_marginTop="@dimen/username_marginTop"
+            android:layout_toRightOf="@+id/aa_iv_username"
+            android:background="@drawable/ac_applogin_input"
+            android:digits="1234567890QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm"
+            android:hint="请输入用户名"
+            android:paddingLeft="@dimen/editview_marginLeft"
+            android:singleLine="true" />
+
+        <ImageView
+            android:id="@+id/aa_iv_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/aa_et_username"
+            android:layout_marginTop="@dimen/password_marginTop"
+            android:paddingTop="@dimen/iamgeview_paddingTop"
+            android:src="@drawable/ac_applogin_password" />
+
+        <EditText
+            android:id="@+id/aa_et_password"
+            android:layout_width="@dimen/editview_username_width"
+            android:layout_height="@dimen/editview_username_height"
+            android:layout_alignLeft="@+id/aa_et_username"
+            android:layout_below="@+id/aa_et_username"
+            android:layout_marginTop="@dimen/password_marginTop"
+            android:background="@drawable/ac_applogin_input"
+            android:hint="请输入密码"
+            android:inputType="textPassword"
+            android:paddingLeft="@dimen/editview_marginLeft"
+            android:password="true"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/loginButton_height"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@+id/aa_et_username"
+            android:layout_below="@+id/aa_et_password"
+            android:layout_marginTop="@dimen/username_marginTop"
+            android:background="@drawable/ac_appset_setting_affirmbutton"
+            android:text="登     录"
+            android:textColor="@color/whiteColor"
+            android:textSize="@dimen/red_buttom_textSize" />
+    </RelativeLayout>
+
+    <com.android.widgets.XCImageButton
+        android:id="@+id/mdmSvnSettingBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/mdmSvnSettingBtn_marginBottom"
+        android:layout_marginRight="@dimen/mdmSvnSettingBtn_marginRight"
+        android:background="@drawable/ac_appset_setting_mdmsvn_button" />
+
+    <TextView
+        android:id="@+id/noLoginTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/mdmSvnSettingBtn"
+        android:layout_alignLeft="@+id/relativeLayout1"
+        android:layout_alignTop="@+id/mdmSvnSettingBtn"
+        android:gravity="center_vertical"
+        android:text="非登陆版"
+        android:textSize="@dimen/title_font_size" />
+
+    <com.android.switchbutton.SwitchButton
+        android:id="@+id/switchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/noLoginTitle"
+        android:layout_alignTop="@+id/noLoginTitle"
+        android:layout_marginLeft="17dp"
+        android:layout_toRightOf="@+id/noLoginTitle"
+        android:gravity="center_vertical" />
+
+</RelativeLayout>

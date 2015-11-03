@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pingan_dtask_relativeLayout_height" >
+
+        <TextView
+            android:id="@+id/pnum"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/pingan_dtask_textview_height"
+            android:layout_marginLeft="@dimen/pingan_dtask_textview_marginLeft"
+            android:gravity="center|left"
+            android:text="123456789"
+            android:textColor="#000000"
+            android:textSize="@dimen/small_textsize" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/pingan_dtask_textview_height"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/pingan_dtask_textview_marginRight"
+            android:gravity="center|right"
+            android:text="@string/date"
+            android:textSize="@dimen/red_buttom_textSize" />
+
+        <TextView
+            android:id="@+id/cusName"
+            android:layout_width="@dimen/pingan_dtask_cusName_width"
+            android:layout_height="@dimen/pingan_dtask_textview_height"
+            android:layout_below="@id/pnum"
+            android:layout_marginLeft="@dimen/pingan_dtask_cusName_marginLeft"
+            android:gravity="center_vertical"
+            android:text="@string/cusname"
+            android:textColor="#000000"
+            android:textSize="@dimen/red_buttom_textSize" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/cardlei"
+            android:layout_width="@dimen/pingan_dtask_cardlei_width"
+            android:layout_height="@dimen/pingan_dtask_textview_height"
+            android:layout_below="@id/pnum"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/padding_leftOrRight"
+            android:layout_toRightOf="@id/cusName"
+            android:gravity="center_vertical"
+            android:text="证件类型:"
+            android:textColor="#000000"
+            android:textSize="@dimen/red_buttom_textSize" />
+
+        <TextView
+            android:id="@+id/cardleitext"
+            android:layout_width="@dimen/pingan_dtask_cardleitext_width"
+            android:layout_height="@dimen/pingan_dtask_textview_height"
+            android:layout_below="@id/pnum"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_leftOrRight"
+            android:layout_toRightOf="@id/cardlei"
+            android:gravity="center_vertical"
+            android:text="证件类型"
+            android:textSize="@dimen/red_buttom_textSize" />
+
+        <TextView
+            android:id="@+id/cusview"
+            android:layout_width="@dimen/pingan_dtask_cusview_width"
+            android:layout_height="@dimen/pingan_dtask_textview_height"
+            android:layout_below="@id/pnum"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/padding_leftOrRight"
+            android:layout_toRightOf="@id/cardleitext"
+            android:gravity="center_vertical"
+            android:text="证件号码:"
+            android:textColor="#000000"
+            android:textSize="@dimen/red_buttom_textSize" />
+
+        <TextView
+            android:id="@+id/cardNum"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/pingan_dtask_textview_height"
+            android:layout_below="@id/pnum"
+            android:layout_marginLeft="@dimen/margin_leftOrRight"
+            android:layout_toRightOf="@id/cusview"
+            android:gravity="center_vertical"
+            android:text="@string/carNum"
+            android:textSize="@dimen/red_buttom_textSize" />
+
+        <TextView
+            android:id="@+id/moneyview"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/pingan_dtask_textview_height"
+            android:layout_below="@id/pnum"
+            android:layout_marginLeft="@dimen/pingan_dtask_moneyview_marginLeft"
+            android:layout_toRightOf="@id/cardNum"
+            android:gravity="center_vertical"
+            android:text="@string/moneycount"
+            android:textColor="#000000"
+            android:textSize="@dimen/red_buttom_textSize" />
+
+        <TextView
+            android:id="@+id/moneyConut"
+            android:layout_width="@dimen/pingan_dtask_moneyConut_width"
+            android:layout_height="@dimen/pingan_dtask_textview_height"
+            android:layout_below="@id/pnum"
+            android:layout_toRightOf="@id/moneyview"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/padding_leftOrRight"
+            android:textColor="@color/redColor"
+            android:textSize="@dimen/red_buttom_textSize" />
+
+        <TextView
+            android:id="@+id/yuan_view"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/pingan_dtask_textview_height"
+            android:layout_below="@id/pnum"
+            android:layout_marginRight="@dimen/pingan_dtask_yuan_marginRight"
+            android:layout_toRightOf="@id/moneyConut"
+            android:gravity="center_vertical"
+            android:text="元"
+            android:textSize="@dimen/red_buttom_textSize" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/mytask_xuxian" />
+
+</LinearLayout>

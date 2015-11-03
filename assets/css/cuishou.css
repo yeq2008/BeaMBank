@@ -1,0 +1,162 @@
+.radioselected{
+	background: red;
+	color: white;
+	margin-top:2px;
+	margin-bottom:2px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 18px;
+	border: 0px;
+}
+
+.radionoselected{
+	background: white;
+	color:#999999;
+	margin-top:2px;
+	margin-bottom:2px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 18px;
+	border: 0px;
+}
+
+.labeltext{
+	width: 100%;
+	font-size: 18px;
+	color: #333333;
+	margin: 0px;
+	padding: 0px;
+}
+
+.labelvalue{
+	width: 100%;
+	font-size: 18px;
+	color: #999999;
+	margin: 0px;
+	padding: 0px;
+}
+
+.inputtext{
+	border: 0;
+	width: 100%;
+	font-size: 18px;
+	color: #333333;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.inputvalue{
+	border: 0;
+	width: 100%;
+	color: #999999;
+	font-size: 18px;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.inputstyle1{
+	border: 0;
+	width: 100%;
+	text-align: left;
+	font: "Verdana", "ËÎÌו", "Arial", "Helvetica", "sans-serif";
+	font-size: 18px;
+}
+.inputstyle2{
+	border: 0;
+	width: 100%;
+	text-align: right;
+	font: "Verdana", "ËÎÌו", "Arial", "Helvetica", "sans-serif";
+	font-size: 18px;
+}
+
+.divtitle{
+	margin-left: 10px;
+	margin-right : 10px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.hr{
+	width: 98%;
+	height: 1px;
+	border: none;
+	border-top: 1px dotted #e4e4e4;
+}
+
+.fieldset {
+	width: 100%;
+	border: 1px solid #e4e4e4;
+	border-width: 1px;
+	margin: 0px;
+	padding: 0px;
+}
+.title{
+	font-size:20px;
+	border: 0px;
+	margin-left: 0px;
+	padding-left: 0px;
+}
+
+.table{
+	width: 100%;
+	margin: 0px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.table tr{
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+.table th,td{
+	width: 25%;
+	height: 35px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.tableimg{
+	width: 100%;
+	margin: 0px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.tableimg tr{
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+.tableimg th,td{
+	height: 40px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.tablepadding{
+	width: 100%;
+	margin: 0px;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.tablepadding tr{
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+.tablepadding th,td{
+	width: 25%;
+	height: 35px;
+	margin: 0px;
+	padding: 0px;
+}

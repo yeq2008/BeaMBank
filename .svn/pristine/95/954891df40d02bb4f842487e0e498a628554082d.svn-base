@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/context_dp100_size" >
+
+        <TextView
+            android:id="@+id/pnum"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/context_dp50_size"
+            android:layout_marginLeft="@dimen/context_dp20_size"
+            android:gravity="center|left"
+            android:text="123456789"
+            android:textColor="#000000"
+            android:textSize="@dimen/small_textsize" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/context_dp50_size"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/context_dp20_size"
+            android:gravity="center|right"
+            android:text="@string/date"
+            android:textSize="@dimen/red_buttom_textSize" />
+
+        <TextView
+            android:id="@+id/cusName"
+            android:layout_width="@dimen/context_dp170_size"
+            android:layout_height="@dimen/context_dp50_size"
+            android:layout_below="@id/pnum"
+            android:layout_marginLeft="@dimen/context_dp30_size"
+            android:gravity="center_vertical"
+            android:text="@string/cusname"
+            android:textColor="#000000"
+            android:textSize="@dimen/red_buttom_textSize" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/cardlei"
+            android:layout_width="@dimen/context_dp70_size"
+            android:layout_height="@dimen/context_dp50_size"
+            android:layout_below="@id/pnum"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/context_dp10_size"
+            android:layout_toRightOf="@id/cusName"
+            android:gravity="center_vertical"
+            android:text="证件类型:"
+            android:textColor="#000000"
+            android:textSize="@dimen/red_buttom_textSize" />
+
+        <TextView
+            android:id="@+id/cardleitext"
+            android:layout_width="@dimen/context_dp100_size"
+            android:layout_height="@dimen/context_dp50_size"
+            android:layout_below="@id/pnum"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_toRightOf="@id/cardlei"
+            android:gravity="center_vertical"
+            android:text="证件类型"
+            android:textSize="@dimen/red_buttom_textSize" />
+
+        <TextView
+            android:id="@+id/cusview"
+            android:layout_width="@dimen/context_dp70_size"
+            android:layout_height="@dimen/context_dp50_size"
+            android:layout_below="@id/pnum"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/context_dp10_size"
+            android:layout_toRightOf="@id/cardleitext"
+            android:gravity="center_vertical"
+            android:text="证件号码:"
+            android:textColor="#000000"
+            android:textSize="@dimen/red_buttom_textSize" />
+
+        <TextView
+            android:id="@+id/cardNum"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/context_dp50_size"
+            android:layout_below="@id/pnum"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_toRightOf="@id/cusview"
+            android:gravity="center_vertical"
+            android:text="@string/carNum"
+            android:textSize="@dimen/red_buttom_textSize" />
+
+        <TextView
+            android:id="@+id/moneyview"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/context_dp50_size"
+            android:layout_below="@id/pnum"
+            android:layout_marginLeft="@dimen/context_dp60_size"
+            android:layout_toRightOf="@id/cardNum"
+            android:gravity="center_vertical"
+            android:text="@string/moneycount"
+            android:textColor="#000000"
+            android:textSize="@dimen/red_buttom_textSize" />
+
+        <TextView
+            android:id="@+id/moneyConut"
+            android:layout_width="@dimen/context_dp100_size"
+            android:layout_height="@dimen/context_dp50_size"
+            android:layout_below="@id/pnum"
+            android:layout_toRightOf="@id/moneyview"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/context_dp10_size"
+            android:textColor="@color/redColor"
+            android:textSize="@dimen/red_buttom_textSize" />
+
+        <TextView
+            android:id="@+id/yuan_view"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/context_dp50_size"
+            android:layout_below="@id/pnum"
+            android:layout_marginRight="@dimen/context_dp50_size"
+            android:layout_toRightOf="@id/moneyConut"
+            android:gravity="center_vertical"
+            android:text="元"
+            android:textSize="@dimen/red_buttom_textSize" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/mytask_xuxian" />
+
+</LinearLayout>

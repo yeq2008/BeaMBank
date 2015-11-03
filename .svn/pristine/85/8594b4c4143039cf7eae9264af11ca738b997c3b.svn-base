@@ -1,0 +1,245 @@
+/**
+ * 
+ */
+package com.bea.remote;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.json.JSONObject;
+
+import xc.android.activity.XCBaseListActivity;
+import xc.android.fragment.XCBaseListFragment;
+import xc.android.remote.IRemoteDataCryp;
+import xc.android.remote.IRemoteResponse;
+import xc.android.remote.RemoteInterfaceSettings;
+import xc.android.remote.RemotePageConfig;
+import xc.android.utils.XCCrypto;
+import xc.android.utils.XCJsonHelper;
+import xc.android.widgets.XCProgressDialog;
+
+import android.app.Activity;
+import android.support.v4.app.Fragment;
+
+import com.bea.application.BeaAppSettings;
+import com.bea.remote.models.user.LoginInfoBO;
+
+
+/**
+ * @author cuiyuguo
+ *
+ */
+public class BeaRemoteSettings extends RemoteInterfaceSettings {
+	/**
+	 * @brief 配置http请求头信息连带请求数据一起传给后台
+	 *        如果不需要设置请求头，此可以返回null
+	 * @param interfaceType  接口类型
+	 * @return 请求头携带的配置信息
+	 */
+	@Override
+	public Map<String, String> getRequestHttpHeaders(int interfaceType) {
+		return null;
+	}
+
+	/**
+	 * @brief http响应头，如果http头有携带信息过来，可以在此函数中解析处理。
+	 *        如果判断某种条件满足，想中断本次响应，则返回true，否则false,
+	 *        如果不关心响应头，此做默认处理即可
+	 * @param context  调用接口的返回接收者句柄
+	 * @param resHttpHeaders 响应头信息
+	 * 
+	 * @return 如果判断某种条件满足，想中断本次响应，则返回true，否则false
+	 */
+	@Override
+	public boolean onResponseHeader(IRemoteResponse context, Map<String, String> resHttpHeaders) {
+		return false;
+	}
+	
+	/**
+	 * @brief 当请求网络数据开始时，会调用等待光标让用户等待网络请求
+	 *        框架库里面有一个调用android系统默认的等待光标的类XCProgressDialog，如果您的系统不需要个性化这个
+	 *        等待光标，可以直接使用XCProgressDialog
+	 * @param context  调用接口的返回接收者句柄
+	 */
+	@Override
+	public void startWaitCursor(IRemoteResponse context) {
+		if (context instanceof Fragment) {
+			XCProgressDialog.show(((Fragment)context).getActivity()).setCanceledOnTouchOutside(false);
+		} else if (context instanceof Activity) {
+			XCProgressDialog.show((Activity)context).setCanceledOnTouchOutside(false);
+		}
+	}
+
+	/**
+	 * @brief 当请求网络结束时调用，停止等待光标
+	 * 
+	 * @param context  调用接口的返回接收者句柄
+	 */
+	@Override
+	public void stopWaitCursor(IRemoteResponse context) {
+		XCProgressDialog.dismiss();
+	}
+	
+	/**
+	 * @brief 系统内网络调用接口地址统一前缀，如果有个别非统一前缀的，可以在
+	 *        remoteSettings()中的url项配置全路径，切记：全路径都是以http://或者https://开头的
+	 * 
+	 * @param context  调用接口的返回接收者句柄
+	 */
+	//开发人员机器地址
+//	final static String s_defaultServerUrl = "http://192.168.1.103:8080/mmp_mobile_service/";
+	//测试环境地址
+//	final static String s_defaultServerUrl = "http://10.192.81.190:7001/mmp_mobile_service/";
+	//生产环境地址
+	final static String s_productEnvIP = "180.168.28.124";
+	final static String s_defaultServerUrl = "http://"+s_productEnvIP+"/mmp_mobile_service/";
+	@Override
+	public String urlDefaultPrefix() {
+		String preUrl = "http://"+BeaAppSettings.getServerUrl() + "/";
+		return null == preUrl ? s_defaultServerUrl : preUrl;
+	}
+
+
+	/**
+	 * 接口数据配置
+	 * <!-- 接口配置关键字：
+	 *  <必须> url：接口函数对应的请求地址（String）
+		<hessian必须，Json不需要> method：接口函数名（String）,hessian请求必须
+		<Hessian必须,
+		 Json可选：最外层为JsonRemoteBO，此为其真实数据模型,
+		          如果此不填则被认为最外层不是JsonRemoteBO结构> resultBO：接口函数返回的结果数据模型（Class）
+		<可选> cryptoReq：是否请求数据需要加密（boolean）,默认为加密的，则将调用getCrypInterface()的实例对象进行加密
+		<可选> cryptoRes：是否返回数据需要解密（boolean）,默认为加密的，则将调用getCrypInterface()的实例对象进行解密
+		<可选> isUseCache：接口是否使用缓存机制（boolean），默认是false，即不使用缓存
+		<可选> cacheMaxTime：接口使用缓存机制时，此缓存数据的最大有效时长（int, 单位为分钟）
+		<可选> noWaitCursor：此接口不需要等待光标。
+		<可选> noCareResponse：只需要发消息发给服务器，不关心服务器后续的返回。注意：如果本项为真则noWaitCursor也将被设置为真
+	  -->
+	 */
+	@Override
+	public Map<String, Map<String, Object>> remoteSettings() {
+		Map<String, Map<String, Object>> retMap = new HashMap<String, Map<String,Object>>();
+		
+		Map<String, Object> itemMap = null;
+		//通用接口
+		itemMap = new HashMap<String, Object>();
+		itemMap.put("url", "servlet/jsonServlet");
+		retMap.put("通用接口", itemMap);
+		
+		//用户登录接口
+		itemMap = new HashMap<String, Object>();
+		itemMap.put("url", "servlet/jsonServlet");
+		itemMap.put("resultBO", LoginInfoBO.class);
+		retMap.put("用户登录", itemMap);
+		
+		//文件上传接口
+		itemMap = new HashMap<String, Object>();
+		if (s_defaultServerUrl.contains(s_productEnvIP)) {//生产环境地址
+			itemMap.put("url", "servlet/FileUploadServlet");
+		} else {//测试环境
+			itemMap.put("url", "servlet/UploadServlet");
+		}
+		retMap.put("文件上传", itemMap);
+		
+		//文件删除接口
+		itemMap = new HashMap<String, Object>();
+		itemMap.put("noCareResponse", true);
+		if (s_defaultServerUrl.contains(s_productEnvIP)) {//生产环境地址
+			itemMap.put("url", "servlet/FileDeleteServlet");
+		} else {//测试环境
+			itemMap.put("url", "servlet/DeleteServlet");
+		}
+		retMap.put("文件删除", itemMap);
+		
+		//版本检查接口
+		itemMap = new HashMap<String, Object>();
+		itemMap.put("url", "servlet/jsonServlet");
+		itemMap.put("noWaitCursor", true);
+		retMap.put("版本检查", itemMap);
+		
+		return retMap;
+	}
+
+	/**
+	 * @brief 根据服务接口返回的数据，解析分页信息
+	 *        此是给列表页面分页使用的
+	 * @param resData  接口返回的整体数据包
+	 * @param returnClass  接口返回的数据包类型
+	 * 
+	 * @return 分页配置信息
+	 */
+	@Override
+	public RemotePageConfig onParsePageConfig(Object resObject) {
+		return null;
+	}
+	
+	/**
+	 * @brief 业务接口返回的数据，项目开发人员可以根据项目内数据接口模型定义做相关的数据判断及一些相关处理，
+	 * 注意：context的onResponsSuccess和onResponsFailed也根据具体情况调用。
+	 *        
+	 * @param context 调用接口的返回接收者句柄
+	 * @param actionTag 请求的标志
+	 * @param resObject 接口返回的数据包
+	 * @param returnClass 返回数据中真正的数据部分
+	 */
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	@Override
+	public void onResponseSucceed(IRemoteResponse context, Class returnClass, int actionTag, Object resData) {
+		try {
+			if (null != resData) {
+				JsonRemoteBO jsonBO = XCJsonHelper.parseObject(resData.toString(), JsonRemoteBO.class);
+				if (null != jsonBO && null != returnClass && null != jsonBO.getObject()) {
+					JSONObject objJson = (JSONObject)jsonBO.getObject();
+					jsonBO.setObject(XCJsonHelper.parseObject(objJson.toString(), returnClass));
+				}
+				
+				RemotePageConfig pageConfig = null;
+				if (null != jsonBO) {
+					JsonRemotePagerBO pagerBO = jsonBO.getPager();
+					if (null != pagerBO) {
+						pageConfig = new RemotePageConfig();
+						pageConfig.setCurrentPage(pagerBO.getPage());
+						pageConfig.setPageSize(pagerBO.getPageSize());
+						pageConfig.setTotalPage(pagerBO.getTotalPage());
+						pageConfig.setTotalRow(pagerBO.getTotalRow());
+					}
+				} else {
+					pageConfig = RemoteInterfaceSettings.instance().onParsePageConfig(resData);
+				}
+				
+				if (context instanceof XCBaseListFragment) {
+					((XCBaseListFragment)context).onManagementPager(pageConfig);
+				} else if (context instanceof XCBaseListActivity) {
+					((XCBaseListActivity)context).onManagementPager(pageConfig);
+				}
+				if (null == jsonBO) {
+					context.onResponsFailed(actionTag, "接口返回数据无法解析！");
+				} else {
+					int errorCode = BeaRemoteErrorManager.analyzeRemoteError(jsonBO.getError());
+					if (BeaRemoteErrorManager.RemoteNoError == errorCode) {
+						context.onResponsSuccess(actionTag, jsonBO.getObject());
+					} else if (BeaRemoteErrorManager.RemoteHasError == errorCode) {
+						context.onResponsFailed(actionTag, jsonBO.getError().getMsg());
+					}
+				}
+			} else {
+				context.onResponsFailed(actionTag, "接口返回为空！");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	@Override
+	public IRemoteDataCryp getCrypInterface() {
+		return XCCrypto.setDESKey("bea.mobile.application");
+	}
+	
+	public static String downloadUrl(String fileUrl) {
+		if (s_defaultServerUrl.contains(s_productEnvIP)) {//生产环境地址
+			return s_defaultServerUrl+"servlet/FileDownloadServlet?filePath="+fileUrl;
+		} else {//测试环境
+			return s_defaultServerUrl+"servlet/DownloadServlet?filePath="+fileUrl;
+		}
+	}
+}

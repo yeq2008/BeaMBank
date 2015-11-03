@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.bea.mbank"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#F2F2F2"
+    android:focusableInTouchMode="true"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/pop_right_margin"
+        android:layout_marginLeft="@dimen/pop_right_margin"
+        android:layout_marginTop="@dimen/pop_right_margin"
+        android:layout_weight="6"
+        android:background="@color/whiteColor"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/padding"
+            android:paddingRight="@dimen/padding" >
+
+            <EditText
+                android:id="@+id/nameInput"
+                android:layout_width="@dimen/nameInput_width"
+                android:layout_height="@dimen/nameInput_height"
+                android:background="@null"
+                android:hint="请输入姓"
+                android:lines="1" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="@dimen/line_height"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:background="#c0c1c2" />
+
+            <EditText
+                android:id="@+id/mingInput"
+                android:layout_width="@dimen/nameInput_width"
+                android:layout_height="@dimen/nameInput_height"
+                android:background="@null"
+                android:hint="请输入名"
+                android:lines="1" />
+
+            <LinearLayout
+                android:layout_width="@dimen/linearLayout_width"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin"
+                android:orientation="vertical" >
+
+                <com.bea.mbank.widgets.GroupTagViewEx
+                    android:id="@+id/country"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/choose_list_height"
+                    app:gt_hintText="请选择国家"
+                    app:gt_spinnerShow="true" />
+
+                <com.bea.mbank.widgets.GroupTagViewEx
+                    android:id="@+id/cardType"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/choose_list_height"
+                    android:layout_marginTop="@dimen/layout_marginTop"
+                    app:gt_hintText="请选择证件类型"
+                    app:gt_spinnerShow="true" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="@dimen/line_height"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:background="#c0c1c2"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="@dimen/saomiao_width"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pop_scan"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/padding"
+            android:layout_marginRight="@dimen/padding"
+            android:background="#c0c1c2" />
+
+        <EditText
+            android:id="@+id/identiferInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding"
+            android:layout_marginLeft="@dimen/padding"
+            android:layout_marginRight="@dimen/padding"
+            android:layout_marginTop="@dimen/padding"
+            android:layout_weight="1"
+            android:background="@null"
+            android:ems="10"
+            android:gravity="center_vertical|center"
+            android:hint="请输入身份证号"
+            android:lines="1"
+            android:textSize="@dimen/identiferInput_textSize" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="@dimen/pop_right_margin"
+        android:layout_marginLeft="@dimen/layout_marginTop"
+        android:layout_marginRight="@dimen/pop_right_margin"
+        android:layout_marginTop="@dimen/pop_right_margin"
+        android:layout_weight="1"
+        android:background="@color/whiteColor"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/margin"
+        android:paddingRight="@dimen/margin" >
+
+        <com.android.widgets.XCImageButton
+            android:id="@+id/confirmBtn"
+            android:layout_width="@dimen/imageButton_width"
+            android:layout_height="@dimen/imageButton_height"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/padding"
+            android:background="@drawable/pop_searing"
+            android:gravity="center"
+            android:textColor="@color/blackColor" />
+
+        <com.android.widgets.XCImageButton
+            android:id="@+id/closeBtn"
+            android:layout_width="@dimen/imageButton_width"
+            android:layout_height="@dimen/imageButton_height"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/image_layout_marginTop"
+            android:background="@drawable/btn_close"
+            android:gravity="center"
+            android:textColor="@color/blackColor"
+            android:textSize="@dimen/small_textsize" />
+    </LinearLayout>
+
+</LinearLayout>

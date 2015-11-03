@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+	<LinearLayout 
+	    android:layout_width="match_parent"
+    	android:layout_height="180dp"
+    	android:layout_marginLeft="40dp"
+    	android:layout_marginTop="10dp" >
+	    <RelativeLayout 
+	        android:id="@+id/fgh_rl_userinfo1"
+	        android:layout_width="0dp"
+	        android:layout_weight="1"
+    		android:layout_height="180dp"
+    		android:paddingTop="10dp" >
+			<LinearLayout 
+			    android:id="@+id/fgh_ll_userinfo"
+		    	android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentTop="true"
+			    android:orientation="horizontal">
+		        <TextView
+		            android:id="@+id/fgh_tv_username"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:textSize="48sp"
+		            android:textColor="#333333" />
+			    <ImageView
+			        android:id="@+id/fgh_iv_user"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="20dp"
+			        android:scaleType="center"
+			        android:src="@drawable/fm_grwdy_hv_muser" />
+			</LinearLayout>
+		    <TextView
+		        android:id="@+id/fgh_tv_userpingyin"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentLeft="true"
+		        android:layout_below="@+id/fgh_ll_userinfo"
+		        android:textSize="36sp"
+		        android:textColor="#666666"
+		        android:text="zhoujielun" />
+
+		    <FrameLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="40dp"
+		        android:layout_alignParentBottom="true" >
+
+		        <View
+		            android:layout_width="match_parent"
+		            android:layout_height="1.5dp"
+		            android:layout_gravity="center_vertical"
+		            android:background="@color/redColor" />
+
+		        <TextView
+		            android:id="@+id/fgh_tv_custnum"
+		            android:layout_width="300dp"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="right|center_vertical"
+		            android:paddingLeft="10dp"
+		            android:paddingRight="10dp"
+		            android:text="客户号:"
+		            android:textColor="@color/redColor"
+		            android:textSize="24sp"
+		            android:background="@color/whiteColor" />
+
+		    </FrameLayout>
+	    </RelativeLayout>
+	    <RelativeLayout
+	        android:id="@+id/fgh_rl_userinfo2"
+	        android:layout_width="600dp"
+	        android:layout_height="160dp"
+    		android:layout_marginRight="40dp"
+	        android:background="@drawable/fm_grwdy_hv_city" >
+		    <ImageView 
+		        android:id="@+id/fgh_ib_return"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:layout_alignParentTop="true"
+		        android:src="@drawable/fm_grwdy_return" />
+		    <LinearLayout 
+		        android:id="@+id/fgh_ll_userinfo3"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/fgh_ib_return"
+		        android:layout_alignParentRight="true"
+		        android:orientation="horizontal" >
+			    <ImageView
+			        android:id="@+id/fgh_iv_phone"
+			        android:layout_width="wrap_content"
+		    		android:layout_height="wrap_content"
+		    		android:layout_gravity="center_vertical"
+		    		android:src="@drawable/fm_grwdy_hv_phone" />
+		        <TextView 
+			        android:id="@+id/fgh_tv_phone"
+			        android:layout_width="wrap_content"
+		    		android:layout_height="wrap_content"
+		    		android:layout_marginLeft="10dp"
+		    		android:text="15816888888"
+		    		android:textSize="32sp"
+		    		android:textColor="@color/blackColor" />
+		        <TextView
+			        android:id="@+id/fgh_tv_country"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+		    		android:layout_marginLeft="10dp"
+			        android:text="中国"
+			        android:textSize="36sp"
+		    		android:textColor="@color/blackColor" />
+		    </LinearLayout>
+		    <Button
+		        android:id="@+id/fgh_iv_btn_app"
+		        android:layout_width="120dp"
+		        android:layout_height="50dp"
+		        android:layout_alignParentRight="true"
+		        android:layout_below="@+id/fgh_ll_userinfo3"
+		        android:layout_marginTop="10dp"
+		        android:layout_marginBottom="10dp"
+		        android:background="@drawable/ac_appset_setting_affirmbutton"
+		        android:text="开始申请"
+		        android:textColor="@color/whiteColor" />
+			<View
+	            android:layout_width="match_parent"
+	            android:layout_height="1.5dp"
+	            android:layout_alignParentBottom="true"
+	            android:background="@color/redColor" />
+	    </RelativeLayout>
+	</LinearLayout>
+	<LinearLayout 
+	    android:id="@+id/fgh_ll_01"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="20dp"
+	    android:layout_marginLeft="40dp"
+	    android:orientation="horizontal" >
+	    <LinearLayout 
+	        android:layout_width="0dp"
+		    android:layout_weight="1"
+		    android:layout_height="wrap_content" >
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="反洗钱风险等级"
+	            android:textSize="18sp"
+	            android:textColor="#000000" />
+	        <TextView 
+	            android:id="@+id/fgh_tv_fxqfxdj"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="10dp"
+	            android:textSize="18sp"
+	            android:textColor="#000000" />
+	    </LinearLayout>
+	    <LinearLayout 
+	        android:layout_width="0dp"
+		    android:layout_weight="1"
+		    android:layout_height="wrap_content" >
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="是否风险控制"
+	            android:textSize="18sp"
+	            android:textColor="#000000" />
+	        <TextView 
+	            android:id="@+id/fgh_tv_sffxkz"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="10dp"
+	            android:textSize="18sp"
+	            android:textColor="#000000" />
+	    </LinearLayout>
+	    <LinearLayout 
+	        android:layout_width="0dp"
+		    android:layout_weight="1"
+		    android:layout_height="wrap_content" >
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="借贷五级分类"
+	            android:textSize="18sp"
+	            android:textColor="#000000" />
+	        <TextView 
+	            android:id="@+id/fgh_tv_jdwjfl"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="10dp"
+	            android:textSize="18sp"
+	            android:textColor="#000000" />
+	    </LinearLayout>
+	    <LinearLayout 
+	        android:layout_width="0dp"
+		    android:layout_weight="1"
+		    android:layout_height="wrap_content" >
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="是否员工"
+	            android:textSize="18sp"
+	            android:textColor="#000000" />
+	        <TextView 
+	            android:id="@+id/fgh_tv_sfyg"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="10dp"
+	            android:textSize="18sp"
+	            android:textColor="#000000" />
+	    </LinearLayout>
+	</LinearLayout>
+	<LinearLayout 
+	    android:id="@+id/fgh_ll_02"
+	    android:layout_width="match_parent"
+	    android:layout_height="0dp"
+	    android:layout_weight="1"
+	    android:layout_marginTop="40dp"
+	    android:layout_marginLeft="20dp"
+	    android:layout_marginRight="20dp"
+	    android:orientation="horizontal" >
+		<TextView 
+		    android:id="@+id/fgh_tv_ck"
+		    android:layout_width="0dp"
+		    android:layout_weight="1"
+		    android:layout_height="wrap_content"
+		    android:background="@drawable/fm_grwdy_hv_ck"
+		    android:text="¥865327"
+		    android:textSize="32sp"
+		    android:textColor="#666666"
+		    android:gravity="center_horizontal|bottom"
+		    android:paddingBottom="10dp" />
+		<TextView 
+		    android:id="@+id/fgh_tv_lc"
+		    android:layout_width="0dp"
+		    android:layout_weight="1"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="@dimen/margin"
+		    android:background="@drawable/fm_grwdy_hv_lc"
+		    android:text="¥50000"
+		    android:textSize="32sp"
+		    android:textColor="#666666"
+		    android:gravity="center_horizontal|bottom"
+		    android:paddingBottom="10dp" />
+		<TextView 
+		    android:id="@+id/fgh_tv_bx"
+		    android:layout_width="0dp"
+		    android:layout_weight="1"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="@dimen/margin"
+		    android:background="@drawable/fm_grwdy_hv_bx"
+		    android:text="68"
+		    android:textSize="32sp"
+		    android:textColor="#666666"
+		    android:gravity="center_horizontal|bottom"
+		    android:paddingBottom="10dp" />
+		<TextView 
+		    android:id="@+id/fgh_tv_dk"
+		    android:layout_width="0dp"
+		    android:layout_weight="1"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="@dimen/margin"
+		    android:background="@drawable/fm_grwdy_hv_dk"
+		    android:text="¥100000"
+		    android:textSize="32sp"
+		    android:textColor="#666666"
+		    android:gravity="center_horizontal|bottom"
+		    android:paddingBottom="10dp" />
+	</LinearLayout>
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="0dp"
+	    android:layout_weight="1"
+	    android:layout_marginLeft="@dimen/margin"
+	    android:layout_marginRight="@dimen/margin"
+	    android:layout_marginBottom="@dimen/margin"
+	    android:orientation="horizontal" >
+		<TextView 
+		    android:id="@+id/fgh_tv_xyk"
+		    android:layout_width="0dp"
+		    android:layout_weight="1"
+		    android:layout_height="wrap_content"
+		    android:background="@drawable/fm_grwdy_hv_xyk"
+		    android:text="¥100000"
+		    android:textSize="32sp"
+		    android:textColor="#666666"
+		    android:gravity="center_horizontal|bottom"
+		    android:paddingBottom="10dp" />
+		<TextView 
+		    android:id="@+id/fgh_tv_jdt"
+		    android:layout_width="0dp"
+		    android:layout_weight="1"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="@dimen/margin"
+		    android:background="@drawable/fm_grwdy_hv_jdt"
+		    android:text="¥100000"
+		    android:textSize="32sp"
+		    android:textColor="#666666"
+		    android:gravity="center_horizontal|bottom"
+		    android:paddingBottom="10dp" />
+		<TextView 
+		    android:id="@+id/fgh_tv_hxzh"
+		    android:layout_width="0dp"
+		    android:layout_weight="1"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="@dimen/margin"
+		    android:background="@drawable/fm_grwdy_hv_hxzh"
+		    android:text="¥100000"
+		    android:textSize="32sp"
+		    android:textColor="#666666"
+		    android:gravity="center_horizontal|bottom"
+		    android:paddingBottom="10dp" />
+		<TextView 
+		    android:id="@+id/fgh_tv_khfx"
+		    android:layout_width="0dp"
+		    android:layout_weight="1"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="@dimen/margin"
+		    android:background="@drawable/fm_grwdy_hv_khfx"
+		    android:text="钻石客户"
+		    android:textSize="32sp"
+		    android:textColor="#666666"
+		    android:gravity="center_horizontal|bottom"
+		    android:paddingBottom="10dp" />
+	</LinearLayout>
+</LinearLayout>

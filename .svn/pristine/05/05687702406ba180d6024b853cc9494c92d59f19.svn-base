@@ -1,0 +1,173 @@
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+    xmlns:app="http://schemas.android.com/apk/res/com.bea.mbank"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteColor">
+	
+	<ImageView 
+	    android:id="@+id/fgdpp_iv_01"
+	    android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_centerHorizontal="true"
+    	android:layout_marginTop="20dp"
+    	android:src="@drawable/fm_grwdy_return" />
+	
+	<com.android.widgets.LineView
+        android:id="@+id/fgdpp_line_01"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/fgdpp_iv_01"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginRight="@dimen/margin"
+        android:layout_marginTop="@dimen/margin"
+        app:lv_lineColor="@color/divider_list"
+        app:lv_lineStyle="DottedLine" />
+
+    <TextView 
+        android:id="@+id/fgdpp_tv_basicinfo"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/fgdpp_line_01"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="30dp"
+        android:text="基本信息"
+        android:textColor="@color/color535353"
+        android:textSize="@dimen/title_font_size" />
+    <View 
+        android:id="@+id/fgdpp_v_01"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/fgdpp_tv_basicinfo"
+        android:background="@drawable/listbg" />
+    <TextView 
+        android:id="@+id/fgdpp_tv_last3return"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/fgdpp_v_01"
+        android:layout_alignLeft="@+id/fgdpp_tv_basicinfo"
+        android:gravity="center_vertical"
+        android:text="最近三笔还款信息"
+        android:textColor="@color/color535353"
+        android:textSize="@dimen/title_font_size" />
+    <View 
+        android:id="@+id/fgdpp_v_02"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/fgdpp_tv_last3return"
+        android:background="@drawable/listbg" />
+    <TextView 
+        android:id="@+id/fgdpp_tv_lxxx"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/fgdpp_v_02"
+        android:layout_alignLeft="@+id/fgdpp_tv_basicinfo"
+        android:gravity="center_vertical"
+        android:text="借款人联系信息"
+        android:textColor="@color/color535353"
+        android:textSize="@dimen/title_font_size" />
+    <View 
+        android:id="@+id/fgdpp_v_03"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/fgdpp_tv_lxxx"
+        android:background="@drawable/listbg" />
+    <!-- <TextView 
+        android:id="@+id/fgdpp_tv_bczxjl"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/fgdpp_v_03"
+        android:layout_alignLeft="@+id/fgdpp_tv_basicinfo"
+        android:gravity="center_vertical"
+        android:text="客户承诺记录"
+        android:textColor="@color/color535353"
+        android:textSize="@dimen/title_font_size" />
+    <View 
+        android:id="@+id/fgdpp_v_04"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/fgdpp_tv_bczxjl"
+        android:background="@drawable/listbg" /> -->
+
+    <!-- <View
+        android:id="@+id/fgdpp_v_09"
+        android:layout_width="3dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/fgdpp_v_04"
+        android:background="@color/redColor" />
+
+    <TextView 
+        android:id="@+id/fgdpp_tv_phonerecord"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/fgdpp_v_04"
+        android:layout_alignLeft="@+id/fgdpp_tv_basicinfo"
+        android:layout_toRightOf="@+id/fgdpp_v_09"
+        android:gravity="center_vertical"
+        android:text="新增客户承诺"
+        android:textColor="@color/color535353"
+        android:textSize="@dimen/title_font_size" />
+    <View 
+        android:id="@+id/fgdpp_v_05"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/fgdpp_tv_phonerecord"
+        android:background="@drawable/listbg" /> -->
+    <View 
+        android:id="@+id/fgdpp_v_10"
+        android:layout_width="3dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/fgdpp_v_03"
+        android:background="@color/redColor" />
+    <TextView 
+        android:id="@+id/fgdpp_tv_cnhcsj"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/fgdpp_v_03"
+        android:layout_alignLeft="@+id/fgdpp_tv_basicinfo"
+        android:layout_toRightOf="@+id/fgdpp_v_10"
+        android:gravity="center_vertical"
+        android:text="新增催收信息"
+        android:textColor="@color/color535353"
+        android:textSize="@dimen/title_font_size" />
+    <View 
+        android:id="@+id/fgdpp_v_06"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/fgdpp_tv_cnhcsj"
+        android:background="@drawable/listbg" />
+    <TextView 
+        android:id="@+id/fgdpp_tv_lccsjl"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/fgdpp_v_06"
+        android:layout_alignLeft="@+id/fgdpp_tv_basicinfo"
+        android:gravity="center_vertical"
+        android:text="历次催收记录"
+        android:textColor="@color/color535353"
+        android:textSize="@dimen/title_font_size" />
+    <View 
+        android:id="@+id/fgdpp_v_07"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/fgdpp_tv_lccsjl"
+        android:background="@drawable/listbg" />
+	<LinearLayout 
+   	    android:layout_width="wrap_content"
+   	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+   	    android:layout_alignParentRight="true" >
+	   	<Button
+	   	    android:id="@+id/fgdpp_btn_send"
+	   	    android:layout_width="@dimen/next_btn_width"
+	   	    android:layout_height="@dimen/next_btn_height"
+	   	    android:layout_marginRight="10dp"
+	   	    android:layout_marginBottom="10dp"
+	   	    android:background="@drawable/ac_appset_setting_affirmbutton"
+	   	    android:text="提交"
+	   	    android:textSize="@dimen/red_buttom_textSize"
+	   	    android:textColor="@color/whiteColor" />
+	</LinearLayout>
+</RelativeLayout>

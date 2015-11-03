@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="0dp"
+    android:orientation="vertical"
+    android:padding="0dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/no"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_leftOrRight"
+            android:paddingTop="@dimen/padding_topOrBottom"
+            android:textColor="@color/titleColor"
+            android:textSize="@dimen/value_font_size" />
+
+        <TextView
+            android:id="@+id/fgpi_tv_policyno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/margin_leftOrRight"
+            android:paddingTop="@dimen/padding_topOrBottom"
+            android:textColor="#333333"
+            android:textSize="@dimen/value_font_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fgpi_ll01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/margin_topOrBottom"
+        android:paddingLeft="@dimen/paxb_dxitem_fgpi_ll01_paddingLeft"
+        android:paddingRight="@dimen/paxb_dxitem_fgpi_ll01_paddingRight"
+        android:paddingTop="@dimen/padding_topOrBottom" >
+
+        <TextView
+            android:id="@+id/fgpi_tv_custname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/cusname"
+            android:textColor="#333333"
+            android:textSize="@dimen/value_font_size" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="证件类型"
+                android:textColor="#000000"
+                android:textSize="@dimen/value_font_size" />
+
+            <TextView
+                android:id="@+id/fgpi_tv_idtypename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/margin"
+                android:textSize="@dimen/value_font_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="证件号码"
+                android:textColor="#000000"
+                android:textSize="@dimen/value_font_size" />
+
+            <TextView
+                android:id="@+id/fgpi_tv_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/margin_leftOrRight"
+                android:textSize="@dimen/value_font_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="申请金额"
+                android:textColor="#333333"
+                android:textSize="@dimen/value_font_size" />
+
+            <TextView
+                android:id="@+id/fgpi_tv_applamt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/margin_leftOrRight"
+                android:textColor="@color/redColor"
+                android:textSize="@dimen/value_font_size" />
+
+            <TextView
+                android:id="@+id/fgpi_tv_applycurrency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/layout_marginTop"
+                android:textSize="@dimen/value_font_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/mytask_xuxian" />
+
+</LinearLayout>

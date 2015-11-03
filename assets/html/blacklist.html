@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title></title>
+<link rel="stylesheet" href="file:///android_asset/css/blacklist.css" type="text/css" media="screen" />
+<script type="text/javascript" src="file:///android_asset/js/prototype-1.6.0.2.js"></script>
+<script type="text/javascript">
+var titlewidth = "20%";
+var valuewidth = "30%";
+
+function init(){
+	webviewutil.getNDSInfo();
+	webviewutil.getAlertInfo();
+	webviewutil.getRelationInfo();
+	webviewutil.getFSInfo();
+}
+
+/**
+ * NDS监察信息
+ */
+function NDSInfo(info){
+	if('' == info)
+		return;
+	var list = info.evalJSON();
+	if(list.length > 0){
+		document.getElementById('model1_1').style.display = "block";
+		var table;
+		var tr1,tr2,tr3,tr4,tr5,tr6,tr7;
+		var obj;
+		var div = document.getElementById('ndsinfo');
+		for(var i = 0; i < list.length; i++){
+			obj = list[i];
+			if('' != obj){
+				table = document.createElement("table");
+				table.className = "table";
+				
+				tr1 = createSingleTr("类型描述",StringFormat(obj.WATCHLIST_DESC));
+				tr2 = createSingleTr("名称",StringFormat(obj.WATCHLIST_NAME));
+				tr3 = createTr("客户转换名称","转换后名称",StringFormat(obj.COUNTRY_NAME),StringFormat(obj.PRE_CLIENT_NAME));
+				tr4 = createTr("国家","出生日期",StringFormat(obj.COUNTRY_NAME),StringFormat(obj.BIRTHDAY));
+				tr5 = createTr("匹配率(%)","是否监察名单",StringFormat(obj.MATCH_RATE),"");
+//				tr6 = createTr("查询状态","");
+//				tr7 = createTr("查询人","查询日期","","");
+				
+				table.appendChild(tr1);
+				table.appendChild(tr2);
+				table.appendChild(tr3);
+				table.appendChild(tr4);
+				table.appendChild(tr5);
+//				table.appendChild(tr6);
+//				table.appendChild(tr7);
+				
+				div.appendChild(table);
+			}
+		}
+	}
+}
+
+/**
+ * 警示信息
+ */
+ function alertInfo(info){
+	if('' == info){
+		document.getElementById('model2_2').innerHTML = '无记录';
+		return;
+	}
+	var list = info.evalJSON();
+	if(list.length > 0){
+        document.getElementById('model2_1').style.display = "block";
+		var table;
+		var tr1,tr2,tr3;
+		var obj;
+		var div = document.getElementById('alertinfo');
+		for(var i = 0; i < list.length; i++){
+			obj = list[i];
+			if('' != obj){
+				table = document.createElement("table");
+				
+				tr1 = createTr("信息类型","失效日期",StringFormat(obj.TYP_NOTIFICATION_O),StringFormat(obj.DAT_NTFMAT_O));
+				tr2 = createTr("生效日期","生效机构",StringFormat(obj.DAT_CREATION_O),StringFormat(obj.USR_CREATION_O));
+				tr3 = createTr("更新日期","更新人",StringFormat(obj.DAT_LASTMOD_O),StringFormat(obj.USR_LASTMOD_O));
+				
+				table.appendChild(tr1);
+				table.appendChild(tr2);
+				table.appendChild(tr3);
+				
+				div.appendChild(table);
+			}
+		}
+	}
+}
+
+/**
+ * 关联信息
+ */
+ function relationInfo(info){
+	if('' == info){
+		document.getElementById('model3_2').innerHTML = '无记录';
+		return;
+	}
+	var list = info.evalJSON();
+	if(list.length > 0){
+        document.getElementById('model3_1').style.display = "block";
+		var table;
+		var tr1,tr2,tr3,tr4,tr5,tr6,tr7;
+		var obj;
+		var div = document.getElementById('relationinfo');
+		for(var i = 0; i < list.length; i++){
+			obj = list[i];
+			if('' != obj){
+				table = document.createElement("table");
+				
+				tr1 = createTr("关联类型","状态",StringFormat(obj.COD_RELAT_O),StringFormat(obj.REL_STATUS_O));
+				tr2 = createTr("英文姓","英文名",StringFormat(obj.SURNAME_ENG_REL_O),StringFormat(obj.NAME_ENG_REL_O));
+				tr3 = createTr("中文姓","中文名",StringFormat(obj.SURNAME_CHI_REL_O),StringFormat(obj.NAME_CHI_REL_O));
+				tr4 = createTr("证件类型","证件号码",StringFormat(obj.COD_ID_REL_O),StringFormat(obj.KEY_ID_REL_O));
+				tr5 = createTr("发证国家","创建日期",StringFormat(obj.COD_ISS_CTRY_REL_O),StringFormat(obj.DAT_CREATION_O));
+				tr6 = createTr("创建人","录最新修改日期",StringFormat(obj.USR_CREATION_O),StringFormat(obj.DAT_LASTMOD_O));
+				tr7 = createTr("记录最新修改人","",StringFormat(obj.USR_LASTMOD_O),"");
+				
+				table.appendChild(tr1);
+				table.appendChild(tr2);
+				table.appendChild(tr3);
+				table.appendChild(tr4);
+				table.appendChild(tr5);
+				table.appendChild(tr6);
+				table.appendChild(tr7);
+				
+				div.appendChild(table);
+			}
+		}
+	}
+}
+
+/**
+ * 附属信息
+ */
+ function fsInfo(info){
+	if('' == info){
+		document.getElementById('model4_2').innerHTML = '无记录';
+		return;
+	}
+	var list = info.evalJSON();
+	if(list.length > 0){
+        document.getElementById('model4_1').style.display = "block";
+		valuewidth = "40%";
+		titlewidth = "10%";
+		var table;
+		var tr1,tr2,tr3,tr4,tr5,tr6,tr7,tr8;
+		var obj;
+		var div = document.getElementById('fsinfo');
+		for(var i = 0; i < list.length; i++){
+			obj = list[i];
+			if('' != obj){
+				table = document.createElement("table");
+				
+				tr1 = createTr("客户死亡日期","公司客户官网",StringFormat(obj.DAT_DEMISE_O),StringFormat(obj.REL_STATUS_O));
+				tr2 = createTr("是否为BEA董事","是否为BEA有权审批人",StringFormat(obj.FLG_DIRECTOR_O),StringFormat(obj.FLG_OFFICER_O));
+				tr3 = createTr("是否为BEA附属公司董事","是否为BEA附属行有权审批人",StringFormat(obj.FLG_SUB_DIRECTOR_O),StringFormat(obj.FLG_SUB_OFFICER_O));
+				tr4 = createTr("是否为BEA秘书","是否持有我行10%~50%股份",StringFormat(obj.FLG_SECRETARY_O),StringFormat(obj.FLG_MIN_INTEREST_O));
+				tr5 = createTr("是否额度已封顶","是否接收电话和传真",StringFormat(obj.FLG_EXP_CAP_O),StringFormat(obj.FLG_INSTRUCTION_O));
+				tr6 = createTr("是否接受对特定账户的电话和传真","创建日期",StringFormat(obj.FLG_AC_INSTRUCTION_O),StringFormat(obj.DAT_CREATION_O));
+				tr7 = createTr("创建人","录最新修改日期",StringFormat(obj.USR_CREATION_O),StringFormat(obj.DAT_LASTMOD_O));
+				tr8 = createTr("记录最新修改人","",StringFormat(obj.USR_LASTMOD_O),"");
+				
+				table.appendChild(tr1);
+				table.appendChild(tr2);
+				table.appendChild(tr3);
+				table.appendChild(tr4);
+				table.appendChild(tr5);
+				table.appendChild(tr6);
+				table.appendChild(tr7);
+				table.appendChild(tr8);
+				
+				div.appendChild(table);
+			}
+		}
+	}
+}
+
+
+function createTr(title1,title2,content1,content2){
+	if(undefined == content1 || null == content1)
+		content1 = "";
+	if(undefined == content2 || null == content2)
+		content2 = "";
+	var tr;
+	var th1,th2;
+	var td1,td2;
+	tr = document.createElement("tr");
+	
+	th1 = document.createElement("td");
+	th1.style.width = titlewidth;
+	th1.innerHTML = '<span class="labeltext">'+title1+'</span>';
+	tr.appendChild(th1);
+	
+	td1 = document.createElement("td");
+	td1.style.width = valuewidth;
+	td1.innerHTML = '<span class="labelvalue">'+content1+'</span>';
+	tr.appendChild(td1);
+	
+	if("" == title2)
+		return tr;
+	th2 = document.createElement("td");
+	th2.style.width = titlewidth;
+	th2.innerHTML = '<span class="labeltext">'+title2+'</span>';
+	tr.appendChild(th2);
+	
+	td2 = document.createElement("td");
+	td2.style.width = valuewidth;
+	td2.innerHTML = '<span class="labelvalue">'+content2+'</span>';
+	tr.appendChild(td2);
+	
+	return tr;
+}
+
+function createSingleTr(title,content){
+	if(undefined == content || null == content)
+		content1 = "";
+	var tr;
+	var th1;
+	var td1;
+	tr = document.createElement("tr");
+	
+	th1 = document.createElement("td");
+	th1.style.width = "20%";
+	th1.innerHTML = '<span class="labeltext">'+title+'</span>';
+	tr.appendChild(th1);
+	
+	td1 = document.createElement("td");
+	td1.style.width = "80%";
+	td1.colSpan = 3;
+	td1.innerHTML = '<span class="labelvalue">'+content+'</span>';
+	tr.appendChild(td1);
+	
+	return tr;
+}
+
+function StringFormat(s){
+	if(undefined == s || null == s)
+		return "";
+	if("null" == s)
+		return "";
+	return s;
+}
+</script>
+</head>
+<body onload="javascript:init()">
+<div id="model1">
+	<div class="divtitle">
+		<input type="text" readonly="readonly" value="NDS监察信息" class="title"/>
+	</div>
+	<div class="divtitle">
+		<hr style="float: left;height: 1px;width: 20%;border: none;border-top: 1px solid red;margin-top: 10px;">
+		<hr style="float: left;height: 1px;width:80%;border: none;border-top: 1px solid #E6E6E6;margin-top: 10px;">
+		<div style="clear: left;"></div>
+	</div>
+	<div class="divtitle" id="model1_1" style="display: none;">
+		<fieldset id="ndsinfo" class="fieldset"></fieldset>
+	</div>
+</div>
+
+<div id="model2" style="margin-top: 40px;">
+	<div class="divtitle">
+		<input type="text" readonly="readonly" value="AFT警示信息" class="title"/>
+	</div>
+	<div class="divtitle">
+		<hr style="float: left;height: 1px;width: 20%;border: none;border-top: 1px solid red;margin-top: 10px;">
+		<hr style="float: left;height: 1px;width:80%;border: none;border-top: 1px solid #E6E6E6;margin-top: 10px;">
+		<div style="clear: left;"></div>
+	</div>
+	<div class="divtitle">
+		<span class="labeltext" id="model2_2"></span>
+	</div>
+	<div class="divtitle" id="model2_1" style="display: none;">
+		<fieldset id="alertinfo" class="fieldset"></fieldset>
+	</div>
+</div>
+
+<div id="model3" style="margin-top: 40px;">
+	<div class="divtitle">
+		<input type="text" readonly="readonly" value="AFT关联信息" class="title"/>
+	</div>
+	<div class="divtitle">
+		<hr style="float: left;height: 1px;width: 20%;border: none;border-top: 1px solid red;margin-top: 10px;">
+		<hr style="float: left;height: 1px;width:80%;border: none;border-top: 1px solid #E6E6E6;margin-top: 10px;">
+		<div style="clear: left;"></div>
+	</div>
+	<div class="divtitle">
+		<span class="labeltext" id="model3_2"></span>
+	</div>
+	<div class="divtitle" id="model3_1" style="display: none;">
+		<fieldset id="relationinfo" class="fieldset"></fieldset>
+	</div>
+</div>
+
+<div id="model4" style="margin-top: 40px;">
+	<div class="divtitle">
+		<input type="text" readonly="readonly" value="AFT附属信息" class="title"/>
+	</div>
+	<div class="divtitle">
+		<hr style="float: left;height: 1px;width: 20%;border: none;border-top: 1px solid red;margin-top: 10px;">
+		<hr style="float: left;height: 1px;width:80%;border: none;border-top: 1px solid #E6E6E6;margin-top: 10px;">
+		<div style="clear: left;"></div>
+	</div>
+	<div class="divtitle">
+		<span class="labeltext" id="model4_2"></span>
+	</div>
+	<div class="divtitle" id="model4_1" style="display: none;">
+		<fieldset id="fsinfo" class="fieldset"></fieldset>
+	</div>
+</div>
+</body>
+</html>

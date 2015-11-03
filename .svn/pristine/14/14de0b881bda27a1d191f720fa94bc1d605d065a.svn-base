@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.bea.mbank"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margin" >
+
+    <com.android.widgets.BottomLineTitleView
+        android:id="@+id/Mate_LineTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:textColor="@color/blackColor"
+        app:bl_lineColor="#e7e7e7"
+        app:bl_lineSize="1dp"
+        app:bl_selectorColor="@color/redColor"
+        app:bl_title="@string/partner"
+        app:bl_titleColor="@color/blackColor"
+        app:bl_titleFont="20sp" />
+
+    <LinearLayout
+        android:id="@+id/Mate_linlayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/Mate_LineTitle"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:orientation="horizontal" >
+
+        <com.android.widgets.TitleValueView
+            android:id="@+id/Mate_fName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:tv_title="姓（中文）"
+            app:tv_titleColor="@color/blackColor"
+            app:tv_titleFont="@dimen/title_font_size"
+            app:tv_titleWidth="@dimen/grouptext_width"
+            app:tv_valueColor="@color/contentColor"
+            app:tv_valueFont="@dimen/value_font_size"
+            app:tv_valueHint="姓"
+        app:tv_valueMaxLength="40"  />
+
+        <com.android.widgets.TitleValueView
+            android:id="@+id/Mate_lName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            app:tv_title="名（中文）"
+            app:tv_titleColor="@color/blackColor"
+            app:tv_titleFont="@dimen/title_font_size"
+            app:tv_titleWidth="@dimen/grouptext_width"
+            app:tv_valueColor="@color/contentColor"
+            app:tv_valueFont="@dimen/value_font_size"
+            app:tv_valueHint="名"
+        app:tv_valueMaxLength="40"  />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Mate_linlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/Mate_linlayout1"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:orientation="horizontal" >
+
+        <com.android.widgets.TitleValueView
+            android:id="@+id/Mate_efName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:tv_title="姓（英文/拼音）"
+            app:tv_titleColor="@color/blackColor"
+            app:tv_titleFont="@dimen/title_font_size"
+            app:tv_titleWidth="@dimen/grouptext_width"
+            app:tv_valueColor="@color/contentColor"
+            app:tv_valueFont="@dimen/value_font_size"
+            app:tv_valueHint="姓"
+        app:tv_valueMaxLength="40"  />
+
+        <com.android.widgets.TitleValueView
+            android:id="@+id/Mate_elName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            app:tv_title="名（英文/拼音）"
+            app:tv_titleColor="@color/blackColor"
+            app:tv_titleFont="@dimen/title_font_size"
+            app:tv_titleWidth="@dimen/grouptext_width"
+            app:tv_valueColor="@color/contentColor"
+            app:tv_valueFont="@dimen/value_font_size"
+            app:tv_valueHint="名" 
+        app:tv_valueMaxLength="40" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/Mate_DocumentType"
+        android:layout_width="@dimen/grouptext_width"
+        android:layout_height="@dimen/borrowerTextView_width"
+        android:gravity="center_vertical" 
+        android:layout_below="@+id/Mate_linlayout"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:text="证件类型"
+        android:textColor="@color/blackColor"
+        android:textSize="@dimen/title_font_size" />
+
+    <com.bea.mbank.widgets.GroupTagViewEx
+        android:id="@+id/Mate_gtvDocumentType"
+        android:layout_width="match_parent"
+         android:layout_height="@dimen/borrowerTextView_width"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/Mate_linlayout"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:layout_toRightOf="@+id/Mate_DocumentType"
+        app:gt_hintText="证件类型"
+        app:gt_spinnerShow="true" />
+
+    <com.android.widgets.TitleValueView
+        android:id="@+id/Mate_DocumentNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/Mate_DocumentType"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        app:tv_title="证件号码"
+        app:tv_titleColor="@color/blackColor"
+        app:tv_titleFont="@dimen/title_font_size"
+        app:tv_titleWidth="@dimen/grouptext_width"
+        app:tv_valueColor="@color/contentColor"
+        app:tv_valueFont="@dimen/value_font_size"
+        app:tv_valueHint="证件号码" 
+        app:tv_valueMaxLength="40" />
+
+    <TextView
+        android:id="@+id/Mate_Issuing"
+        android:layout_width="@dimen/grouptext_width"
+         android:layout_height="@dimen/borrowerTextView_width"
+        android:gravity="center_vertical" 
+        android:layout_below="@+id/Mate_DocumentNumber"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:text="发证国家"
+        android:textColor="@color/blackColor"
+        android:textSize="@dimen/title_font_size" />
+
+    <com.bea.mbank.widgets.GroupTagViewEx
+        android:id="@+id/Mate_gtvIssuing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Mate_DocumentNumber"
+		android:layout_alignTop="@id/Mate_Issuing"
+        android:layout_toRightOf="@+id/Mate_Issuing"
+        app:gt_hintText="发证国家"
+        app:gt_spinnerShow="true" />
+
+    <TextView
+        android:id="@+id/Mate_DocumentDate"
+        android:layout_width="@dimen/grouptext_width"
+         android:layout_height="@dimen/borrowerTextView_width"
+        android:gravity="center_vertical"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/Mate_Issuing"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:text="证件到期日"
+        android:textColor="@color/blackColor"
+        android:textSize="@dimen/title_font_size" />
+
+    <TextView
+        android:id="@+id/Mate_valueDocumentDate"
+        android:layout_width="match_parent"
+         android:layout_height="@dimen/borrowerTextView_width"
+        android:gravity="center_vertical"
+        android:layout_alignLeft="@+id/Mate_gtvDocumentType"
+        android:layout_below="@+id/Mate_Issuing"
+        android:layout_alignTop="@id/Mate_DocumentDate" 
+        android:hint="证件到期日" 
+        android:textColor="@color/contentColor"
+        android:textSize="@dimen/title_font_size" />
+
+</RelativeLayout>

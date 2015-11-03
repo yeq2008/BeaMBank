@@ -1,0 +1,71 @@
+.inputtext{
+	border: 0;
+	width: 100%;
+	font-size: 18px;
+	color: #333333;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.inputvalue{
+	border: 0;
+	width: 100%;
+	color: #999999;
+	font-size: 18px;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.labeltext{
+	width: 100%;
+	font-size: 18px;
+	color: #333333;
+	margin: 0px;
+	padding: 0px;
+}
+
+.labelvalue{
+	width: 100%;
+	font-size: 18px;
+	color: #999999;
+	margin: 0px;
+	padding: 0px;
+}
+
+.title{
+	font-size:18px;
+	border: 0px;
+	margin-left: 0px;
+	padding-left: 0px;
+}
+
+.div{
+	margin-left: 0px;
+	margin-right : 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.table{
+	width: 100%;
+	margin: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.table tr{
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+.table th,td{
+	width: 25%;
+	height : 35px;
+	margin: 0px;
+	padding: 0px;
+}

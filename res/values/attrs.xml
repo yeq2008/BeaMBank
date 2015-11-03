@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- GridTableView related attributes -->
+    <declare-styleable name="GridTableView">
+       <!-- title区域文字内容 -->
+       <attr name="grt_title" format="string|reference" /> 
+       <!-- title区域字体大小 -->
+       <attr name="grt_titleFont" format="dimension|reference"/>
+       <!-- 按钮的文字数组,列宽在数组每个元素后用@＋数值格式设定，如：xxxx@40 -->
+       <attr name="grt_titles" format="reference" />
+    </declare-styleable>
+    
+ 
+</resources>

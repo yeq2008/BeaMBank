@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title></title>
+<link rel="stylesheet" href="file:///android_asset/css/core.css" type="text/css" media="screen" />
+</head>
+<body>
+<div style="margin: 10px;padding: 0px;">
+	<div class="RoundedCorner">
+		<b class="rtop">
+			<b class="r1"></b>
+			<b class="r2"></b>
+			<b class="r3"></b>
+			<b class="r4"></b>
+		</b>
+		<div style="font-size: 16px;padding: 10px;">
+			<label style="font-size: 16px;color: #333333;">
+				 签署 （本行有权拒绝接受此份申请文件而无需作任何解释。本申请表及所 提交文件将 不予返还 。本行亦有可能需要借款人提供额外文件以作审批。 ）
+				本人已阅读并理解了 贵行向本人提供的《个人金融信息使用和保护告知书》 ，自愿授权并同意 贵行按《个人金融信息使用和保护告知书》规定的范围收集、
+				保存、使用和对外提供本人的金融信息。
+				本人已认真阅读并完全同意遵守及履行本申请表所载之所有章程及条款。本人完全同意本申请表中的所有授权，并保证遵守上述所载的所有承诺及声明，
+				特此确认。
+				本人已知悉本贷款申请有待 贵行批准。若 贵行批准的贷款金额、期限、利率与本人在申请表填写的信息一致，则申请表构成一份不可撤销的要约。
+			</label>
+		</div>
+		<b class="rbottom">
+			<b class="r4"></b>
+			<b class="r3"></b>
+			<b class="r2"></b>
+			<b class="r1"></b>
+		</b>
+	</div>
+</div>
+</body>
+</html>

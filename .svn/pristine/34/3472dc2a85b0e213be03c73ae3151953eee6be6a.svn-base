@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/frame_back"
+    android:padding="@dimen/margin" >
+    
+    <com.android.widgets.BottomLineTitleView
+        android:id="@+id/fgccmi_bltv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/blackColor"
+        app:bl_lineColor="#e7e7e7"
+        app:bl_selectorColor="@color/redColor"
+        app:bl_title="客户经理填写"
+        app:bl_titleColor="@color/blackColor"
+        app:bl_titleFont="20sp"
+        app:bl_lineSize="1px"/>
+    
+    <TextView
+        android:id="@+id/fgccmi_tv_ointerest"
+        android:layout_width="@dimen/grouptext_width"
+         android:layout_height="@dimen/borrowerTextView_width"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/fgccmi_bltv_title" 
+        android:text="享受员工贴息"
+        android:textColor="@color/titleColor"
+        android:textSize="@dimen/title_font_size" />
+	    
+    <com.bea.mbank.widgets.GroupTagViewEx
+        android:id="@+id/fgccmi_gtv_ointerest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_marginTop="@dimen/grouptop"
+        android:layout_toRightOf="@+id/fgccmi_tv_ointerest"
+        android:layout_below="@+id/fgccmi_bltv_title"
+        android:layout_alignTop="@id/fgccmi_tv_ointerest"
+        app:gt_titleFont="@dimen/value_font_size" />
+    
+    <TextView
+        android:id="@+id/fgccmi_tv_olua"
+        android:layout_width="@dimen/grouptext_width"
+         android:layout_height="@dimen/borrowerTextView_width"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/fgccmi_tv_ointerest" 
+        android:text="资金使用地"
+        android:textColor="@color/titleColor"
+        android:textSize="@dimen/title_font_size" />
+	    
+    <com.bea.mbank.widgets.GroupTagViewEx
+        android:id="@+id/fgccmi_gtv_olua"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_marginTop="@dimen/grouptop"
+        android:layout_toRightOf="@+id/fgccmi_tv_olua"
+        android:layout_below="@+id/fgccmi_tv_ointerest"
+        android:layout_alignTop="@id/fgccmi_tv_olua"
+        app:gt_titleFont="@dimen/value_font_size" />
+    
+    <TextView 
+	    android:id="@+id/fgccmi_tv_ocounandprov"
+	    android:layout_width="@dimen/grouptext_width"
+	     android:layout_height="@dimen/borrowerTextView_width"
+        android:gravity="center_vertical"
+	    android:layout_below="@+id/fgccmi_tv_olua" 
+        android:text="贷款使用所在地"
+        android:textColor="@color/titleColor"
+        android:textSize="@dimen/title_font_size" />
+    
+    <TextView 
+	    android:id="@+id/fgccmi_tv_ocounandprov_content"
+	    android:layout_width="wrap_content"
+	    android:layout_height="@dimen/borrowerTextView_width"
+        android:gravity="center_vertical"
+	    android:layout_below="@+id/fgccmi_tv_olua" 
+	    android:layout_toRightOf="@+id/fgccmi_tv_ocounandprov"
+	    android:layout_alignTop="@id/fgccmi_tv_ocounandprov"
+	    android:hint="贷款使用所在地"
+	    android:textSize="@dimen/value_font_size"
+        android:textColor="@color/contentColor"
+	    android:background="@null"/>
+    
+    <TextView 
+	    android:id="@+id/fgccmi_tv_ocomment"
+	    android:layout_width="@dimen/grouptext_width"
+	     android:layout_height="@dimen/borrowerTextView_width"
+        android:gravity="center_vertical"
+	    android:layout_below="@+id/fgccmi_tv_ocounandprov" 
+        android:text="用途备注"
+        android:textColor="@color/titleColor"
+        android:textSize="@dimen/title_font_size"
+        android:visibility="gone" />
+    
+    <EditText
+        android:id="@+id/fgccmi_et_ocomment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fgccmi_tv_ocounandprov"
+        android:layout_toRightOf="@+id/fgccmi_tv_ocomment"
+        android:layout_alignTop="@+id/fgccmi_tv_ocomment"
+        android:background="@null"
+         android:layout_marginTop="@dimen/grouptop"
+        android:hint="用途备注" 
+        android:textColor="@color/contentColor"
+        android:textSize="@dimen/value_font_size"
+        android:visibility="gone"
+         />
+    
+    <TextView
+        android:id="@+id/fgccmi_tv_ocrtype"
+        android:layout_width="@dimen/grouptext_width"
+         android:layout_height="@dimen/borrowerTextView_width"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/fgccmi_tv_ocomment" 
+        android:text="还款能力标准"
+        android:textColor="@color/titleColor"
+        android:textSize="@dimen/title_font_size" />
+	    
+    <com.bea.mbank.widgets.GroupTagViewEx
+        android:id="@+id/fgccmi_gtv_ocrtype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_marginTop="@dimen/grouptop"
+        android:layout_toRightOf="@+id/fgccmi_tv_ocrtype"
+        android:layout_below="@+id/fgccmi_tv_ocomment"
+        android:layout_alignTop="@id/fgccmi_tv_ocrtype"
+        app:gt_titleFont="@dimen/value_font_size" />
+    
+    <TextView
+        android:id="@+id/fgccmi_tv_omic"
+        android:layout_width="@dimen/grouptext_width"
+         android:layout_height="@dimen/borrowerTextView_width"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/fgccmi_tv_ocrtype" 
+        android:text="业务推荐类型"
+        android:textColor="@color/titleColor"
+        android:textSize="@dimen/title_font_size" />
+	    
+    <com.bea.mbank.widgets.GroupTagViewEx
+        android:id="@+id/fgccmi_gtv_omic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_marginTop="@dimen/grouptop"
+        android:layout_toRightOf="@+id/fgccmi_tv_omic"
+        android:layout_below="@+id/fgccmi_tv_ocrtype"
+        android:layout_alignTop="@id/fgccmi_tv_omic"
+        app:gt_titleFont="@dimen/value_font_size" /> 
+	
+    <TextView 
+        android:id="@+id/fgccmi_tv_obead"
+	    android:layout_width="@dimen/grouptext_width"
+	     android:layout_height="@dimen/borrowerTextView_width"
+        android:gravity="center_vertical"
+	    android:layout_below="@+id/fgccmi_gtv_omic"  
+        android:text="推荐部门名称"
+        android:textColor="@color/titleColor"
+        android:textSize="@dimen/title_font_size" />
+    
+    <EditText
+        android:id="@+id/fgccmi_et_obead"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/borrowerTextView_width"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/fgccmi_gtv_omic"
+        android:layout_toRightOf="@+id/fgccmi_tv_obead"
+        android:layout_alignTop="@+id/fgccmi_tv_obead"
+        android:background="@null" 
+        android:hint="推荐部门名称" 
+        android:textColor="@color/contentColor"
+        android:textSize="@dimen/value_font_size" />
+    
+    <RelativeLayout 
+        android:id="@+id/fgccmi_rl_oc"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/fgccmi_tv_obead" >
+	    
+	    <TextView 
+	        android:id="@+id/fgccmi_tv_octype"
+		    android:layout_width="@dimen/grouptext_width"
+		    android:layout_height="@dimen/borrowerTextView_width"  
+		    android:gravity="center_vertical"
+	        android:text="客户证件类型"
+	        android:textColor="@color/titleColor"
+	        android:textSize="@dimen/title_font_size" />
+	    
+	     <com.bea.mbank.widgets.GroupTagViewEx
+	        android:id="@+id/fgccmi_gtv_octype"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" 
+	        android:layout_toRightOf="@+id/fgccmi_tv_octype"
+	        android:layout_alignTop="@id/fgccmi_tv_octype"
+		    app:gt_spinnerShow="true"
+	        app:gt_titleFont="@dimen/value_font_size" 
+	        app:gt_hintText="证件类型" />
+	    
+	    <TextView 
+	        android:id="@+id/fgccmi_tv_ocnum"
+		    android:layout_width="@dimen/grouptext_width"
+		     android:layout_height="@dimen/borrowerTextView_width"
+        android:gravity="center_vertical"
+		    android:layout_below="@+id/fgccmi_tv_octype" 
+		    android:paddingRight="20dp"
+	        android:text="客户证件号码"
+	        android:textColor="@color/titleColor"
+	        android:textSize="@dimen/title_font_size" />
+	
+	    <EditText
+	        android:id="@+id/fgccmi_et_ocnum"
+	        android:layout_width="match_parent"
+	        android:layout_height="@dimen/borrowerTextView_width"
+        android:gravity="center_vertical"
+	        android:layout_below="@+id/fgccmi_tv_octype"
+	        android:layout_toRightOf="@+id/fgccmi_tv_ocnum"
+	        android:layout_alignTop="@+id/fgccmi_tv_ocnum" 
+	        android:background="@null"
+	        android:hint="证件号码" 
+	        android:textColor="@color/contentColor"
+	        android:textSize="@dimen/value_font_size"  />
+	    
+	    <TextView 
+	        android:id="@+id/fgccmi_tv_ocname"
+		    android:layout_width="@dimen/grouptext_width"
+		    android:layout_height="@dimen/borrowerTextView_width"
+        android:gravity="center_vertical"
+		    android:layout_below="@+id/fgccmi_tv_ocnum" 
+	        android:text="客户名称"
+	        android:textColor="@color/titleColor"
+	        android:textSize="@dimen/title_font_size" />
+	    
+	    <EditText 
+	        android:id="@+id/fgccmi_et_ocname"
+		    android:layout_width="match_parent"
+		    android:layout_height="@dimen/borrowerTextView_width"
+        android:gravity="center_vertical"
+		    android:layout_toRightOf="@+id/fgccmi_tv_ocname"
+		    android:layout_below="@+id/fgccmi_tv_ocnum"
+		    android:layout_alignTop="@+id/fgccmi_tv_ocname" 
+		    android:hint="名称" 
+		    android:textSize="@dimen/value_font_size"
+	        android:textColor="@color/contentColor"
+		    android:background="@null" />
+	    
+	    <TextView 
+	        android:id="@+id/fgccmi_tv_octel"
+		    android:layout_width="@dimen/grouptext_width"
+		    android:layout_height="@dimen/borrowerTextView_width"
+        android:gravity="center_vertical"
+		    android:layout_below="@+id/fgccmi_tv_ocname" 
+	        android:text="客户联系手机"
+	        android:textColor="@color/titleColor"
+	        android:textSize="@dimen/title_font_size" />
+	    
+	    <EditText 
+	        android:id="@+id/fgccmi_et_octel"
+		    android:layout_width="match_parent"
+		    android:layout_height="@dimen/borrowerTextView_width"
+        android:gravity="center_vertical"
+		    android:layout_toRightOf="@+id/fgccmi_tv_octel"
+		    android:layout_below="@+id/fgccmi_tv_ocname"
+		    android:layout_alignTop="@+id/fgccmi_tv_octel" 
+		    android:hint="联系手机" 
+		    android:textSize="@dimen/value_font_size"
+	        android:textColor="@color/contentColor"
+		    android:background="@null"
+		    android:inputType="phone" />
+    </RelativeLayout>
+    
+    <TextView 
+        android:id="@+id/fgccmi_tv_orsnum"
+	    android:layout_width="@dimen/grouptext_width"
+	   android:layout_height="@dimen/borrowerTextView_width"
+        android:gravity="center_vertical"
+	    android:layout_below="@+id/fgccmi_rl_oc" 
+        android:text="推荐员工工号"
+        android:textColor="@color/titleColor"
+        android:textSize="@dimen/title_font_size" />
+    
+    <EditText 
+        android:id="@+id/fgccmi_et_orsnum"
+	    android:layout_width="match_parent"
+	    android:layout_height="@dimen/borrowerTextView_width"
+        android:gravity="center_vertical"
+	    android:layout_toRightOf="@+id/fgccmi_tv_orsnum"
+	    android:layout_below="@+id/fgccmi_rl_oc"
+	    android:layout_alignTop="@+id/fgccmi_tv_orsnum" 
+	    android:hint="推荐员工工号" 
+	    android:textSize="@dimen/value_font_size"
+        android:textColor="@color/contentColor"
+	    android:background="@null" />
+    
+    <TextView
+        android:id="@+id/fgccmi_tv_ostype"
+        android:layout_width="@dimen/grouptext_width"
+        
+	   android:layout_height="@dimen/borrowerTextView_width"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/fgccmi_tv_orsnum" 
+        android:text="员工所在条线"
+        android:textColor="@color/titleColor"
+        android:textSize="@dimen/title_font_size" />
+    
+    <com.bea.mbank.widgets.GroupTagViewEx
+        android:id="@+id/fgccmi_gtv_ostype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_marginTop="@dimen/grouptop"
+        android:layout_toRightOf="@+id/fgccmi_tv_ostype"
+        android:layout_below="@+id/fgccmi_tv_orsnum"
+        android:layout_alignTop="@id/fgccmi_tv_ostype"
+        app:gt_titleFont="@dimen/value_font_size" />
+    
+</RelativeLayout>

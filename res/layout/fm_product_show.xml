@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/redTitle_height"
+        android:background="@color/whiteColor"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/redTitle_height"
+            android:layout_alignParentLeft="true"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_leftOrRight"
+            android:textColor="@color/blackColor"
+            android:textSize="@dimen/myTask_listitem_below_textSize" />
+
+        <ProgressBar
+            android:id="@+id/downProgress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="@dimen/product_show_downProgress_width"
+            android:layout_height="@dimen/product_show_downProgress_height"
+            android:focusable="false"
+            android:max="100"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_leftOrRight" >
+
+            <com.android.widgets.XCImageButton
+                android:id="@+id/attaches"
+                android:layout_width="@dimen/grwdy_returnBtn_width"
+                android:layout_height="@dimen/grwdy_returnBtn_height"
+                android:layout_centerInParent="true"
+                android:background="@drawable/fm_back_productlistbg"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+        <com.android.widgets.XCImageButton
+            android:id="@+id/saveColect"
+            android:layout_width="@dimen/grwdy_returnBtn_width"
+            android:layout_height="@dimen/grwdy_returnBtn_height"
+            android:layout_marginLeft="@dimen/margin_leftOrRight"
+            android:layout_marginRight="@dimen/margin_leftOrRight"
+            android:background="@drawable/fm_back_productlistbg" />
+
+        <com.android.widgets.XCImageButton
+            android:id="@+id/goBackBtn"
+            android:layout_width="@dimen/grwdy_returnBtn_width"
+            android:layout_height="@dimen/grwdy_returnBtn_height"
+            android:layout_marginRight="@dimen/margin_leftOrRight"
+            android:background="@drawable/fm_grwdy_return" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/pdfView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/padding_topOrBottom" />
+
+</LinearLayout>

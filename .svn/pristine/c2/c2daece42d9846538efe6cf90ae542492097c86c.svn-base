@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.bea.mbank"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/padding" >
+
+    <com.android.widgets.BottomLineTitleView
+        android:id="@+id/Takephoto_LineTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bl_lineColor="#e6e6e6"
+        app:bl_lineSize="1px"
+        app:bl_selectorColor="@color/redColor"
+        app:bl_title="@string/screenage"
+        app:bl_titleColor="@color/blackColor"
+        app:bl_titleFont="20sp" />
+
+    <com.bea.mbank.widgets.PhotoGridView
+        android:id="@+id/gridView_takephoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding"
+        android:gravity="center_horizontal"
+        android:numColumns="3"
+        android:stretchMode="columnWidth" >
+    </com.bea.mbank.widgets.PhotoGridView>
+
+
+</LinearLayout>

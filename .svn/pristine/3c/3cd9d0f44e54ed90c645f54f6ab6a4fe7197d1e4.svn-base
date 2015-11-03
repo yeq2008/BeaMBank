@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title></title>
+<link rel="stylesheet" href="file:///android_asset/css/crmcommon.css" type="text/css" media="screen" />
+<script type="text/javascript" src="file:///android_asset/js/prototype-1.6.0.2.js"></script>
+<script type="text/javascript" src="file:///android_asset/js/crmcommon.js"></script>
+<script type="text/javascript">
+//客户分析
+function loadCustAnalysisData(obj){
+	var info = obj.evalJSON();
+	document.getElementById('value_id1').value=setValue1(info.IF_PAY_WAGE);//是否代发工资
+	document.getElementById('value_id2').value=setValue1(info.IF_LOAN);//是否个人贷款客户
+	document.getElementById('value_id3').value=setValue1(info.IF_BANK_ASSU);//是否银保客户
+	document.getElementById('value_id4').value=setValue1(info.IF_WEIXIN);//是否微信客户
+	document.getElementById('value_id5').value=setValue1(info.IF_COMMON);//是否普通客户
+	document.getElementById('value_id6').value=setValue1(info.IF_DIAMOND);//是否钻石显卓客户
+	document.getElementById('value_id7').value=setValue1(info.IF_USA_RESID);//是否美籍客户
+	document.getElementById('value_id8').value=setValue1(info.IF_HEAD_BANK);//是否总行推荐客户
+	document.getElementById('value_id9').value=setValue1(info.IF_TWOPLACE);//是否两地通客户
+	document.getElementById('value_id10').value=info.CUST_TYPE;//客户分类
+	document.getElementById('value_id11').value=setValue1(info.IF_FINANCE);//是否理财客户
+	document.getElementById('value_id12').value=setValue1(info.IF_CREDIT);//是否信用卡客户
+	document.getElementById('value_id13').value=setValue1(info.IF_ELEC);//是否个人网银客户
+	document.getElementById('value_id14').value=setValue1(info.IF_PHONE);//是否电话银行客户
+	document.getElementById('value_id15').value=setValue1(info.IF_TELEPHONE);//是否手机银行客户
+	document.getElementById('value_id16').value=setValue1(info.IF_HIGH_FINANCE);//是否显卓理财客户
+	document.getElementById('value_id17').value=setValue1(info.IF_VIP);//是否私人银行客户
+	document.getElementById('value_id18').value=setValue1(info.IF_MIDDLE_FINANCE);//是否优慧理财客户
+}
+
+
+function setValue1(obj){
+	if(undefined == obj || null == obj)
+		return "";
+	if(0 == obj)
+		return "否";
+	if(1 == obj)
+		return "是";
+	if('Y' == obj)
+		return "是";
+	if('N' == obj)
+		return "否";
+	return "";
+}
+</script>
+</head>
+<body onload="javascript:jsHelper.loadData()" style="margin: 10px;padding: 0px;">
+<div class="div">
+	<input type="text" readonly="readonly" value="客户分析" class="title" style="float: left;margin-top: 15px;"/>
+	<img src="file:///android_asset/img/return1.png" style="float: right;" onclick="returnBack()">
+	<div style="clear: right;"></div>
+</div>
+<div class="div" style="margin-top: 10px;">
+	<hr style="float: left;height: 1px;width: 8%;border: none;border-top: 1px solid red;margin: 0px;padding: 0px;">
+	<hr style="float: left;height: 1px;width:92%;border: none;border-top: 1px solid #E6E6E6;margin: 0px;padding: 0px;">
+	<div style="clear: left;"></div>
+</div>
+<table class="table">
+	<tr>
+		<td> <input type="text" readonly="readonly" class="inputtext" value="是否代发工资"/> </td> 
+		<td> <input id="value_id1" type="text" readonly="readonly" class="inputvalue"/> </td>
+		<td> <input type="text" readonly="readonly" class="inputtext" value="是否个人贷款客户"/> </td> 
+		<td> <input id="value_id2" type="text" readonly="readonly" class="inputvalue"/> </td>
+	</tr>
+	<tr>
+		<td> <input type="text" readonly="readonly" class="inputtext" value="是否银保客户"/> </td> 
+		<td><input id="value_id3" type="text" readonly="readonly" class="inputvalue"/></td>
+		<td> <input type="text" readonly="readonly" class="inputtext" value="是否微信客户"/> </td> 
+		<td> <input id="value_id4" type="text" readonly="readonly" class="inputvalue"/> </td>
+	</tr>
+	<tr>
+		<td> <input type="text" readonly="readonly" class="inputtext" value="是否普通客户 "/> </td>
+		<td> <input id="value_id5" type="text" readonly="readonly" class="inputvalue"/> </td>
+		<td> <input type="text" readonly="readonly" class="inputtext" value="是否钻石显卓客户 "/> </td>
+		<td> <input id="value_id6" type="text" readonly="readonly" class="inputvalue"/> </td>
+	</tr>
+	<tr>
+		<td> <input type="text" readonly="readonly" class="inputtext" value="是否美籍客户"/> </td>
+		<td> <input id="value_id7" type="text" readonly="readonly" class="inputvalue"/> </td>
+		<td> <input type="text" readonly="readonly" class="inputtext" value="是否总行推荐客户"/> </td>
+		<td> <input id="value_id8" type="text" readonly="readonly" class="inputvalue"/> </td>
+	</tr>
+	<tr>
+		<td> <input type="text" readonly="readonly" class="inputtext" value="是否两地通客户 "/> </td>
+		<td> <input id="value_id9" type="text" readonly="readonly" class="inputvalue"/> </td>
+		<td> <input type="text" readonly="readonly" class="inputtext" value="客户分类 "/> </td>
+		<td> <input id="value_id10" type="text" readonly="readonly" class="inputvalue"/> </td>
+	</tr>
+	<tr>
+		<td> <input type="text" readonly="readonly" class="inputtext" value="是否理财客户 "/> </td>
+		<td> <input id="value_id11" type="text" readonly="readonly" class="inputvalue"/> </td>
+		<td><input type="text" readonly="readonly" class="inputtext" value="是否信用卡客户 "/> </td>
+		<td> <input id="value_id12" type="text" readonly="readonly" class="inputvalue"/> </td>
+	</tr>
+	<tr>
+		<td> <input type="text" readonly="readonly" class="inputtext" value="是否个人网银客户 "/> </td>
+		<td> <input id="value_id13" type="text" readonly="readonly" class="inputvalue"/> </td>
+		<td> <input type="text" readonly="readonly" class="inputtext" value="是否电话银行客户"/> </td>
+		<td> <input id="value_id14" type="text" readonly="readonly" class="inputvalue"/> </td>
+	</tr>
+	<tr>
+		<td> <input type="text" readonly="readonly" class="inputtext" value="是否手机银行客户"/> </td>
+		<td> <input id="value_id15" type="text" readonly="readonly" class="inputvalue"/> </td>
+		<td> <input type="text" readonly="readonly" class="inputtext" value="是否显卓理财客户"/> </td>
+		<td> <input id="value_id16" type="text" readonly="readonly" class="inputvalue"/> </td>
+	</tr>
+	<tr>
+		<td> <input type="text" readonly="readonly" class="inputtext" value="是否私人银行客户"/> </td>
+		<td> <input id="value_id17" type="text" readonly="readonly" class="inputvalue"/> </td>
+		<td> <input type="text" readonly="readonly" class="inputtext" value="是否优慧理财客户"/> </td>
+		<td> <input id="value_id18" type="text" readonly="readonly" class="inputvalue"/> </td>
+	</tr>
+</table>
+</body>
+</html>

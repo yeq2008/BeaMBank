@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.bea.mbank"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/myTask_listitem_height" >
+
+        <TextView
+            android:id="@+id/no"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_leftOrRight"
+            android:gravity="center|bottom"
+            android:paddingBottom="@dimen/layout_marginTop"
+            android:textColor="@color/titleColor"
+            android:textSize="@dimen/myTask_listitem_above_textSize" />
+
+        <TextView
+            android:id="@+id/pname"
+            android:layout_width="@dimen/myTask_draft_listitem_width"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/no"
+            android:gravity="bottom"
+            android:paddingBottom="@dimen/layout_marginTop"
+            android:paddingLeft="@dimen/margin_leftOrRight"
+            android:textColor="@color/titleColor"
+            android:textSize="@dimen/myTask_listitem_above_textSize" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="@dimen/myTask_draft_listitem_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/myTask_draft_listitem_date_marginRight"
+            android:gravity="center|bottom"
+            android:paddingBottom="@dimen/layout_marginTop"
+            android:textSize="@dimen/myTask_listitem_above_textSize" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/myTask_listitem_height" >
+
+        <TextView
+            android:id="@+id/cusName"
+            android:layout_width="@dimen/myTask_draft_listitem_cusName_width"
+            android:layout_height="@dimen/myTask_draft_listitem_cusName_height"
+            android:layout_marginLeft="@dimen/myTask_draft_listitem_cusName_marginLeft"
+            android:gravity="top"
+            android:paddingTop="@dimen/layout_marginTop"
+            android:textColor="@color/titleColor"
+            android:textSize="@dimen/myTask_listitem_below_textSize" >
+        </TextView>
+
+        <ImageView
+            android:id="@+id/cusimg"
+            android:layout_width="@dimen/myTask_draft_listitem_cusimg_width"
+            android:layout_height="@dimen/myTask_draft_listitem_cusimg_height"
+            android:layout_marginLeft="@dimen/padding_leftOrRight"
+            android:layout_toRightOf="@id/cusName"
+            android:paddingTop="@dimen/layout_marginTop"
+            android:src="@drawable/mytast_idcard" />
+
+        <TextView
+            android:id="@+id/cardNum"
+            android:layout_width="@dimen/myTask_draft_listitem_cardNum_width"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/cusimg"
+            android:paddingLeft="@dimen/padding_leftOrRight"
+            android:paddingTop="@dimen/layout_marginTop"
+            android:textColor="@color/titleColor"
+            android:textSize="@dimen/myTask_listitem_below_textSize" />
+
+        <TextView
+            android:id="@+id/deadtext"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/cardNum"
+            android:gravity="center|top"
+            android:paddingTop="@dimen/layout_marginTop"
+            android:text="申请期限"
+            android:textColor="@color/titleColor"
+            android:textSize="@dimen/myTask_listitem_below_textSize" />
+
+        <TextView
+            android:id="@+id/deadline"
+            android:layout_width="@dimen/myTask_draft_listitem_deadline_width"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/myTask_draft_listitem_deadline_marginLeft"
+            android:layout_toRightOf="@id/deadtext"
+            android:gravity="center|top"
+            android:paddingTop="@dimen/layout_marginTop"
+            android:textSize="@dimen/myTask_listitem_below_textSize" />
+
+        <TextView
+            android:id="@+id/month"
+            android:layout_width="@dimen/margin_leftOrRight"
+            android:layout_height="@dimen/myTask_listitem_height"
+            android:layout_marginLeft="@dimen/padding_leftOrRight"
+            android:layout_toRightOf="@+id/deadline"
+            android:gravity="center|top"
+            android:paddingTop="@dimen/layout_marginTop"
+            android:text="月"
+            android:textSize="@dimen/myTask_listitem_below_textSize" />
+
+        <TextView
+            android:id="@+id/moneyview"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/myTask_draft_listitem_moneyview_marginLeft"
+            android:layout_toRightOf="@+id/month"
+            android:gravity="center|top"
+            android:paddingTop="@dimen/layout_marginTop"
+            android:text="@string/moneycount"
+            android:textColor="@color/titleColor"
+            android:textSize="@dimen/myTask_listitem_below_textSize" />
+
+        <TextView
+            android:id="@+id/moneyConut"
+            android:layout_width="@dimen/myTask_draft_listitem_moneyConut_width"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/myTask_draft_listitem_deadline_marginLeft"
+            android:layout_toRightOf="@id/moneyview"
+            android:gravity="top"
+            android:paddingTop="@dimen/layout_marginTop"
+            android:textColor="@color/redColor"
+            android:textSize="@dimen/myTask_listitem_below_textSize" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/myTask_draft_listitem_yuan_marginRight"
+            android:gravity="center|top"
+            android:paddingTop="@dimen/layout_marginTop"
+            android:text="元"
+            android:textSize="@dimen/myTask_listitem_below_textSize" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/padding_leftOrRight"
+            android:layout_marginRight="@dimen/padding_leftOrRight"
+            android:background="@drawable/mytask_xuxian" />
+    </RelativeLayout>
+
+</LinearLayout>

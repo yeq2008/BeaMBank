@@ -1,0 +1,354 @@
+<resources>
+
+    <!-- ******************全局使用尺寸大小的设置*********************** -->
+    <dimen name="context_dp03_size">2.4dp</dimen>
+    <dimen name="context_dp05_size">4dp</dimen>
+    <dimen name="context_dp10_size">8dp</dimen>
+    <dimen name="context_dp15_size">12dp</dimen>
+    <dimen name="context_dp20_size">16dp</dimen>
+    <dimen name="context_dp25_size">20dp</dimen>
+    <dimen name="context_dp30_size">24dp</dimen>
+    <dimen name="context_dp40_size">32dp</dimen>
+    <dimen name="context_dp42_size">33.6dp</dimen>
+    <dimen name="context_dp45_size">36dp</dimen>
+    <dimen name="context_dp50_size">40dp</dimen>
+    <dimen name="context_dp54_size">43.2dp</dimen>
+    <dimen name="context_dp55_size">44dp</dimen>
+    <dimen name="context_dp60_size">48dp</dimen>
+    <dimen name="context_dp62_size">49.6dp</dimen>
+    <dimen name="context_dp70_size">56dp</dimen>
+    <dimen name="context_dp80_size">64dp</dimen>
+    <dimen name="context_dp90_size">72dp</dimen>
+    <dimen name="context_dp95_size">76dp</dimen>
+    <dimen name="context_dp100_size">80dp</dimen>
+    <dimen name="context_dp110_size">88dp</dimen>
+    <dimen name="context_dp114_size">91.2dp</dimen>
+    <dimen name="context_dp120_size">96dp</dimen>
+    <dimen name="context_dp130_size">104dp</dimen>
+    <dimen name="context_dp132_size">105.6dp</dimen>
+    <dimen name="context_dp140_size">112dp</dimen>
+    <dimen name="context_dp150_size">120dp</dimen>
+    <dimen name="context_dp160_size">128dp</dimen>
+    <dimen name="context_dp164_size">131.2dp</dimen>
+    <dimen name="context_dp170_size">136dp</dimen>
+    <dimen name="context_dp180_size">144dp</dimen>
+    <dimen name="context_dp190_size">152dp</dimen>
+    <dimen name="context_dp192_size">153.6dp</dimen>
+    <dimen name="context_dp200_size">160dp</dimen>
+    <dimen name="context_dp220_size">176dp</dimen>
+    <dimen name="context_dp224_size">179.2dp</dimen>
+    <dimen name="context_dp230_size">184dp</dimen>
+    <dimen name="context_dp250_size">200dp</dimen>
+    <dimen name="context_dp260_size">208dp</dimen>
+    <dimen name="context_dp300_size">240dp</dimen>
+    <dimen name="context_dp360_size">288dp</dimen>
+    <dimen name="context_dp400_size">320dp</dimen>
+    <dimen name="context_dp440_size">352dp</dimen>
+    <dimen name="context_dp560_size">448dp</dimen>
+    <dimen name="context_dp580_size">464dp</dimen>
+    <dimen name="context_dp600_size">480dp</dimen>
+
+    <!-- ******************全局使用*********************** -->
+    <dimen name="title_font_size">16sp</dimen> <!-- 字段说明文字大小 -->
+    <dimen name="value_font_size">16sp</dimen> <!-- 显示值文字大小 -->
+    <dimen name="bottom_line_title_textSize">16sp</dimen> <!-- 带下划线标题的文字大小 -->
+    <dimen name="small_title_textsize">17.6sp</dimen> <!-- 一般小标题的文字大小 -->
+    <dimen name="small_textsize">14.4sp</dimen> <!-- 比正常文本小点的文字大小 -->
+    <dimen name="red_buttom_textSize">12.8sp</dimen> <!-- 红色按钮的字体，如下一步，继续... -->
+    <dimen name="big24_textSize">19.2sp</dimen>
+    <dimen name="big28_textSize">22.4sp</dimen>
+    <dimen name="big32_textSize">25.6sp</dimen>
+    <dimen name="big36_textSize">28.8sp</dimen>
+    <dimen name="big48_textSize">38.4sp</dimen>
+    <dimen name="big50_textSize">40sp</dimen>
+    <dimen name="crmtitlefont">@dimen/small_textsize</dimen> <!-- 查询标题字体 ？？？ -->
+    <dimen name="margin">@dimen/context_dp20_size</dimen> <!-- 外间距 -->
+    <dimen name="margin_leftOrRight">@dimen/context_dp20_size</dimen>
+    <dimen name="margin_topOrBottom">@dimen/context_dp20_size</dimen>
+    <dimen name="padding">@dimen/context_dp10_size</dimen> <!-- 内间距 -->
+    <dimen name="padding_leftOrRight">@dimen/context_dp10_size</dimen>
+    <dimen name="padding_topOrBottom">@dimen/context_dp10_size</dimen>
+    <dimen name="image_layout_marginTop">@dimen/context_dp15_size</dimen>
+    <dimen name="layout_marginTop">@dimen/context_dp05_size</dimen>
+    <dimen name="grouptop">@dimen/context_dp03_size</dimen> <!-- 选择按钮（红色背景），文字上边距 -->
+    <dimen name="pop_imageButton_width">@dimen/context_dp60_size</dimen> <!-- 弹窗右侧确认关闭按钮宽度 -->
+    <dimen name="pop_imageButton_height">@dimen/context_dp60_size</dimen> <!-- 弹窗右侧确认关闭按钮宽度 -->
+
+
+    <!-- *****************登录界面ac_applogin********************** -->
+    <dimen name="relativeLayout1_marginBottom">@dimen/context_dp110_size</dimen>
+    <dimen name="username_marginTop">@dimen/context_dp50_size</dimen>
+    <dimen name="editview_username_height">@dimen/context_dp40_size</dimen>
+    <dimen name="editview_username_width">@dimen/context_dp260_size</dimen>
+    <dimen name="editview_marginLeft">@dimen/context_dp10_size</dimen>
+    <dimen name="iamgeview_paddingTop">@dimen/context_dp05_size</dimen>
+    <dimen name="password_marginTop">@dimen/context_dp20_size</dimen>
+    <dimen name="loginButton_height">@dimen/context_dp50_size</dimen>
+    <dimen name="mdmSvnSettingBtn_marginBottom">@dimen/context_dp25_size</dimen>
+    <dimen name="mdmSvnSettingBtn_marginRight">@dimen/context_dp30_size</dimen>
+    <dimen name="applogin_iv_im01_width">@dimen/context_dp114_size</dimen>
+    <dimen name="applogin_iv_im01_height">@dimen/context_dp114_size</dimen>
+    <dimen name="applogin_iv_username_width">@dimen/context_dp40_size</dimen>
+    <dimen name="applogin_iv_username_height">@dimen/context_dp40_size</dimen>
+    <dimen name="applogin_mdmSvnSettingBtn_width">@dimen/context_dp40_size</dimen>
+    <dimen name="applogin_mdmSvnSettingBtn_height">@dimen/context_dp40_size</dimen>
+
+    <!-- **************主界面左侧栏ac_appmenu********************** -->
+    <dimen name="redTitle_height">@dimen/context_dp54_size</dimen>
+    <dimen name="appmenu_username_fontSize">@dimen/value_font_size</dimen>
+    <dimen name="appmenu_textVersion_height">@dimen/context_dp50_size</dimen>
+    <dimen name="appmenu_textVersion_width">@dimen/context_dp95_size</dimen>
+    <dimen name="appmenu_textVersion_textSize">@dimen/title_font_size</dimen>
+    <dimen name="appmenu_userHeader_width">@dimen/context_dp62_size</dimen>
+    <dimen name="appmenu_userHeader_height">@dimen/context_dp62_size</dimen>
+    <dimen name="appmenu_divider_height">@dimen/context_dp10_size</dimen>
+    <dimen name="appmenu_listview_paddingTop">@dimen/context_dp15_size</dimen>
+    <dimen name="appmenu_setting_width">@dimen/context_dp50_size</dimen>
+    <dimen name="appmenu_setting_height">@dimen/context_dp50_size</dimen>
+
+    <!-- *******密码修改fm_appset_content_menu_setting************* -->
+    <dimen name="appset_setting_layout_width">@dimen/context_dp440_size</dimen>
+    <dimen name="appset_setting_layout_height">@dimen/context_dp560_size</dimen>
+    <dimen name="appset_textView_textSize">@dimen/big24_textSize</dimen>
+    <dimen name="appset_imageView_height">@dimen/context_dp50_size</dimen>
+    <dimen name="appset_imageView_marginLeft">@dimen/context_dp40_size</dimen>
+    <dimen name="appset_imageView_marginTop">@dimen/context_dp100_size</dimen>
+    <dimen name="appset_editText_width">@dimen/context_dp300_size</dimen>
+    <dimen name="appset_editText_height">@dimen/context_dp50_size</dimen>
+    <dimen name="appset_editText_marginLeft">@dimen/context_dp20_size</dimen>
+    <dimen name="appset_editText_padding">@dimen/context_dp20_size</dimen>
+    <dimen name="appset_imageView1_marginTop">@dimen/context_dp30_size</dimen>
+    <dimen name="appset_AffirmButton_marginTop">@dimen/context_dp50_size</dimen>
+    <dimen name="appset_AffirmButton_marginLeft">@dimen/context_dp70_size</dimen>
+
+    <!-- ********密码设置fm_appset_content_menu*************** -->
+    <dimen name="appsetmenu_setpassword_image1_width">@dimen/context_dp60_size</dimen>
+    <dimen name="appsetmenu_setpassword_image1_height">@dimen/context_dp60_size</dimen>
+    <dimen name="appsetmenu_image2_width">@dimen/context_dp30_size</dimen>
+    <dimen name="appsetmenu_image2_height">@dimen/context_dp30_size</dimen>
+    <dimen name="appsetmenu_appset_2_height">@dimen/context_dp60_size</dimen>
+
+    <!-- ********个人无抵押保险fm_grwdy_crm_xxxx*************** -->
+    <dimen name="grwdy_returnBtn_width">@dimen/context_dp40_size</dimen>
+    <dimen name="grwdy_returnBtn_height">@dimen/context_dp40_size</dimen>
+    <dimen name="iv_return_marginTop">@dimen/context_dp15_size</dimen>
+    <dimen name="grwdy_crm_height">@dimen/context_dp40_size</dimen>
+    <dimen name="crm_home_iv_user_width">@dimen/context_dp50_size</dimen>
+    <dimen name="crm_home_iv_user_height">@dimen/context_dp50_size</dimen>
+    <dimen name="crm_home_iv_phone_width">@dimen/context_dp30_size</dimen>
+    <dimen name="crm_home_iv_phone_height">@dimen/context_dp30_size</dimen>
+    <dimen name="crm_home_linearLayout_height">@dimen/context_dp180_size</dimen>
+    <dimen name="crm_home_linearLayout_marginLeft">@dimen/context_dp40_size</dimen>
+    <dimen name="crm_home_fgh_rl_userinfo_height">@dimen/context_dp180_size</dimen>
+    <dimen name="crm_home_username_textSize">@dimen/big48_textSize</dimen>
+    <dimen name="crm_home_userpingyin_textSize">@dimen/big36_textSize</dimen>
+    <dimen name="crm_home_custnum_width">@dimen/context_dp300_size</dimen>
+    <dimen name="crm_home_custnum_textSize">@dimen/big24_textSize</dimen>
+    <dimen name="crm_home_fgh_rl_userinfo2_width">@dimen/context_dp600_size</dimen>
+    <dimen name="crm_home_fgh_rl_userinfo2_height">@dimen/context_dp160_size</dimen>
+    <dimen name="crm_home_fgh_tv_phone_textSize">@dimen/big32_textSize</dimen>
+    <dimen name="crm_home_fgh_tv_country_textSize">@dimen/big36_textSize</dimen>
+    <dimen name="crm_home_fgh_iv_btn_app_width">@dimen/context_dp120_size</dimen>
+    <dimen name="crm_home_fgh_iv_btn_app_height">@dimen/context_dp50_size</dimen>
+    <dimen name="crm_home_fgh_tv_ck_textSize">@dimen/big32_textSize</dimen>
+
+    <!-- ********个人无抵押保险fm_grwdy_paxb_xxxx*************** -->
+    <dimen name="paxb_fgp_rb01_paddingTop">@dimen/context_dp15_size</dimen>
+    <dimen name="paxb_fgp_rb01_paddingLeft">@dimen/context_dp45_size</dimen>
+    <dimen name="paxb_reset_width">@dimen/context_dp40_size</dimen>
+    <dimen name="paxb_reset_height">@dimen/context_dp40_size</dimen>
+    <dimen name="paxb_jiantou_width">@dimen/context_dp40_size</dimen>
+    <dimen name="paxb_jiantou_height">@dimen/context_dp40_size</dimen>
+    <dimen name="paxb_dxitem_fgpi_ll01_paddingLeft">@dimen/context_dp40_size</dimen>
+    <dimen name="paxb_dxitem_fgpi_ll01_paddingRight">@dimen/context_dp50_size</dimen>
+
+    <!-- ***********个人无抵押贷款fm_grwdy_step1_xxxx**************** -->
+    <dimen name="applyloaninfo_titleValueView_width">@dimen/context_dp360_size</dimen>
+    <dimen name="step1_applyloaninfo_et_ifluctuate_width">@dimen/context_dp100_size</dimen>
+    <dimen name="step1_panel_pannelCRM_width">@dimen/context_dp132_size</dimen>
+    <dimen name="step1_panel_pannelCRM_height">@dimen/context_dp42_size</dimen>
+    <dimen name="step1_panel_partOrAll_width">@dimen/context_dp54_size</dimen>
+    <dimen name="step1_panel_partOrAll_height">@dimen/context_dp42_size</dimen>
+    <dimen name="pannelLayout_width">@dimen/context_dp250_size</dimen> <!-- 右侧panel的宽度 -->
+    <dimen name="pannel_item_lineState_width">@dimen/context_dp03_size</dimen>
+    <dimen name="step_pannel_button_width">@dimen/context_dp40_size</dimen>
+    <dimen name="step_pannel_button_height">@dimen/context_dp40_size</dimen>
+    <dimen name="step2_content_signname_marginLeft">@dimen/context_dp30_size</dimen>
+    <dimen name="step2_content_btn_signname_height">@dimen/context_dp30_size</dimen>
+    <dimen name="step2_content_iv_phone_width">@dimen/context_dp30_size</dimen>
+    <dimen name="step2_content_iv_phone_height">@dimen/context_dp45_size</dimen>
+    <dimen name="step2_content_pannelLast_width">@dimen/context_dp40_size</dimen>
+    <dimen name="step2_content_pannelLast_height">@dimen/context_dp60_size</dimen>
+    <dimen name="next_btn_width">@dimen/context_dp90_size</dimen>
+    <dimen name="next_btn_height">@dimen/context_dp50_size</dimen>
+    <dimen name="pannel_title_textSize">@dimen/big28_textSize</dimen> <!-- 申请表大标题字体大小 -->
+    <dimen name="grwdy_margin_top">@dimen/context_dp10_size</dimen>
+    <dimen name="borrowermargin_top">@dimen/context_dp15_size</dimen> <!-- 每行之间的间距 -->
+    <dimen name="grouptext_width">@dimen/context_dp150_size</dimen> <!-- 说明字段的宽度 -->
+    <dimen name="takephotos_imageView_width">@dimen/context_dp200_size</dimen> <!-- 影像资料显示的照片宽度 -->
+    <dimen name="takephotos_imageView_height">@dimen/context_dp160_size</dimen> <!-- 影像资料显示的照片宽度 -->
+    <dimen name="fgcdp_checked_width">@dimen/context_dp250_size</dimen>
+    <dimen name="fgcdp_checked_height">@dimen/context_dp50_size</dimen>
+    <dimen name="fgcdp_signname_width">@dimen/context_dp360_size</dimen>
+    <dimen name="fgcdp_signname_height">@dimen/context_dp160_size</dimen>
+
+    <!-- ***********平安信保页面**************** -->
+    <dimen name="paxb_pannel_pannelCRM_width">@dimen/context_dp192_size</dimen>
+    <dimen name="paxb_pannel_pannelCRM_height">@dimen/context_dp42_size</dimen>
+    <dimen name="paxb_switch_task_textSize">@dimen/small_textsize</dimen>
+    <dimen name="paxb_switch_task_textHeight">@dimen/context_dp50_size</dimen>
+
+    <!-- ***********我的任务，崔收件搜索框pop_mytask_collect_search************** -->
+    <dimen name="myTask_listitem_repayment_width">@dimen/context_dp140_size</dimen>
+    <dimen name="myTask_listitem_height">@dimen/context_dp50_size</dimen>
+    <dimen name="CBType_marginLeft">@dimen/context_dp50_size</dimen>
+    <dimen name="myTask_collecte_listitem_height">@dimen/context_dp100_size</dimen>
+    <dimen name="myTask_listitem_above_textSize">@dimen/title_font_size</dimen>
+    <dimen name="myTask_listitem_below_textSize">@dimen/small_textsize</dimen>
+    <dimen name="myTask_cuishou_fgdpp_textview_height">@dimen/context_dp60_size</dimen>
+    <dimen name="myTask_cuishou_fmcd_fm_width">@dimen/context_dp230_size</dimen>
+    <dimen name="myTask_findButton_width">@dimen/context_dp40_size</dimen>
+    <dimen name="myTask_findButton_height">@dimen/context_dp40_size</dimen>
+    <dimen name="myTask_draft_listitem_width">@dimen/context_dp200_size</dimen>
+    <dimen name="myTask_draft_listitem_date_marginRight">@dimen/context_dp50_size</dimen>
+    <dimen name="myTask_draft_listitem_cusName_width">@dimen/context_dp130_size</dimen>
+    <dimen name="myTask_draft_listitem_cusName_height">@dimen/context_dp50_size</dimen>
+    <dimen name="myTask_draft_listitem_cusName_marginLeft">@dimen/context_dp40_size</dimen>
+    <dimen name="myTask_draft_listitem_cusimg_width">@dimen/context_dp40_size</dimen>
+    <dimen name="myTask_draft_listitem_cusimg_height">@dimen/context_dp30_size</dimen>
+    <dimen name="myTask_draft_listitem_cardNum_width">@dimen/context_dp230_size</dimen>
+    <dimen name="myTask_draft_listitem_deadline_width">@dimen/context_dp50_size</dimen>
+    <dimen name="myTask_draft_listitem_deadline_marginLeft">@dimen/context_dp15_size</dimen>
+    <dimen name="myTask_draft_listitem_moneyview_marginLeft">@dimen/context_dp80_size</dimen>
+    <dimen name="myTask_draft_listitem_moneyConut_width">@dimen/context_dp150_size</dimen>
+    <dimen name="myTask_draft_listitem_yuan_marginRight">@dimen/context_dp70_size</dimen>
+    <dimen name="mytask_tasklay_taskTitle_width">@dimen/context_dp40_size</dimen>
+    <dimen name="mytask_tasklay_taskTitle_height">@dimen/context_dp50_size</dimen>
+    <dimen name="mytask_tasklay_search_lay_width">@dimen/context_dp250_size</dimen>
+    <dimen name="mytask_tasklay_search_lay_marginRight">@dimen/context_dp20_size</dimen>
+    <dimen name="mytask_tasklay_searchview_width">@dimen/context_dp40_size</dimen>
+    <dimen name="mytask_tasklay_searchview_height">@dimen/context_dp40_size</dimen>
+
+    <!-- ***********产品中心，fm_product_show************** -->
+    <dimen name="product_show_downProgress_width">@dimen/context_dp200_size</dimen>
+    <dimen name="product_show_downProgress_height">@dimen/context_dp03_size</dimen>
+    <dimen name="product_cate_lay_width">@dimen/context_dp250_size</dimen>
+    <dimen name="product_catename_width">@dimen/context_dp200_size</dimen>
+    <dimen name="product_catename_height">@dimen/context_dp40_size</dimen>
+    <dimen name="product_catename_paddingLeft">@dimen/context_dp55_size</dimen>
+
+    <!-- ************客户查询弹窗pop_crmedit************** -->
+    <dimen name="nameInput_width">@dimen/context_dp80_size</dimen>
+    <dimen name="nameInput_height">@dimen/context_dp80_size</dimen>
+    <dimen name="line_height">@dimen/context_dp60_size</dimen>
+    <dimen name="linearLayout_width">@dimen/context_dp180_size</dimen>
+    <dimen name="identiferInput_textSize">@dimen/big50_textSize</dimen>
+    <dimen name="choose_list_height">@dimen/context_dp30_size</dimen>
+    <dimen name="saomiao_width">@dimen/context_dp110_size</dimen>
+
+    <!-- ************证件国籍弹窗pop_grouptag************** -->
+    <dimen name="please_choose_textSize">@dimen/small_title_textsize</dimen>
+    <dimen name="blue_title_minHeight">@dimen/context_dp50_size</dimen> <!-- 标题高度 -->
+    <dimen name="grouptag_width">@dimen/context_dp400_size</dimen> <!-- 弹窗宽度 -->
+    <dimen name="grouptag_height">@dimen/context_dp600_size</dimen> <!-- 弹窗高度 -->
+    <dimen name="filter_edit_textSize">@dimen/value_font_size</dimen> <!-- 搜索文字大小 -->
+    <dimen name="filter_edit_margin">@dimen/context_dp10_size</dimen> <!-- 搜索框上边距 -->
+    <dimen name="filter_edit_padding">@dimen/context_dp10_size</dimen> <!-- 搜索框下边距 -->
+    <dimen name="pop_grouptag_item_textSize">@dimen/value_font_size</dimen> <!-- 列表文字大小 -->
+    <dimen name="pop_grouptag_item_paddingTop">@dimen/context_dp10_size</dimen> <!-- 列表内容上边据 -->
+    <dimen name="pop_grouptag_item_paddingBottom">@dimen/context_dp10_size</dimen> <!-- 列表内容下边距 -->
+    <dimen name="pop_grouptag_dialog_width">@dimen/context_dp80_size</dimen>
+    <dimen name="pop_grouptag_dialog_height">@dimen/context_dp80_size</dimen>
+    <dimen name="pop_grouptag_dialog_textSize">@dimen/context_dp30_size</dimen>
+
+    <!-- ************日期弹窗pop_html_datepicker************** -->
+    <dimen name="choose_date_textSize">@dimen/small_title_textsize</dimen>
+    <dimen name="scollChoose_date_textSize">@dimen/value_font_size</dimen>
+    <dimen name="choose_date_marginTop">@dimen/context_dp60_size</dimen>
+
+    <!-- ************个人信息弹窗pop_personinfo************** -->
+    <dimen name="personinfo_title_width">@dimen/context_dp80_size</dimen>
+    <dimen name="personinfo_value_width">@dimen/context_dp200_size</dimen>
+    <dimen name="personinfo_photo_width">@dimen/context_dp180_size</dimen>
+    <dimen name="personinfo_photo_height">@dimen/context_dp220_size</dimen>
+    <dimen name="personinfo_creditcard_textSize">@dimen/big24_textSize</dimen>
+    <dimen name="personinfo_layout_width">@dimen/context_dp100_size</dimen>
+
+    <!-- ************mdm设置弹窗pop_setmdmsvn************** -->
+    <dimen name="setmdmsvn_longin_marginBottom">@dimen/context_dp30_size</dimen>
+    <dimen name="setmdmsvn_username_marginTo">@dimen/context_dp50_size</dimen>
+    <dimen name="setmdmsvn_username_width">@dimen/context_dp260_size</dimen>
+    <dimen name="setmdmsvn_username_height">@dimen/context_dp40_size</dimen>
+    <dimen name="setmdmsvn_yu_login_width">@dimen/context_dp300_size</dimen>
+    <dimen name="setmdmsvn_yu_login_height">@dimen/context_dp50_size</dimen>
+
+    <!-- ************mdm设置弹窗pop_setpassword************** -->
+    <dimen name="setpassword_relativeLayout_width">@dimen/context_dp580_size</dimen>
+    <dimen name="setpassword_setpassword_height">@dimen/context_dp40_size</dimen>
+    <dimen name="setpassword_setpassword_marginTop">@dimen/context_dp30_size</dimen>
+    <dimen name="setpassword_setpasswordEV_width">@dimen/context_dp300_size</dimen>
+    <dimen name="setpassword_linearLayout_width">@dimen/context_dp110_size</dimen>
+    <dimen name="setpassword_searchBtn_width">@dimen/context_dp60_size</dimen>
+    <dimen name="setpassword_searchBtn_height">@dimen/context_dp60_size</dimen>
+
+    <!-- ************服务器路径设置弹窗pop_setserverurl************** -->
+    <dimen name="setserverurl_iv_username_width">@dimen/context_dp40_size</dimen>
+    <dimen name="setserverurl_iv_username_height">@dimen/context_dp40_size</dimen>
+    <dimen name="setserverurl_textview_marginBottom">@dimen/context_dp30_size</dimen>
+    <dimen name="setserverurl_iv_username_marginTop">@dimen/context_dp50_size</dimen>
+    <dimen name="setserverurl_server_url_width">@dimen/context_dp260_size</dimen>
+    <dimen name="setserverurl_server_url_height">@dimen/context_dp40_size</dimen>
+    <dimen name="setserverurl_confirm_width">@dimen/context_dp300_size</dimen>
+    <dimen name="setserverurl_confirm_height">@dimen/context_dp50_size</dimen>
+    <dimen name="signname_view_marginTop">@dimen/context_dp190_size</dimen>
+
+    <!-- ************地址选择弹窗pop_zone_parent************** -->
+    <dimen name="zone_parent_vertical_divider_width">1.5dp</dimen>
+    <dimen name="zone_parent_vertical_divider_height">@dimen/context_dp70_size</dimen>
+    <dimen name="zone_parent_country_height">@dimen/context_dp80_size</dimen>
+
+    <!-- ******************v_appmenu********************** -->
+    <dimen name="appmenu_linearLayout_height">@dimen/context_dp50_size</dimen>
+    <dimen name="appmenu_child_tv01_width">@dimen/context_dp100_size</dimen>
+    <dimen name="appmenu_child_tv01_marginLeft">@dimen/context_dp80_size</dimen>
+    <dimen name="appmenu_child_tv02_width">@dimen/context_dp25_size</dimen>
+    <dimen name="appmenu_parent_iv_marginLeft">@dimen/context_dp30_size</dimen>
+    <dimen name="appmenu_parent_iv_width">@dimen/context_dp40_size</dimen>
+    <dimen name="appmenu_parent_iv_height">@dimen/context_dp50_size</dimen>
+
+    <!-- ******************v_pingan_dtask********************** -->
+    <dimen name="pingan_dtask_relativeLayout_height">@dimen/context_dp100_size</dimen>
+    <dimen name="pingan_dtask_textview_height">@dimen/context_dp50_size</dimen>
+    <dimen name="pingan_dtask_textview_marginLeft">@dimen/context_dp20_size</dimen>
+    <dimen name="pingan_dtask_textview_marginRight">@dimen/context_dp20_size</dimen>
+    <dimen name="pingan_dtask_cusName_width">@dimen/context_dp170_size</dimen>
+    <dimen name="pingan_dtask_cusName_marginLeft">@dimen/context_dp30_size</dimen>
+    <dimen name="pingan_dtask_cardlei_width">@dimen/context_dp70_size</dimen>
+    <dimen name="pingan_dtask_cardleitext_width">@dimen/context_dp100_size</dimen>
+    <dimen name="pingan_dtask_cusview_width">@dimen/context_dp70_size</dimen>
+    <dimen name="pingan_dtask_moneyview_marginLeft">@dimen/context_dp60_size</dimen>
+    <dimen name="pingan_dtask_moneyConut_width">@dimen/context_dp100_size</dimen>
+    <dimen name="pingan_dtask_yuan_marginRight">@dimen/context_dp50_size</dimen>
+    <dimen name="pingan_task_date_marginRight">@dimen/context_dp90_size</dimen>
+    <dimen name="pingan_task_jiantou_height">@dimen/context_dp100_size</dimen>
+
+    <!-- ******************v_product_carditem********************** -->
+    <dimen name="product_cartitema_marginLeft">@dimen/context_dp90_size</dimen>
+    <dimen name="product_cartitema_marginRight">@dimen/context_dp90_size</dimen>
+    <dimen name="product_cartitema_marginTop">@dimen/context_dp40_size</dimen>
+    <dimen name="product_cartitema_horizontalSpacing">@dimen/context_dp70_size</dimen>
+    <dimen name="product_cartitemview_productBg_width">@dimen/context_dp164_size</dimen>
+    <dimen name="product_cartitemview_productBg_height">@dimen/context_dp224_size</dimen>
+
+    <!-- *********************辅助功能************************ -->
+    <dimen name="jisuan_btn_width">@dimen/context_dp300_size</dimen>
+    <dimen name="jisuan_btn_height">@dimen/context_dp50_size</dimen>
+    <dimen name="pieChart_width">@dimen/context_dp150_size</dimen>
+    <dimen name="pieChart_height">@dimen/context_dp150_size</dimen>
+    <dimen name="loan_list_title_size">@dimen/title_font_size</dimen>
+    <dimen name="loan_list_size">@dimen/value_font_size</dimen>
+    <dimen name="loan_summary_size">@dimen/value_font_size</dimen>
+    <dimen name="loancounter_titleValueView_width">@dimen/context_dp200_size</dimen>
+    <!-- ****************************ending****************************** -->
+
+</resources>

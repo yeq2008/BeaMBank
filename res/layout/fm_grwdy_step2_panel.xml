@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.bea.mbank"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/frame_back"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/pannelControlLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/margin_leftOrRight"
+        android:layout_marginRight="@dimen/margin_leftOrRight"
+        android:layout_marginTop="@dimen/margin_topOrBottom"
+        android:gravity="center_vertical" >
+
+        <com.android.widgets.XCImageButton
+            android:id="@+id/pannelAdd"
+            android:layout_width="@dimen/step_pannel_button_width"
+            android:layout_height="@dimen/step_pannel_button_width"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/margin_leftOrRight"
+            android:background="@drawable/pannel_btn_zhengjia" />
+
+        <com.android.widgets.XCImageButton
+            android:id="@+id/pannelReset"
+            android:layout_width="@dimen/step_pannel_button_width"
+            android:layout_height="@dimen/step_pannel_button_width"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/pannel_btn_chongzhi"
+            android:visibility="gone" />
+
+        <com.android.widgets.XCImageButton
+            android:id="@+id/pannelSave"
+            android:layout_width="@dimen/step_pannel_button_width"
+            android:layout_height="@dimen/step_pannel_button_width"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/margin_leftOrRight"
+            android:background="@drawable/pannel_btn_zhancun" />
+    </RelativeLayout>
+
+    <com.android.widgets.LineView
+        android:id="@+id/pannelHLine"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/pannelControlLayout"
+        android:layout_marginTop="@dimen/margin_topOrBottom"
+        app:lv_lineColor="@color/divider_list"
+        app:lv_lineStyle="DottedLine" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/pannelNext"
+        android:layout_below="@+id/pannelHLine"
+        android:gravity="center_vertical" >
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="@color/divider_list"
+            android:dividerHeight="1px"
+            android:listSelector="@drawable/listview_bg" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/pannelLast"
+        android:layout_width="@dimen/step2_content_pannelLast_width"
+        android:layout_height="@dimen/step2_content_pannelLast_height"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="@dimen/padding_topOrBottom"
+        android:layout_marginLeft="@dimen/margin_leftOrRight"
+        android:layout_marginRight="@dimen/margin_leftOrRight"
+        android:layout_marginTop="@dimen/padding_topOrBottom"
+        android:background="@drawable/fm_grwdy_laststep"
+        android:text="上一步"
+        android:textColor="@color/whiteColor"
+        android:textSize="@dimen/red_buttom_textSize" />
+
+    <Button
+        android:id="@+id/pannelNext"
+        android:layout_width="@dimen/next_btn_width"
+        android:layout_height="@dimen/next_btn_height"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/padding_topOrBottom"
+        android:layout_marginLeft="@dimen/margin_leftOrRight"
+        android:layout_marginRight="@dimen/padding_leftOrRight"
+        android:layout_marginTop="@dimen/padding_topOrBottom"
+        android:background="@drawable/ac_appset_setting_affirmbutton"
+        android:text="下一步"
+        android:textColor="@color/whiteColor"
+        android:textSize="@dimen/red_buttom_textSize" />
+
+</RelativeLayout>

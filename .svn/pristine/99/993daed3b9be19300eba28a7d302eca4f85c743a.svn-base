@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.bea.mbank"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#F2F2F2"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="583dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical" 
+        android:layout_margin="10dp"
+        android:background="@color/whiteColor"
+        android:orientation="vertical" >
+
+<com.android.widgets.BottomLineTitleView
+        android:id="@+id/bottomLineTitleView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginRight="@dimen/margin"
+        android:layout_marginTop="@dimen/margin"
+        app:bl_lineColor="#e7e7e7"
+        app:bl_lineSize="1px"
+        app:bl_selectorColor="@color/redColor"
+        app:bl_title="借款人负债"
+        app:bl_titleColor="@color/blackColor"
+        app:bl_titleFont="20sp" >
+    </com.android.widgets.BottomLineTitleView>
+    <TextView
+        android:id="@+id/borrower_fenlei_sub"
+        android:layout_width="@dimen/grouptext_width"
+        android:layout_height="@dimen/borrowerTextView_width"
+        android:gravity="center_vertical"
+        android:layout_below="@id/bottomLineTitleView1"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginTop="@dimen/layoutmargin"
+        android:text="负债项目分类"
+        android:textColor="@color/blackColor"
+        android:textSize="@dimen/title_font_size" />
+
+    <com.bea.mbank.widgets.GroupTagViewEx
+        android:id="@+id/borrower_fenlei_subview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_below="@id/bottomLineTitleView1"
+        android:layout_marginTop="@dimen/layoutmargin"
+        android:layout_toRightOf="@+id/borrower_fenlei_sub"
+        app:gt_hintText="点击选择"
+        app:gt_spinnerShow="true" >
+    </com.bea.mbank.widgets.GroupTagViewEx>
+    
+    <TextView
+        android:id="@+id/borrower_bizhong_sub"
+        android:layout_width="@dimen/grouptext_width"
+        android:layout_height="@dimen/borrowerTextView_width"
+        android:gravity="center_vertical"
+        android:layout_below="@id/borrower_fenlei_sub"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginTop="@dimen/layoutmargin"
+        android:text="币种"
+        android:textColor="@color/blackColor"
+        android:textSize="@dimen/title_font_size" />
+
+    <com.bea.mbank.widgets.GroupTagViewEx
+        android:id="@+id/borrower_bizhong_subview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_below="@id/borrower_fenlei_sub"
+        android:layout_marginTop="@dimen/layoutmargin"
+        android:layout_toRightOf="@+id/borrower_bizhong_sub"
+        app:gt_hintText="点击选择"
+        app:gt_spinnerShow="true" >
+    </com.bea.mbank.widgets.GroupTagViewEx>
+
+    <com.android.widgets.TitleValueView
+        android:id="@+id/borower_yu_e_sub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/borrower_bizhong_sub"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginTop="@dimen/layoutmargin"
+        app:tv_title="余额"
+        app:tv_titleColor="@color/blackColor"
+        app:tv_titleFont="@dimen/title_font_size"
+        app:tv_titleWidth="@dimen/grouptext_width"
+        app:tv_valueColor="@color/contentColor"
+        app:tv_valueFont="@dimen/value_font_size"
+        app:tv_valueHint="余额" 
+        app:tv_valueMaxLength="20"
+        app:tv_valueInputType="decimal"/>
+
+    <com.android.widgets.TitleValueView
+        android:id="@+id/borower_e_dulimit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/borower_yu_e_sub"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginTop="@dimen/layoutmargin"
+        app:tv_title="授信额度"
+        app:tv_titleColor="@color/blackColor"
+        app:tv_titleFont="@dimen/title_font_size"
+        app:tv_titleWidth="@dimen/grouptext_width"
+        app:tv_valueColor="@color/contentColor"
+        app:tv_valueFont="@dimen/value_font_size"
+        app:tv_valueHint="授信额度" 
+        app:tv_valueMaxLength="20"
+        app:tv_valueInputType="decimal"/>
+
+    <com.android.widgets.TitleValueView
+        android:id="@+id/borower_huankuan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/borower_e_dulimit"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginTop="@dimen/layoutmargin"
+        app:tv_title="每月还款金额"
+        app:tv_titleColor="@color/blackColor"
+        app:tv_titleFont="@dimen/title_font_size"
+        app:tv_titleWidth="@dimen/grouptext_width"
+        app:tv_valueColor="@color/contentColor"
+        app:tv_valueFont="@dimen/value_font_size"
+        app:tv_valueHint="每月还款金额" 
+        app:tv_valueMaxLength="20"
+        app:tv_valueInputType="decimal"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="110dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical" 
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/whiteColor"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/padding"
+        android:paddingRight="@dimen/padding" >
+
+        <Button
+            android:id="@+id/mytask_search_confirmBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_commit"
+            android:gravity="center"
+            android:textColor="@color/blackColor" />
+
+        <Button
+            android:id="@+id/mytask_search_closeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/btn_close"
+            android:gravity="center"
+            android:textColor="@color/blackColor"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.bea.mbank"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/mdmsvn_setting"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/setserverurl_textview_marginBottom"
+        android:layout_marginTop="@dimen/margin"
+        android:text="服务器设置"
+        android:textColor="@color/blackColor"
+        android:textSize="@dimen/title_font_size" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/padding"
+        android:background="@color/whiteColor"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/aa_iv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="@dimen/setserverurl_iv_username_marginTop"
+            android:paddingTop="@dimen/layout_marginTop"
+            android:src="@drawable/ac_applogin_username" />
+
+        <EditText
+            android:id="@+id/server_url"
+            android:layout_width="@dimen/setserverurl_server_url_width"
+            android:layout_height="@dimen/setserverurl_server_url_height"
+            android:layout_marginLeft="@dimen/padding"
+            android:layout_marginTop="@dimen/setserverurl_iv_username_marginTop"
+            android:layout_toRightOf="@+id/aa_iv_username"
+            android:background="@drawable/ac_applogin_input"
+            android:digits="1234567890QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm.:"
+            android:hint="请输入服务器地址"
+            android:paddingLeft="@dimen/padding"
+            android:singleLine="true" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/server_confirm"
+        android:layout_width="@dimen/setserverurl_confirm_width"
+        android:layout_height="@dimen/setserverurl_confirm_height"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/setserverurl_iv_username_marginTop"
+        android:background="@drawable/ac_appset_setting_affirmbutton"
+        android:gravity="center"
+        android:text="确定"
+        android:textColor="@color/whiteColor"
+        android:textSize="@dimen/red_buttom_textSize" />
+
+</LinearLayout>

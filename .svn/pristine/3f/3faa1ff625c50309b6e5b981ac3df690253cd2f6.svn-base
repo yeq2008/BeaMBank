@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/grouptag_width"
+    android:layout_height="@dimen/grouptag_height"
+    android:background="@color/whiteColor"
+    android:focusableInTouchMode="true" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color33365e"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/blue_title_minHeight"
+            android:paddingLeft="@dimen/padding"
+            android:text="请选择"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/whiteColor"
+            android:textSize="@dimen/please_choose_textSize" />
+
+        <com.bea.grouptagpop.ClearEditText
+            android:id="@+id/filter_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/filter_edit_margin"
+            android:padding="@dimen/filter_edit_padding"
+            android:background="@drawable/grouptag_searchbar_edit_selector"
+            android:drawableLeft="@drawable/grouptag_searchbar_icon_normal"
+            android:hint="请输入关键字"
+            android:singleLine="true"
+            android:textSize="@dimen/filter_edit_textSize" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ListView
+                android:id="@+id/country_lvcountry"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:divider="@color/divider_list" 
+                android:dividerHeight="1px"
+                />
+
+            <TextView
+                android:id="@+id/dialog"
+                android:layout_width="80.0dip"
+                android:layout_height="80.0dip"
+                android:layout_gravity="center"
+                android:background="@drawable/grouptag_show_head_toast_bg"
+                android:gravity="center"
+                android:textColor="#ffffffff"
+                android:textSize="30.0dip"
+                android:visibility="invisible" />
+
+            <com.bea.grouptagpop.SideBar
+                android:id="@+id/sidrbar"
+                android:layout_width="30.0dip"
+                android:layout_height="fill_parent"
+                android:layout_gravity="right|center" />
+        </FrameLayout>
+    </LinearLayout>
+
+</FrameLayout>

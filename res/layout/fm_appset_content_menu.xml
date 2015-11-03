@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/appset_Relativelayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="click" >
+
+        <ImageView
+            android:id="@+id/Setpassword_image1"
+            android:layout_width="@dimen/appsetmenu_setpassword_image1_width"
+            android:layout_height="@dimen/appsetmenu_setpassword_image1_height"
+            android:padding="@dimen/margin"
+            android:src="@drawable/ac_appset_1" />
+
+        <TextView
+            android:id="@+id/newVersionTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/Setpassword_image1"
+            android:layout_marginBottom="@dimen/margin_topOrBottom"
+            android:layout_toRightOf="@+id/Setpassword_image1"
+            android:gravity="center_vertical"
+            android:text="密码设置"
+            android:textColor="#373737"
+            android:textSize="@dimen/title_font_size" />
+
+        <ImageView
+            android:layout_width="@dimen/appsetmenu_image2_width"
+            android:layout_height="@dimen/appsetmenu_image2_height"
+            android:layout_alignBottom="@+id/newVersionTip"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_leftOrRight"
+            android:src="@drawable/ac_appset_2" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/context_dp03_size"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/Setpassword_image1"
+            android:layout_marginLeft="@dimen/padding_leftOrRight"
+            android:layout_marginRight="@dimen/padding_leftOrRight"
+            android:src="@drawable/divider_line" />
+    </RelativeLayout>
+
+</LinearLayout>

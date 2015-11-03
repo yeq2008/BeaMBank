@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.bea.mbank"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" 
+    android:background="@drawable/mdmsvn_setting">
+
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_topOrBottom"
+        android:layout_marginBottom="@dimen/setmdmsvn_longin_marginBottom"
+        android:text="域登录"
+        android:layout_gravity="center_horizontal"
+        android:textSize="@dimen/value_font_size"
+        android:textColor="@color/blackColor"/>
+    
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/padding"
+        android:background="@color/whiteColor"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/aa_iv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="@dimen/setmdmsvn_username_marginTo"
+            android:paddingTop="@dimen/layout_marginTop"
+            android:src="@drawable/ac_applogin_username" />
+
+        <EditText
+            android:id="@+id/yu_et_username"
+            android:layout_width="@dimen/setmdmsvn_username_width"
+            android:layout_height="@dimen/setmdmsvn_username_height"
+            android:layout_marginLeft="@dimen/padding_leftOrRight"
+            android:layout_marginTop="@dimen/setmdmsvn_username_marginTo"
+            android:layout_toRightOf="@+id/aa_iv_username"
+            android:background="@drawable/ac_applogin_input"
+            android:digits="1234567890QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm"
+            android:hint="请输入用户名"
+            android:paddingLeft="@dimen/padding_leftOrRight"
+            android:singleLine="true" />
+
+        <ImageView
+            android:id="@+id/aa_iv_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/yu_et_username"
+            android:layout_marginTop="@dimen/margin_topOrBottom"
+            android:paddingTop="@dimen/layout_marginTop"
+            android:src="@drawable/ac_applogin_password" />
+
+        <EditText
+            android:id="@+id/yu_et_password"
+            android:layout_width="@dimen/setmdmsvn_username_width"
+            android:layout_height="@dimen/setmdmsvn_username_height"
+            android:layout_alignLeft="@+id/yu_et_username"
+            android:layout_below="@+id/yu_et_username"
+            android:layout_marginTop="@dimen/margin_topOrBottom"
+            android:background="@drawable/ac_applogin_input"
+            android:hint="请输入密码"
+            android:inputType="textPassword"
+            android:paddingLeft="@dimen/padding"
+            android:password="true"
+            android:singleLine="true" />
+                
+    </RelativeLayout>
+
+        <Button
+            android:id="@+id/yu_login"
+            android:layout_width="@dimen/setmdmsvn_yu_login_width"
+            android:layout_height="@dimen/setmdmsvn_yu_login_height"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/setmdmsvn_username_marginTo"
+            android:background="@drawable/ac_appset_setting_affirmbutton"
+            android:gravity="center" 
+            android:text="域登录"
+            android:textColor="@color/whiteColor"
+            android:textSize="@dimen/red_buttom_textSize"/>
+
+
+</LinearLayout>

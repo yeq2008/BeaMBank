@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/mytask_collecte_Title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/redTitle_height"
+        android:background="@color/whiteColor" >
+
+        <ImageView
+            android:id="@+id/mytask_collecte_TitleImage"
+            android:layout_width="@dimen/step_pannel_button_width"
+            android:layout_height="@dimen/step_pannel_button_height"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/padding"
+            android:background="@drawable/mytask_collectericon" />
+
+        <TextView
+            android:id="@+id/mytask_collecteText1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/layout_marginTop"
+            android:layout_toRightOf="@+id/mytask_collecte_TitleImage"
+            android:gravity="center"
+            android:text="您有  "
+            android:textColor="@color/blackColor"
+            android:textSize="@dimen/myTask_listitem_below_textSize" />
+
+        <TextView
+            android:id="@+id/mytask_collecteNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/mytask_collecteText1"
+            android:gravity="center" 
+            android:textColor="@color/redColor"
+            android:textSize="@dimen/myTask_listitem_below_textSize" />
+
+        <TextView
+            android:id="@+id/mytask_collecteText2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/mytask_collecteNumber"
+            android:gravity="center"
+            android:text="  条催收信息"
+            android:textColor="@color/blackColor"
+            android:textSize="@dimen/myTask_listitem_below_textSize" />
+
+
+        <Button
+            android:id="@+id/collecte_FindButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin"
+            android:background="@drawable/task_draft_searchbg" />
+    </RelativeLayout>
+
+    <com.android.uitableview.UITableView
+        android:id="@+id/mytask_collecte_UiTableView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/padding"
+        android:background="@color/whiteColor"
+        android:divider="@drawable/transparentColor"
+        android:dividerHeight="1dp"
+        android:listSelector="@drawable/listview_bg" >
+    </com.android.uitableview.UITableView>
+
+</LinearLayout>

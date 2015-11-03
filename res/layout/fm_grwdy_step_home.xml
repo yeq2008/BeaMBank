@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/padding"
+        android:layout_toLeftOf="@+id/pannelLayout"
+        android:background="@drawable/frame_back" >
+
+        <FrameLayout
+            android:id="@+id/pannel_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+        </FrameLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/pannelLayout"
+        android:layout_width="@dimen/pannelLayout_width"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/padding_topOrBottom"
+        android:layout_marginRight="@dimen/padding_leftOrRight"
+        android:layout_marginTop="@dimen/padding_topOrBottom"
+        android:background="@drawable/frame_back" >
+    </FrameLayout>
+
+</RelativeLayout>

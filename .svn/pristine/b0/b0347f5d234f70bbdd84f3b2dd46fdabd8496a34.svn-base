@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.bea.mbank"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margin" >
+
+    <TextView
+        android:id="@+id/pannel_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textColor="@color/blackColor"
+        android:textSize="28sp" />
+
+    <com.android.widgets.BottomLineTitleView
+        android:id="@+id/Bor_LineTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/pannel_title"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/blackColor"
+        app:bl_lineColor="#e7e7e7"
+        app:bl_lineSize="1dp"
+        app:bl_selectorColor="@color/redColor"
+        app:bl_title="@string/personalinfor"
+        app:bl_titleColor="@color/blackColor"
+        app:bl_titleFont="20sp" />
+
+    <LinearLayout
+        android:id="@+id/Bor_linlayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/Bor_LineTitle"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:orientation="horizontal" >
+
+        <com.android.widgets.TitleValueView
+            android:id="@+id/Bor_fName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:tv_title="姓（中文）"
+            app:tv_titleColor="@color/blackColor"
+            app:tv_titleFont="@dimen/title_font_size"
+            app:tv_titleWidth="@dimen/grouptext_width"
+            app:tv_valueColor="@color/contentColor"
+            app:tv_valueFont="@dimen/value_font_size"
+            app:tv_valueHint="姓" 
+         	app:tv_valueMaxLength="40"/>
+
+        <com.android.widgets.TitleValueView
+            android:id="@+id/Bor_lName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            app:tv_title="名（中文）"
+            app:tv_titleColor="@color/blackColor"
+            app:tv_titleFont="@dimen/title_font_size"
+            app:tv_titleWidth="@dimen/grouptext_width"
+            app:tv_valueColor="@color/contentColor"
+            app:tv_valueFont="@dimen/value_font_size"
+            app:tv_valueHint="名" 
+        	app:tv_valueMaxLength="40"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Bor_linlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/Bor_linlayout1"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:orientation="horizontal" >
+
+        <com.android.widgets.TitleValueView
+            android:id="@+id/Bor_efName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:tv_title="姓（英文/拼音）"
+            app:tv_titleColor="@color/blackColor"
+            app:tv_titleFont="@dimen/title_font_size"
+            app:tv_titleWidth="@dimen/grouptext_width"
+            app:tv_valueColor="@color/contentColor"
+            app:tv_valueFont="@dimen/value_font_size"
+            app:tv_valueHint="姓" 
+        	app:tv_valueMaxLength="40"/>
+
+        <com.android.widgets.TitleValueView
+            android:id="@+id/Bor_elName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            app:tv_title="名（英文/拼音）"
+            app:tv_titleColor="@color/blackColor"
+            app:tv_titleFont="@dimen/title_font_size"
+            app:tv_titleWidth="@dimen/grouptext_width"
+            app:tv_valueColor="@color/contentColor"
+            app:tv_valueFont="@dimen/value_font_size"
+            app:tv_valueHint="名" 
+        	app:tv_valueMaxLength="40"/>
+    </LinearLayout>
+    
+	<TextView
+        android:id="@+id/Bor_sexual"
+        android:layout_width="@dimen/grouptext_width"
+        android:layout_height="@dimen/borrowerTextView_width" 
+        android:gravity="center_vertical" 
+        android:layout_below="@id/Bor_linlayout"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:text="性别" 
+        android:textColor="@color/blackColor"
+        android:textSize="@dimen/title_font_size" />
+	
+	<com.bea.mbank.widgets.GroupTagViewEx
+        android:id="@+id/Bor_gtvSexual"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/borrowerTextView_width"
+        android:layout_marginTop="@dimen/grouptop"
+		android:layout_toRightOf="@id/Bor_sexual"
+		android:layout_alignTop="@id/Bor_sexual"
+        android:layout_below="@id/Bor_linlayout"  
+        app:gt_hintText="性别" />
+    
+	<TextView
+        android:id="@+id/Bor_National"
+        android:layout_width="@dimen/grouptext_width"
+        android:layout_height="@dimen/borrowerTextView_width"
+        android:gravity="center_vertical"
+        android:layout_below="@id/Bor_sexual"
+        android:text="国籍" 
+        android:textColor="@color/blackColor"
+        android:textSize="@dimen/title_font_size" />
+
+    <com.bea.mbank.widgets.GroupTagViewEx
+        android:id="@+id/Bor_gtvNational"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Bor_sexual" 
+		android:layout_alignTop="@id/Bor_National"
+        android:layout_alignLeft="@id/Bor_gtvSexual"
+        app:gt_hintText="国籍"
+        app:gt_spinnerShow="true" />
+    
+     <TextView
+        android:id="@+id/Bor_BirthDate"
+        android:layout_width="@dimen/grouptext_width"
+        android:layout_height="@dimen/borrowerTextView_width" 
+        android:gravity="center_vertical"
+        android:layout_below="@id/Bor_National"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:text="出生日期"
+        android:textColor="@color/blackColor"
+        android:textSize="@dimen/title_font_size" />
+
+    <TextView
+        android:id="@+id/Bor_valueBirthDate"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/borrowerTextView_width"
+        android:layout_alignLeft="@id/Bor_gtvSexual"
+        android:layout_below="@+id/Bor_National"
+		android:layout_alignTop="@id/Bor_BirthDate"
+		android:gravity="left|center_vertical"
+		android:paddingLeft="5dp"
+        android:hint="出生日期" 
+        android:textColor="@color/contentColor"
+        android:textSize="@dimen/title_font_size" />
+    
+    <TextView
+        android:id="@+id/Bor_DocumentType"
+        android:layout_width="@dimen/grouptext_width"
+        android:layout_height="@dimen/borrowerTextView_width" 
+        android:gravity="center_vertical"
+        android:layout_below="@id/Bor_BirthDate"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:text="证件类型"
+        android:textColor="@color/blackColor"
+        android:textSize="@dimen/title_font_size" />
+
+    <com.bea.mbank.widgets.GroupTagViewEx
+        android:id="@+id/Bor_gtvDocumentType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/Bor_gtvSexual"
+        android:layout_below="@id/Bor_BirthDate"
+		android:layout_alignTop="@id/Bor_DocumentType"
+        app:gt_hintText="请选证件类型"
+        app:gt_spinnerShow="true" />
+    
+    <com.android.widgets.TitleValueView
+        android:id="@+id/Bor_DocumentNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_below="@id/Bor_DocumentType"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        app:tv_title="证件号码"
+        app:tv_titleColor="@color/blackColor"
+        app:tv_titleFont="@dimen/title_font_size"
+        app:tv_titleWidth="@dimen/grouptext_width"
+        app:tv_valueColor="@color/contentColor"
+        app:tv_valueFont="@dimen/value_font_size"
+        app:tv_valueHint="证件号码"
+        app:tv_valueMaxLength="40" />
+    
+    <TextView
+        android:id="@+id/Bor_Issuing"
+        android:layout_width="@dimen/grouptext_width"
+        android:layout_height="@dimen/borrowerTextView_width" 
+        android:gravity="center_vertical"
+        android:layout_below="@id/Bor_DocumentNumber"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:text="发证国家"
+        android:textColor="@color/blackColor"
+        android:textSize="@dimen/title_font_size" />
+
+    <com.bea.mbank.widgets.GroupTagViewEx
+        android:id="@+id/Bor_gtvIssuing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/Bor_gtvSexual"
+        android:layout_below="@id/Bor_DocumentNumber"
+		android:layout_alignTop="@id/Bor_Issuing"
+        app:gt_hintText="发证国家"
+        app:gt_spinnerShow="true" />
+    
+     <TextView
+        android:id="@+id/Bor_DocumentEndDate"
+        android:layout_width="@dimen/grouptext_width"
+        android:layout_height="@dimen/borrowerTextView_width" 
+        android:gravity="center_vertical"
+        android:layout_below="@id/Bor_Issuing"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:text="证件到期日"
+        android:textColor="@color/blackColor"
+        android:textSize="@dimen/title_font_size" />
+
+    <TextView
+        android:id="@+id/Bor_valueDocumentEndDate"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/borrowerTextView_width"
+        android:layout_alignLeft="@id/Bor_gtvSexual"
+        android:layout_below="@id/Bor_Issuing"
+		android:layout_alignTop="@id/Bor_DocumentEndDate"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="5dp"
+        android:hint="证件到期日" 
+        android:textColor="@color/contentColor"
+        android:textSize="@dimen/title_font_size" />
+    
+     <TextView
+        android:id="@+id/Bor_Ismarketing"
+        android:layout_width="@dimen/grouptext_width"
+        android:layout_height="@dimen/borrowerTextView_width" 
+        android:gravity="center_vertical"
+        android:layout_below="@id/Bor_DocumentEndDate"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:text="同意交叉营销"
+        android:textColor="@color/blackColor"
+        android:textSize="@dimen/title_font_size" />
+
+    <com.bea.mbank.widgets.GroupTagViewEx
+        android:id="@+id/Bor_gtvIsmarketing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/grouptop"
+        android:layout_alignLeft="@id/Bor_gtvSexual"
+        android:layout_below="@id/Bor_DocumentEndDate"
+		android:layout_alignTop="@id/Bor_Ismarketing" />
+    
+    <TextView
+        android:id="@+id/Bor_Service"
+        android:layout_width="@dimen/grouptext_width"
+        android:layout_height="@dimen/borrowerTextView_width" 
+        android:gravity="center_vertical"
+        android:layout_below="@id/Bor_Ismarketing"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:text="业务来往情况"
+        android:textColor="@color/blackColor"
+        android:textSize="@dimen/title_font_size" />
+
+    <com.bea.mbank.widgets.GroupTagViewEx
+        android:id="@+id/Bor_gtvService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/Bor_gtvSexual"
+        android:layout_below="@id/Bor_Ismarketing"
+		android:layout_alignTop="@id/Bor_Service"
+		app:gt_hintText="业务来往情况"
+		app:gt_spinnerShow="true" />
+    
+    <TextView
+        android:id="@+id/Bor_Customer"
+        android:layout_width="@dimen/grouptext_width"
+        android:layout_height="@dimen/borrowerTextView_width" 
+        android:gravity="center_vertical"
+        android:layout_below="@id/Bor_gtvService"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:text="客户源"
+        android:textColor="@color/blackColor"
+        android:textSize="@dimen/title_font_size" />
+
+    <com.bea.mbank.widgets.GroupTagViewEx
+        android:id="@+id/Bor_gtvCustomer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/Bor_gtvSexual"
+        android:layout_below="@id/Bor_gtvService"
+		android:layout_alignTop="@id/Bor_Customer"
+        app:gt_hintText="客户源"
+        app:gt_spinnerShow="true" />
+    
+     <TextView
+        android:id="@+id/Bor_CbrType"
+        android:layout_width="@dimen/grouptext_width"
+        android:layout_height="@dimen/borrowerTextView_width" 
+        android:gravity="center_vertical"
+        android:layout_below="@id/Bor_gtvCustomer"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:text="银行通知方式"
+        android:textColor="@color/blackColor"
+        android:textSize="@dimen/title_font_size" />
+
+    <com.bea.mbank.widgets.GroupTagViewEx
+        android:id="@+id/Bor_gtvCbrType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/grouptop"
+        android:layout_alignLeft="@id/Bor_gtvSexual"
+        android:layout_below="@id/Bor_gtvCustomer"
+		android:layout_alignTop="@+id/Bor_CbrType" />
+    
+     <TextView
+        android:id="@+id/Bor_CmrType"
+        android:layout_width="@dimen/grouptext_width"
+        android:layout_height="@dimen/borrowerTextView_width" 
+        android:gravity="center_vertical"
+        android:layout_below="@id/Bor_CbrType"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:text="账单投递方式"
+        android:textColor="@color/blackColor"
+        android:textSize="@dimen/title_font_size" />
+
+    <com.bea.mbank.widgets.GroupTagViewEx
+        android:id="@+id/Bor_gtvCmrType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/grouptop"
+        android:layout_alignLeft="@id/Bor_gtvSexual"
+        android:layout_below="@id/Bor_CbrType"
+        android:layout_alignTop="@id/Bor_CmrType" />
+    
+    	<com.android.widgets.TitleValueView
+        android:id="@+id/Bor_Email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_below="@id/Bor_CmrType"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        app:tv_title="电子邮箱"
+        app:tv_titleColor="@color/blackColor"
+        app:tv_titleFont="@dimen/title_font_size"
+        app:tv_titleWidth="@dimen/grouptext_width"
+        app:tv_valueColor="@color/contentColor"
+        app:tv_valueFont="@dimen/value_font_size"
+        app:tv_valueHint="电子邮箱"
+        app:tv_valueInputType="email"
+        app:tv_valueMaxLength="40" />
+    
+     <TextView
+        android:id="@+id/Bor_IsAddress"
+        android:layout_width="@dimen/grouptext_width"
+        android:layout_height="@dimen/borrowerTextView_width" 
+        android:gravity="center_vertical"
+        android:layout_below="@id/Bor_Email"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:text="通讯地址"
+        android:textColor="@color/blackColor"
+        android:textSize="@dimen/title_font_size" />
+
+    <com.bea.mbank.widgets.GroupTagViewEx
+        android:id="@+id/Bor_gtvIsAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/grouptop"
+        android:layout_alignLeft="@id/Bor_gtvSexual"
+        android:layout_below="@id/Bor_Email"
+		android:layout_alignTop="@id/Bor_IsAddress"
+        app:gt_spinnerShow="false" />
+    
+    <TextView
+        android:id="@+id/Bor_CompleteAddress"
+        android:layout_width="@dimen/grouptext_width"
+        android:layout_height="@dimen/borrowerTextView_width" 
+        android:gravity="center_vertical"
+        android:layout_below="@id/Bor_IsAddress"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:text="住址详情"
+        android:textColor="@color/blackColor"
+        android:textSize="@dimen/title_font_size" />
+
+    <TextView
+        android:id="@+id/Bor_gtvCompleteAddress"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@id/Bor_gtvSexual"
+        android:layout_below="@id/Bor_IsAddress"
+		android:layout_alignTop="@id/Bor_CompleteAddress"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="5dp"
+        android:hint="住址详情" 
+        android:singleLine="false"
+        android:textColor="@color/contentColor"
+        android:textSize="@dimen/title_font_size" />
+    
+    <com.android.widgets.TitleValueView
+        android:id="@+id/Bor_Postcode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_below="@id/Bor_CompleteAddress"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        app:tv_title="邮政编码"
+        app:tv_titleColor="@color/blackColor"
+        app:tv_titleFont="@dimen/title_font_size"
+        app:tv_titleWidth="@dimen/grouptext_width"
+        app:tv_valueColor="@color/contentColor"
+        app:tv_valueFont="@dimen/value_font_size"
+        app:tv_valueHint="邮政编码"
+        app:tv_valueInputType="number"
+        app:tv_valueMaxLength="40" />
+    
+    <TextView
+        android:id="@+id/Bor_MailingCode"
+        android:layout_width="@dimen/grouptext_width"
+        android:layout_height="@dimen/borrowerTextView_width" 
+        android:gravity="center_vertical"
+        android:layout_below="@id/Bor_Postcode"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:text="邮寄方式"
+        android:textColor="@color/blackColor"
+        android:textSize="@dimen/title_font_size" />
+
+    <com.bea.mbank.widgets.GroupTagViewEx
+        android:id="@+id/Bor_gtvMailingCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/Bor_gtvSexual"
+        android:layout_below="@id/Bor_Postcode"
+		android:layout_alignTop="@id/Bor_MailingCode"
+        app:gt_hintText="邮寄方式"
+        app:gt_spinnerShow="true" />
+    
+    <com.android.widgets.TitleValueView
+        android:id="@+id/Bor_InterCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_below="@id/Bor_gtvMailingCode"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        app:tv_title="国际区号"
+        app:tv_titleColor="@color/blackColor"
+        app:tv_titleFont="@dimen/title_font_size"
+        app:tv_titleWidth="@dimen/grouptext_width"
+        app:tv_valueColor="@color/contentColor"
+        app:tv_valueFont="@dimen/value_font_size"
+        app:tv_valueHint="国际区号"
+        app:tv_valueInputType="number" 
+        app:tv_valueMaxLength="40"/>
+    
+	<com.android.widgets.TitleValueView
+        android:id="@+id/Bor_PhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_below="@id/Bor_InterCode"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        app:tv_title="手机号码"
+        app:tv_titleColor="@color/blackColor"
+        app:tv_titleFont="@dimen/title_font_size"
+        app:tv_titleWidth="@dimen/grouptext_width"
+        app:tv_valueColor="@color/contentColor"
+        app:tv_valueFont="@dimen/value_font_size"
+        app:tv_valueHint="电话号码"
+        app:tv_valueInputType="phone" 
+        app:tv_valueMaxLength="40" />
+  
+	<TextView
+        android:id="@+id/Bor_SmsNumber"
+        android:layout_width="@dimen/grouptext_width"
+        android:layout_height="@dimen/borrowerTextView_width" 
+        android:gravity="center_vertical"
+        android:layout_below="@id/Bor_PhoneNumber"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:text="是否接收短信"
+        android:textColor="@color/blackColor"
+        android:textSize="@dimen/title_font_size" />
+
+    <com.bea.mbank.widgets.GroupTagViewEx
+        android:id="@+id/Bor_gtvSmsNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/grouptop"
+        android:layout_alignLeft="@id/Bor_gtvSexual"
+        android:layout_below="@id/Bor_PhoneNumber"
+		android:layout_alignTop="@id/Bor_SmsNumber"
+        app:gt_spinnerShow="false" />
+    
+    <TextView
+        android:id="@+id/Bor_Education"
+        android:layout_width="@dimen/grouptext_width"
+        android:layout_height="@dimen/borrowerTextView_width" 
+        android:gravity="center_vertical"
+        android:layout_below="@id/Bor_SmsNumber"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:text="教育水平"
+        android:textColor="@color/blackColor"
+        android:textSize="@dimen/title_font_size" />
+
+    <com.bea.mbank.widgets.GroupTagViewEx
+        android:id="@+id/Bor_gtvEducation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/Bor_gtvSexual"
+        android:layout_below="@id/Bor_SmsNumber"
+		android:layout_alignTop="@id/Bor_Education"
+        app:gt_hintText="教育水平"
+        app:gt_spinnerShow="true" />
+    
+     <TextView
+        android:id="@+id/Bor_MarryState"
+        android:layout_width="@dimen/grouptext_width"
+        android:layout_height="@dimen/borrowerTextView_width" 
+        android:gravity="center_vertical"
+        android:layout_below="@id/Bor_gtvEducation"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:text="婚姻状况"
+        android:textColor="@color/blackColor"
+        android:textSize="@dimen/title_font_size" />
+
+    <com.bea.mbank.widgets.GroupTagViewEx
+        android:id="@+id/Bor_gtvMarryState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/Bor_gtvSexual"
+        android:layout_below="@id/Bor_gtvEducation"
+		android:layout_alignTop="@id/Bor_MarryState"
+        app:gt_hintText="婚姻状况" 
+        app:gt_spinnerShow="true" />
+    
+    <com.android.widgets.TitleValueView
+        android:id="@+id/Bor_Money"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content" 
+        android:layout_below="@id/Bor_gtvMarryState"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        app:tv_title="月收入金额"
+        app:tv_titleColor="@color/blackColor"
+        app:tv_titleFont="@dimen/title_font_size"
+        app:tv_titleWidth="@dimen/grouptext_width"
+        app:tv_valueColor="@color/contentColor"
+        app:tv_valueFont="@dimen/value_font_size"
+        app:tv_valueHint="月收入金额"
+        app:tv_valueInputType="decimal"  
+        app:tv_valueMaxLength="20"/>
+    
+     <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:layout_below="@id/Bor_gtvMarryState" 
+        android:layout_toRightOf="@id/Bor_Money"  
+        android:layout_marginLeft="10dp"
+        android:layout_alignTop="@id/Bor_Money"
+        android:text="元"
+        android:textSize="20sp" />
+     
+      <TextView
+        android:id="@+id/Bor_is"
+        android:layout_width="@dimen/grouptext_width"
+        android:layout_height="@dimen/borrowerTextView_width" 
+        android:gravity="center_vertical"
+        android:layout_below="@id/Bor_Money"
+        android:layout_marginTop="@dimen/borrowermargin_top"
+        android:text="是否为东亚银行董事/雇员亲属"
+        android:textColor="@color/blackColor"
+        android:textSize="@dimen/title_font_size" />
+
+    <com.bea.mbank.widgets.GroupTagViewEx
+        android:id="@+id/Bor_gtvis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_below="@id/Bor_Money"
+		android:layout_alignTop="@id/Bor_is"
+		android:layout_toRightOf="@id/Bor_is"
+        app:gt_hintText="is" 
+        app:gt_spinnerShow="false" />
+</RelativeLayout>
